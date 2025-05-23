@@ -1,0 +1,8 @@
+@use "../../shared/styles/functions" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: var(--white);
+}

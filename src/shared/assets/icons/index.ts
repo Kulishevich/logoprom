@@ -27,3 +27,8 @@ export { default as ArrowToTopLeftIcon } from "./ArrowToTopLeftIcon";
 export { default as MiniArrowRight } from "./MiniArrowRight";
 export { default as CheckedIcon } from "./CheckedIcon";
 export { default as ArrowLeftIcon } from "./ArrowLeftIcon";
+export { default as MailIcon } from "./MailIcon";
+export { default as WhatsappOutlineIcon } from "./WhatsappOutlineIcon";
+export { default as TelegramOutlineIcon } from "./TelegramOutlineIcon";
+export { default as ViberOutlineIcon } from "./ViberOutlineIcon";
+export { default as LocationIcon } from "./LocationIcon";

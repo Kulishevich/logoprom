@@ -1,0 +1,37 @@
+@use "../../shared/styles/functions" as *;
+
+.container {
+  display: flex;
+  align-items: center;
+  width: vw-1440(1584);
+  margin: 0 auto;
+}
+
+.logo {
+  margin-right: vw-1440(86);
+}
+
+.address {
+  display: flex;
+  align-items: center;
+  gap: vw-1440(6);
+  width: vw-1440(221);
+  flex-shrink: 0;
+
+  margin-left: vw-1440(48);
+  margin-right: vw-1440(48);
+
+  & > svg {
+    flex-shrink: 0;
+    width: vw-1440(32);
+    height: vw-1440(32);
+  }
+}
+
+.phone {
+  display: flex;
+  align-items: center;
+  gap: vw-1440(6);
+  width: vw-1440(246);
+  flex-shrink: 0;
+}

@@ -1,0 +1,52 @@
+@use "../../shared/styles/functions" as *;
+
+.wrapper {
+  width: 100%;
+  height: 72px;
+  border-top: 1px solid var(--white-20);
+  border-bottom: 1px solid var(--white-20);
+}
+
+.container {
+  margin: 0 auto;
+  width: vw-1440(1584);
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: vw-1440(42);
+
+  margin-left: 47px;
+  margin-right: 44px;
+
+  height: 100%;
+
+  & > a {
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: var(--white);
+    height: 100%;
+
+    &:hover {
+      color: var(--color-blue);
+    }
+
+    &.active {
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 4px;
+        background-color: var(--color-red);
+        border-radius: 6px 6px 0 0;
+      }
+    }
+  }
+}

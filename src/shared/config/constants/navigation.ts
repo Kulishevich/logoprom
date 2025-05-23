@@ -1,14 +1,11 @@
-import { paths } from './paths';
+import { paths } from "./paths";
 
 export const navigation = [
-  { title: 'Главная', path: paths.home },
-  { title: 'Акции', path: paths.shares },
-  { title: 'Новости', path: paths.news },
-  { title: 'Оплата и доставка', path: paths.payment_and_delivery },
-  { title: 'О нас', path: paths.about_us },
-  { title: 'Контакты', path: paths.contacts },
-  { title: 'Политика конфиденциальности', path: paths.privacy_policy },
-  { title: 'Каталог', path: paths.catalog },
-  { title: 'Корзина', path: paths.cart },
-  { title: 'Оформление заказа', path: paths.order },
+  { title: "Главная", path: paths.home },
+  { title: "О компании", path: paths.about },
+  { title: "Проекты", path: paths.projects },
+  { title: "Помощь клиенту", path: paths.customer_assistance },
+  { title: "Отзывы", path: paths.reviews },
+  { title: "Блог", path: paths.blog },
+  { title: "Контакты", path: paths.contacts },
 ];
