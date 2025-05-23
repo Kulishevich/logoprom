@@ -13,14 +13,14 @@ const BelarusFlagIcon = (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <g clip-path="url(#clip0_29_781)">
+    <g clipPath="url(#clip0_29_781)">
       <path
         d="M-0.00488281 4.84587V19.646C0.151773 20.2012 0.66407 20.6111 1.26749 20.6111H22.6734C23.4004 20.6111 23.9951 20.0163 23.9951 19.2893V5.20264C23.9951 4.47566 23.4004 3.88086 22.6734 3.88086H1.26749C0.66407 3.88086 0.151773 4.29073 -0.00488281 4.84587Z"
         fill="#CE1720"
       />
       <mask
         id="mask0_29_781"
-        style="mask-type:luminance"
+        style={{ maskType: "luminance" }}
         maskUnits="userSpaceOnUse"
         x="0"
         y="3"

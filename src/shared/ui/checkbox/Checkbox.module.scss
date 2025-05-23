@@ -1,4 +1,4 @@
-@use '../../config/styles/functions' as *;
+@use "../../styles/functions" as *;
 
 .container {
   display: flex;
@@ -22,8 +22,7 @@
   width: vw-1440(32);
   height: vw-1440(32);
 
-  background-color: var(--color-white);
-  border: 1px solid #1114341a;
+  border: 1px solid var(--grey);
   border-radius: 2px;
 
   & > button {
@@ -33,7 +32,7 @@
   transition: border 0.3s ease;
 
   &:hover {
-    border: 1px solid #25338c;
+    border: 1px solid var(--color-blue);
   }
 
   &:disabled {
@@ -42,12 +41,12 @@
     border: 1px solid #1114341a;
   }
 
-  &[data-state='checked'] {
+  &[data-state="checked"] {
     width: vw-1440(32);
     height: vw-1440(32);
 
-    background-color: var(--color-accent-1);
-    border-radius: 2px;
+    background-color: var(--color-blue);
+    border-radius: vw-1440(6);
 
     &:disabled {
       opacity: 0.5;
@@ -59,11 +58,11 @@
     }
   }
 
-  &[data-state='unchecked'] {
-    background-color: transparent;
+  &[data-state="unchecked"] {
+    background-color: var(--white);
 
     &:disabled {
-      background-color: inherit;
+      background-color: var(--white);
     }
   }
 
@@ -77,7 +76,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--color-white);
+  color: var(--white);
 }
 
 .icon {
@@ -90,16 +89,16 @@
 }
 
 .error {
-  outline: 1px solid var(--color-accent-red);
+  outline: 1px solid var(--color-red);
 }
 
 .label {
   opacity: 0.5;
   &.disabled {
-    color: var(--color-accent-red);
+    color: var(--color-red);
   }
 }
 
 .disabledIcon {
-  color: var(--color-accent-red);
+  color: var(--color-red);
 }

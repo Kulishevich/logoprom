@@ -17,3 +17,12 @@ export { default as SecurityProtectionShieldIcon } from "./SecurityProtectionShi
 export { default as TelegramIcon } from "./TelegramIcon";
 export { default as ViberIcon } from "./ViberIcon";
 export { default as WhatsappIcon } from "./WhatsappIcon";
+export { default as MenuIcon } from "./MenuIcon";
+export { default as MiniArrowDown } from "./MiniArrowDown";
+export { default as SearchIcon } from "./SearchIcon";
+export { default as FilterSecondIcon } from "./FilterSecondIcon";
+export { default as CartIcon } from "./CartIcon";
+export { default as ArrowRightIcon } from "./ArrowRightIcon";
+export { default as ArrowToTopLeftIcon } from "./ArrowToTopLeftIcon";
+export { default as MiniArrowRight } from "./MiniArrowRight";
+export { default as CheckedIcon } from "./CheckedIcon";

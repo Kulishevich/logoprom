@@ -1,0 +1,129 @@
+@use "../../styles/functions" as *;
+
+.icon {
+  width: vw-1440(9);
+  height: vw-1440(9);
+
+  @media (max-width: 768px) {
+    width: 9px;
+    height: 9px;
+  }
+}
+
+.trigger {
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: vw-1440(12);
+
+  width: 265px;
+
+  text-align: center;
+  padding: vw-1440(14) vw-1440(20);
+
+  border: 1px solid var(--grey);
+  border-radius: vw-1440(32);
+  background-color: var(--white);
+
+  &[data-state="open"] .icon {
+    transform: rotate(90deg);
+    transition: all 0.5s ease-in-out;
+  }
+
+  &[data-state="closed"] .icon {
+    transition: all 0.5s ease-in-out;
+  }
+
+  &:hover {
+    .icon {
+      color: var(--color-blue);
+    }
+  }
+
+  &:focus {
+    .icon {
+      color: var(--color-blue);
+    }
+  }
+
+  @media (max-width: 768px) {
+    gap: 12px;
+    padding: 14px 20px;
+    border-radius: 32px;
+  }
+}
+
+.trigger:disabled {
+  opacity: 0.5;
+}
+
+.content {
+  width: var(--radix-select-trigger-width);
+  max-height: var(--radix-select-content-available-height);
+  padding: vw-1440(16) vw-1440(20);
+
+  border: 1px solid var(--grey);
+  border-radius: vw-1440(32);
+  background-color: var(--white);
+
+  animation: fade-in 0.6s ease;
+
+  @media (max-width: 768px) {
+    padding: 16px 20px;
+    border-radius: 32px;
+  }
+}
+
+.selectItem {
+  transition: all 0.3s;
+
+  margin-bottom: vw-1440(12);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    & > div > p {
+      cursor: pointer;
+      color: var(--color-blue);
+    }
+  }
+
+  &[data-state="checked"] {
+    outline: none;
+    & > div > p {
+      color: var(--color-blue);
+    }
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 12px;
+  }
+}
+
+.option {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: vw-1440(12);
+  align-items: center;
+
+  @media (max-width: 768px) {
+    gap: 12px;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    max-height: 0;
+  }
+
+  to {
+    max-height: var(--radix-select-content-available-height);
+  }
+}

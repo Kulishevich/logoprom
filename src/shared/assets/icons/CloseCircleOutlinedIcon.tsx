@@ -20,7 +20,7 @@ const CloseCircleOutlinedIcon = (
     <path
       d="M19.3337 12.667L12.667 19.3337M12.667 12.667L19.3337 19.3337"
       stroke="#008F86"
-      stroke-linecap="round"
+      strokeLinecap="round"
     />
   </svg>
 );

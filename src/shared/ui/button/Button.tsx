@@ -13,15 +13,20 @@ export type ButtonProps<T extends ElementType = "button"> = {
   as?: T;
   fullWidth?: boolean;
   variant?:
-    | "icon"
-    | "icon_outlined"
-    | "icon_primary"
-    | "icon_secondary"
-    | "link"
-    | "burger"
+    | "callback"
+    | "catalog"
     | "primary"
-    | "category"
-    | "secondary";
+    | "secondary"
+    | "search"
+    | "filter"
+    | "link_1"
+    | "link_2"
+    | "link_3"
+    | "cart"
+    | "nav_1"
+    | "nav_2"
+    | "nav_3"
+    | "default";
 } & ComponentPropsWithoutRef<T>;
 
 export const Button = forwardRef(
@@ -42,7 +47,7 @@ export const Button = forwardRef(
       styles[variant],
       fullWidth && styles.fullWidth,
       className,
-      "button"
+      variant === "catalog" ? "header" : "button"
     );
 
     return <Component className={cn} ref={ref} type={type} {...rest} />;

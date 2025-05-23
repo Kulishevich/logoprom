@@ -1,10 +1,10 @@
-'use client';
-import cn, { clsx } from 'clsx';
-import s from './Breadcrumbs.module.scss';
-import { usePathname } from 'next/navigation';
-import Link from 'next/link';
-import { ArrowRightIcon } from '@/shared/assets';
-import { navigation } from '@/shared/config/constants/navigation';
+"use client";
+import cn, { clsx } from "clsx";
+import s from "./Breadcrumbs.module.scss";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
+import { navigation } from "@/shared/config/constants/navigation";
+import { ArrowRightIcon } from "@/shared/assets/icons";
 
 interface Props {
   className?: string;
@@ -13,10 +13,10 @@ interface Props {
 
 export const Breadcrumbs = ({ className, dynamicPath }: Props) => {
   const pathname = usePathname();
-  const pathNames = pathname.split('/');
+  const pathNames = pathname.split("/");
 
   function handlePathName(path: string) {
-    return navigation.find((elem) => path === elem.path.replace('/', ''));
+    return navigation.find((elem) => path === elem.path.replace("/", ""));
   }
 
   const pathArr = [
@@ -31,18 +31,18 @@ export const Breadcrumbs = ({ className, dynamicPath }: Props) => {
         const href = pathArr
           .slice(1, idx + 1)
           .map((elem) => elem.path)
-          .join('');
+          .join("");
 
         if (lastItem) {
           return (
-            <p className={cn(s.elem, 'body_6_bold')} key={idx}>
+            <p className={cn(s.elem, "body_6_bold")} key={idx}>
               {path?.title}
             </p>
           );
         }
 
         return (
-          <Link href={href || '/'} className={cn(s.elem, 'body_6')} key={idx}>
+          <Link href={href || "/"} className={cn(s.elem, "body_6")} key={idx}>
             {path?.title}
             <ArrowRightIcon className={s.icon} />
           </Link>

@@ -1,4 +1,4 @@
-@use "../../config/styles/functions" as *;
+@use "../../../shared/styles/functions" as *;
 
 .container {
   display: flex;
@@ -15,12 +15,21 @@
   position: relative;
   display: flex;
   align-items: center;
+
+  &:hover .input.search_1 ~ .iconSearch,
+  &:focus-within .input.search_1 ~ .iconSearch {
+    color: var(--color-blue);
+  }
+
+  .input.error ~ .iconSearch {
+    color: var(--color-red);
+  }
 }
 
 .iconSearch {
   position: absolute;
   top: 50%;
-  left: vw-1440(12);
+  left: vw-1440(16);
   transform: translateY(-50%);
 
   display: flex;
@@ -29,118 +38,142 @@
   width: vw-1440(26);
   height: vw-1440(26);
 
-  color: var(--color-text);
+  &.search_1 {
+    color: var(--white);
+  }
+
+  &.search_2 {
+    color: var(--color-red);
+  }
+
+  &.search_3 {
+    color: var(--color-blue);
+    &.disabled {
+      color: var(--text);
+      opacity: 0.4;
+    }
+  }
 
   @media (max-width: 768px) {
-    left: 12px;
+    left: 16px;
     width: 26px;
     height: 26px;
   }
 }
 
-.clearIcon {
-  display: none;
-
-  @media (max-width: 768px) {
-    display: block;
-    position: absolute;
-    right: 16px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-}
-
 .input {
   all: unset;
-
   box-sizing: border-box;
   width: 100%;
 
-  border: 1px solid #1114341a;
-  border-radius: 4px;
-  background-color: var(--color-white);
+  border-radius: vw-1440(32);
   transition: border 0.3s ease;
 
-  &::placeholder {
-    color: var(--color-text);
-    opacity: 0.4;
-  }
-
-  &.text {
-    padding: vw-1440(20);
-
-    &:focus {
-      border: 1px solid var(--color-accent-1);
-    }
-
-    &:hover {
-      border: 1px solid var(--color-accent-1);
-    }
+  &.search_1 {
+    border: 1px solid var(--white-20);
+    padding: vw-1440(14) vw-1440(16) vw-1440(14) vw-1440(48);
+    background-color: var(--white-10);
 
     &:disabled {
-      opacity: 0.2;
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    &.error {
+      border-color: var(--color-red);
+    }
+
+    &::placeholder {
+      color: var(--white);
+      opacity: 0.7;
     }
 
     @media (max-width: 768px) {
-      padding: 20px;
+      padding: 14px 16px 14px 48px;
     }
   }
 
-  &.search {
-    padding: vw-1440(15);
-    padding-left: vw-1440(50);
+  &.search_2 {
+    color: var(--text);
+    border: 1px solid var(--grey);
+    padding: vw-1440(14) vw-1440(16) vw-1440(14) vw-1440(48);
 
     &:focus {
-      border: 1px solid var(--color-accent-1);
+      &::placeholder {
+        opacity: 1;
+      }
     }
 
     &:hover {
-      border: 1px solid var(--color-accent-1);
+      &::placeholder {
+        opacity: 1;
+      }
     }
 
     &:disabled {
-      opacity: 0.2;
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    &.error {
+      color: var(--color-red);
+      border-color: var(--color-red);
+
+      &::placeholder {
+        color: var(--color-red);
+      }
+    }
+
+    &::placeholder {
+      color: var(--text);
+      opacity: 0.7;
     }
 
     @media (max-width: 768px) {
-      padding: 15px;
-      padding-left: 50px;
-      padding-right: 43px;
+      padding: 14px 16px 14px 48px;
     }
   }
-}
 
-.passwordControl {
-  cursor: pointer;
+  &.search_3 {
+    color: var(--text);
+    border: 1px solid var(--grey);
+    background-color: var(--white);
+    padding: vw-1440(15) vw-1440(16) vw-1440(15) vw-1440(48);
 
-  position: absolute;
-  top: 50%;
-  right: vw-1440(12);
-  transform: translateY(-50%);
+    &:focus {
+      border-color: var(--color-blue);
+    }
 
-  display: none;
+    &:hover {
+      border-color: var(--color-blue);
+    }
 
-  padding: 0;
+    &:disabled {
+      pointer-events: none;
+    }
 
-  background: none;
-  border: none;
+    &.error {
+      color: var(--color-red);
+      border-color: var(--color-red);
 
-  &:hover {
-    background: none;
+      &::placeholder {
+        color: var(--color-red);
+      }
+    }
+
+    &::placeholder {
+      color: var(--text);
+      opacity: 0.7;
+    }
+
+    @media (max-width: 768px) {
+      padding: 14px 16px 14px 48px;
+    }
   }
 
   @media (max-width: 768px) {
-    right: 12px;
+    border-radius: 32px;
   }
-}
-
-.showIcon {
-  display: flex;
-}
-
-.error {
-  color: var(--color-accent-red);
-  border-color: var(--color-accent-red);
 }
 
 .disabled {
