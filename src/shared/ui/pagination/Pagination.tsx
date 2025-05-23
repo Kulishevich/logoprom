@@ -1,17 +1,17 @@
-'use client';
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
-import { useEffect, useState } from 'react';
-import { getPaginationPages } from '@/shared/lib/utils/getPaginationPages';
-import cn from 'clsx';
-import { ArrowLeftIcon, ArrowRightIcon } from '../../assets';
-import s from './Pagination.module.scss';
+"use client";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
+import { getPaginationPages } from "@/shared/lib/utils/getPaginationPages";
+import cn from "clsx";
+import s from "./Pagination.module.scss";
+import { ArrowLeftIcon, ArrowRightIcon } from "@/shared/assets/icons";
 
 interface Props {
   totalPages: number;
   currentPage?: string;
 }
 
-export const Pagination = ({ totalPages, currentPage = '1' }: Props) => {
+export const Pagination = ({ totalPages, currentPage = "1" }: Props) => {
   const [paginationPages, setPaginationPages] = useState<number[]>([]);
   const searchParams = useSearchParams();
   const pathname = usePathname();
@@ -24,7 +24,7 @@ export const Pagination = ({ totalPages, currentPage = '1' }: Props) => {
     return () => {
       const params = new URLSearchParams(searchParams);
 
-      params.set('page', page.toString());
+      params.set("page", page.toString());
 
       const url = `${pathname}?${params.toString()}`;
       router.push(url, { scroll: false });
@@ -62,7 +62,7 @@ export const Pagination = ({ totalPages, currentPage = '1' }: Props) => {
           return (
             <button
               key={page}
-              className={cn(isActive && s.active, s.paginationElem, 'h4')}
+              className={cn(isActive && s.active, s.paginationElem, "body_1")}
               onClick={handlePageChange(page)}
             >
               {page}
@@ -71,7 +71,10 @@ export const Pagination = ({ totalPages, currentPage = '1' }: Props) => {
         })}
       </div>
       {currentPageNumber !== totalPagesNumber && (
-        <button className={s.button} onClick={handlePageChange(currentPageNumber + 1)}>
+        <button
+          className={s.button}
+          onClick={handlePageChange(currentPageNumber + 1)}
+        >
           <ArrowRightIcon />
         </button>
       )}

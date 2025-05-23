@@ -26,3 +26,4 @@ export { default as ArrowRightIcon } from "./ArrowRightIcon";
 export { default as ArrowToTopLeftIcon } from "./ArrowToTopLeftIcon";
 export { default as MiniArrowRight } from "./MiniArrowRight";
 export { default as CheckedIcon } from "./CheckedIcon";
+export { default as ArrowLeftIcon } from "./ArrowLeftIcon";
