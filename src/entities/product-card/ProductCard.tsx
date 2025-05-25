@@ -1,0 +1,43 @@
+import React from "react";
+import s from "./ProductCard.module.scss";
+import Image from "next/image";
+import { Button } from "@/shared/ui/button";
+
+export const ProductCard = () => {
+  return (
+    <div className={s.container}>
+      <div className={s.imageContainer}>
+        <Image src={"/product-image.png"} fill alt="product" />
+      </div>
+      <div className={s.content}>
+        <p className="body_3">
+          2ТРМ1 обновлённый погодозависимый двухканальный регулятор с RS-485
+        </p>
+        <p className="body_6">*В наличии</p>
+        <div className={s.characteristics}>
+          <p className="body_6">
+            Количество каналов:<strong>1–2 канала</strong>
+          </p>
+          <p className="body_6">
+            Особенности КИП:<strong>Для работы при Т  0 ⁰С</strong>
+          </p>
+          <p className="body_6">
+            Тип:<strong>ON/OFF-регулятор</strong>
+          </p>
+          <p className="body_6">
+            Тип крепления:{" "}
+            <strong>
+              С креплением в щит, С креплением на DIN-рейку, С креплением
+              на стену (плоскую поверхность)
+            </strong>
+          </p>
+        </div>
+        <div className={s.priceContainer}>
+          <p className="h4">2600 BYN</p>
+          <Button>Добавить в КП</Button>
+          <Button variant="secondary">Купить в 1 клик</Button>
+        </div>
+      </div>
+    </div>
+  );
+};

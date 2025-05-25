@@ -9,6 +9,7 @@ import { Pagination } from "@/shared/ui/pagination";
 import { Select } from "@/shared/ui/select";
 import { TextField } from "@/shared/ui/text-field";
 import { FeedbackForm } from "@/widgets/feedback-form";
+import { PopularProducts } from "@/widgets/popular-products";
 
 const options = [
   {
@@ -35,7 +36,8 @@ const options = [
 
 export default function Home() {
   return (
-    <div>
+    <main>
+      <PopularProducts />
       <FeedbackForm />
       <div>
         <Button variant={"link_2"}>
@@ -116,6 +118,6 @@ export default function Home() {
           disabled={true}
         />
       </div> */}
-    </div>
+    </main>
   );
 }

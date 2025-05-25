@@ -1,0 +1,24 @@
+@use "../../shared/styles/functions" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  width: vw-1440(1296);
+  gap: vw-1440(36);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & > button {
+    width: vw-1440(243);
+  }
+}
+
+.productsList {
+  display: flex;
+  gap: vw-1440(24);
+}

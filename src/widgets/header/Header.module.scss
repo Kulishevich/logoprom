@@ -3,6 +3,6 @@
 .container {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: vw-1440(20);
   color: var(--white);
 }
