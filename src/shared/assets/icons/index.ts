@@ -32,3 +32,7 @@ export { default as WhatsappOutlineIcon } from "./WhatsappOutlineIcon";
 export { default as TelegramOutlineIcon } from "./TelegramOutlineIcon";
 export { default as ViberOutlineIcon } from "./ViberOutlineIcon";
 export { default as LocationIcon } from "./LocationIcon";
+export { default as ViberBackgroundIcon } from "./ViberBackgroundIcon";
+export { default as WhatsappBackgroundIcon } from "./WhatsappBackgroundIcon";
+export { default as TelegramBackgroundIcon } from "./TelegramBackgroundIcon";
+export { default as TelegramMiniIcon } from "./TelegramMiniIcon";

@@ -1,0 +1,80 @@
+@use "../../shared/styles/functions" as *;
+
+.wrapper {
+  background-color: var(--text);
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+
+  width: vw-1440(1584);
+  margin: 0 auto;
+  padding-top: vw-1440(64);
+  padding-bottom: vw-1440(32);
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: vw-1440(64);
+  color: var(--white);
+
+  & > .logo {
+    display: flex;
+    flex-direction: column;
+    gap: vw-1440(20);
+
+    width: vw-1440(391);
+  }
+
+  .menu {
+    display: flex;
+    gap: vw-1440(130);
+
+    .catalog {
+      display: flex;
+      flex-direction: column;
+      gap: vw-1440(16);
+
+      width: vw-1440(240);
+
+      & > div {
+        display: flex;
+        flex-direction: column;
+        gap: vw-1440(16);
+      }
+    }
+
+    .navigation {
+      display: flex;
+      flex-direction: column;
+      gap: vw-1440(16);
+
+      width: vw-1440(220);
+
+      & > div {
+        display: flex;
+        flex-direction: column;
+        gap: vw-1440(16);
+      }
+    }
+
+    .contacts {
+      width: vw-1440(330);
+      display: flex;
+      flex-direction: column;
+      gap: vw-1440(16);
+    }
+  }
+}
+
+.info {
+  color: var(--dark-grey);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-top: vw-1440(48);
+}

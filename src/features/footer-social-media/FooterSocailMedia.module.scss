@@ -1,0 +1,71 @@
+@use "../../shared/styles/functions" as *;
+
+.container {
+  display: flex;
+  gap: vw-1440(24);
+
+  @media (max-width: 768px) {
+    gap: 24px;
+  }
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  padding: vw-1440(20);
+
+  height: vw-1440(194);
+  width: vw-1440(512);
+
+  border: 1px solid var(--white-20);
+  border-radius: vw-1440(12);
+
+  transition: border-color 0.3s ease;
+
+  &:hover {
+    border-color: var(--color-blue);
+    & > .background {
+      color: var(--color-blue);
+      opacity: 0.3;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 20px;
+    height: 194px;
+    width: 512px;
+    border-radius: 12px;
+  }
+}
+.icon {
+  border: 1px solid var(--white-20);
+  border-radius: vw-1440(8);
+  width: vw-1440(54);
+  height: vw-1440(54);
+  padding: vw-1440(11);
+
+  @media (max-width: 768px) {
+    border-radius: 8px;
+    width: 54px;
+    height: 54px;
+    padding: 11px;
+  }
+}
+.background {
+  position: absolute;
+  right: 0;
+  top: -2px;
+  color: var(--white);
+  width: vw-1440(200);
+  height: vw-1440(200);
+  opacity: 0.01;
+  transition: color 0.3s ease, opacity 0.5s ease;
+
+  @media (max-width: 768px) {
+    width: 200px;
+    height: 200px;
+  }
+}

@@ -8,6 +8,7 @@ import { Checkbox } from "@/shared/ui/checkbox";
 import { Pagination } from "@/shared/ui/pagination";
 import { Select } from "@/shared/ui/select";
 import { TextField } from "@/shared/ui/text-field";
+import { FeedbackForm } from "@/widgets/feedback-form";
 
 const options = [
   {
@@ -35,6 +36,7 @@ const options = [
 export default function Home() {
   return (
     <div>
+      <FeedbackForm />
       <div>
         <Button variant={"link_2"}>
           <ArrowToTopLeftIcon />

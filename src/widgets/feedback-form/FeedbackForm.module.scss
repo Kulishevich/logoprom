@@ -1,0 +1,38 @@
+@use "../../shared/styles/functions" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: vw-1440(42);
+
+  width: vw-1440(1296);
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & > h2 {
+    width: vw-1440(567);
+  }
+
+  & > p {
+    width: vw-1440(636);
+  }
+}
+
+.content {
+  display: flex;
+  gap: vw-1440(48);
+}
+
+.imageContainer {
+  position: relative;
+  width: vw-1440(612);
+  height: vw-1440(440);
+
+  border-radius: vw-1440(12);
+  overflow: hidden;
+}
