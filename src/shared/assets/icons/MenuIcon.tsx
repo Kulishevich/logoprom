@@ -15,7 +15,7 @@ const MenuIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => (
       stroke="currentColor"
       strokeWidth="1.5"
       strokeLinecap="round"
-      stroke-linejoin="round"
+      strokeLinejoin="round"
     />
   </svg>
 );

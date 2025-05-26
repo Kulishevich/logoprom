@@ -14,13 +14,13 @@ const MailIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => (
       d="M3.33203 6.83398L9.9987 11.7507L16.6654 6.83398"
       stroke="currentColor"
       strokeLinecap="round"
-      stroke-linejoin="round"
+      strokeLinejoin="round"
     />
     <path
       d="M15.8333 5.41699H4.16667C3.24619 5.41699 2.5 6.16318 2.5 7.08366V15.417C2.5 16.3375 3.24619 17.0837 4.16667 17.0837H15.8333C16.7538 17.0837 17.5 16.3375 17.5 15.417V7.08366C17.5 6.16318 16.7538 5.41699 15.8333 5.41699Z"
       stroke="currentColor"
       strokeLinecap="round"
-      stroke-linejoin="round"
+      strokeLinejoin="round"
     />
   </svg>
 );

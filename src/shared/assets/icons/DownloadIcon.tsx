@@ -18,14 +18,14 @@ const DownloadIcon = (
       stroke="#D71920"
       strokeWidth="1.2"
       strokeLinecap="round"
-      stroke-linejoin="round"
+      strokeLinejoin="round"
     />
     <path
       d="M12 3V16M12 16L16 11.625M12 16L8 11.625"
       stroke="#D71920"
       strokeWidth="1.2"
       strokeLinecap="round"
-      stroke-linejoin="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
