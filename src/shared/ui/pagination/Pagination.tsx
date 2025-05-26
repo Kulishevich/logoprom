@@ -1,6 +1,6 @@
 "use client";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { getPaginationPages } from "@/shared/lib/utils/getPaginationPages";
 import cn from "clsx";
 import s from "./Pagination.module.scss";
@@ -45,39 +45,41 @@ export const Pagination = ({ totalPages, currentPage = "1" }: Props) => {
   }
 
   return (
-    <div className={s.container}>
-      {currentPageNumber !== 1 && (
-        <button
-          className={s.button}
-          onClick={handlePageChange(currentPageNumber - 1)}
-          disabled={currentPageNumber === 1}
-        >
-          <ArrowLeftIcon />
-        </button>
-      )}
-      <div className={s.pagination}>
-        {paginationPages.map((page) => {
-          const isActive = currentPageNumber == page;
+    <Suspense fallback={<h1>Загрузка...</h1>}>
+      <div className={s.container}>
+        {currentPageNumber !== 1 && (
+          <button
+            className={s.button}
+            onClick={handlePageChange(currentPageNumber - 1)}
+            disabled={currentPageNumber === 1}
+          >
+            <ArrowLeftIcon />
+          </button>
+        )}
+        <div className={s.pagination}>
+          {paginationPages.map((page) => {
+            const isActive = currentPageNumber == page;
 
-          return (
-            <button
-              key={page}
-              className={cn(isActive && s.active, s.paginationElem, "body_1")}
-              onClick={handlePageChange(page)}
-            >
-              {page}
-            </button>
-          );
-        })}
+            return (
+              <button
+                key={page}
+                className={cn(isActive && s.active, s.paginationElem, "body_1")}
+                onClick={handlePageChange(page)}
+              >
+                {page}
+              </button>
+            );
+          })}
+        </div>
+        {currentPageNumber !== totalPagesNumber && (
+          <button
+            className={s.button}
+            onClick={handlePageChange(currentPageNumber + 1)}
+          >
+            <ArrowRightIcon />
+          </button>
+        )}
       </div>
-      {currentPageNumber !== totalPagesNumber && (
-        <button
-          className={s.button}
-          onClick={handlePageChange(currentPageNumber + 1)}
-        >
-          <ArrowRightIcon />
-        </button>
-      )}
-    </div>
+    </Suspense>
   );
 };

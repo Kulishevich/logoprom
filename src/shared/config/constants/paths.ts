@@ -6,4 +6,5 @@ export const paths = {
   reviews: "/reviews",
   blog: "/blog",
   contacts: "/contacts",
+  privacy_policy: "/privacy-policy",
 };

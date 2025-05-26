@@ -5,7 +5,6 @@ import {
 } from "@/shared/assets/icons";
 import { Button } from "@/shared/ui/button";
 import { Checkbox } from "@/shared/ui/checkbox";
-import { Pagination } from "@/shared/ui/pagination";
 import { Select } from "@/shared/ui/select";
 import { TextField } from "@/shared/ui/text-field";
 import { FeedbackForm } from "@/widgets/feedback-form";
@@ -62,7 +61,6 @@ export default function Home() {
         <Button variant={"link_1"} disabled>
           Подробнее о доставке
         </Button>
-        <Pagination totalPages={10} currentPage={"2"} />
         <Checkbox />
         <Checkbox disabled />
 
@@ -75,7 +73,7 @@ export default function Home() {
         </Button>
       </div>
       <Select options={options} placeHolder={options[0].option} />
-      {/* <div>
+      <div>
         <TextField variant="search_1" placeholder="Поиск по сайту" />
         <TextField
           variant="search_1"
@@ -117,7 +115,7 @@ export default function Home() {
           placeholder="Поиск по сайту"
           disabled={true}
         />
-      </div> */}
+      </div>
     </main>
   );
 }

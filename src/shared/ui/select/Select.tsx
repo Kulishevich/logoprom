@@ -10,7 +10,7 @@ import { SelectGroup, SelectItem } from "@radix-ui/react-select";
 import { clsx } from "clsx";
 
 import s from "./Select.module.scss";
-import { MiniArrowDown, MiniArrowRight } from "@/shared/assets/icons";
+import { MiniArrowRight } from "@/shared/assets/icons";
 
 export type OptionsValue = {
   icon?: ReactNode;
@@ -89,3 +89,5 @@ export const Select = forwardRef<
     );
   }
 );
+
+Select.displayName = "Select";

@@ -20,10 +20,11 @@ export const HeaderNavigation = () => {
           <MiniArrowDown />
         </Button>
         <nav className={s.navigation}>
-          {navigation.slice(0, 2).map((nav) => (
+          {navigation.slice(0, 2).map((nav, index) => (
             <Link
               href={nav.path}
               className={clsx("header", pathname === nav.path && s.active)}
+              key={index}
             >
               {nav.title}
             </Link>
@@ -31,10 +32,11 @@ export const HeaderNavigation = () => {
           <Link href={"/"} className="header">
             Услуги
           </Link>
-          {navigation.slice(2).map((nav) => (
+          {navigation.slice(2).map((nav, index) => (
             <Link
               href={nav.path}
               className={clsx("header", pathname === nav.path && s.active)}
+              key={index}
             >
               {nav.title}
             </Link>
