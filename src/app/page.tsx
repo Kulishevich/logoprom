@@ -1,50 +1,52 @@
-import {
-  ArrowRightIcon,
-  ArrowToTopLeftIcon,
-  CartIcon,
-} from "@/shared/assets/icons";
-import { Button } from "@/shared/ui/button";
-import { Checkbox } from "@/shared/ui/checkbox";
-import { Select } from "@/shared/ui/select";
-import { TextField } from "@/shared/ui/text-field";
+// import {
+//   ArrowRightIcon,
+//   ArrowToTopLeftIcon,
+//   CartIcon,
+// } from "@/shared/assets/icons";
+// import { Button } from "@/shared/ui/button";
+// import { Checkbox } from "@/shared/ui/checkbox";
+// import { Select } from "@/shared/ui/select";
+// import { TextField } from "@/shared/ui/text-field";
 import { FeedbackForm } from "@/widgets/feedback-form";
 import { HomeInfoSection } from "@/widgets/home-info-section";
 import { HomeSeoTextSection } from "@/widgets/home-seo-text-section";
+import { HomeSlider } from "@/widgets/home-slider";
 import { LastNews } from "@/widgets/last-news";
 import { PopularProducts } from "@/widgets/popular-products";
 
-const options = [
-  {
-    option: "Популярные",
-    value: "default",
-  },
-  {
-    option: "Сначала дешевые",
-    value: "price_asc",
-  },
-  {
-    option: "Сначала дорогие",
-    value: "price_desc",
-  },
-  {
-    option: "По алфавиту А-Я",
-    value: "name_asc",
-  },
-  {
-    option: "По алфавиту Я-А",
-    value: "name_desc",
-  },
-];
+// const options = [
+//   {
+//     option: "Популярные",
+//     value: "default",
+//   },
+//   {
+//     option: "Сначала дешевые",
+//     value: "price_asc",
+//   },
+//   {
+//     option: "Сначала дорогие",
+//     value: "price_desc",
+//   },
+//   {
+//     option: "По алфавиту А-Я",
+//     value: "name_asc",
+//   },
+//   {
+//     option: "По алфавиту Я-А",
+//     value: "name_desc",
+//   },
+// ];
 
 export default function Home() {
   return (
     <main>
+      <HomeSlider />
       <PopularProducts />
       <HomeInfoSection />
       <LastNews />
       <HomeSeoTextSection />
       <FeedbackForm />
-      <div>
+      {/* <div>
         <TextField variant="search_1" placeholder="Поиск по сайту" />
         <TextField
           variant="search_1"
@@ -119,7 +121,7 @@ export default function Home() {
           </p>
         </Button>
         <Select options={options} placeHolder={options[0].option} />
-      </div>
+      </div> */}
     </main>
   );
 }

@@ -32,8 +32,8 @@ export const HomeInfoSection = () => {
         </Button>
       </div>
       <div className={s.cardsContainer}>
-        {cards.map((card) => (
-          <div className={s.card}>
+        {cards.map((card, index) => (
+          <div className={s.card} key={index}>
             <h2 className="h2">{card.title}</h2>
             <p className="body_5">{card.description}</p>
           </div>

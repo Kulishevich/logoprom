@@ -5,6 +5,10 @@
   height: vw-1440(72);
   border-top: 1px solid var(--white-20);
   border-bottom: 1px solid var(--white-20);
+
+  position: absolute;
+  top: 154px;
+  z-index: 10;
 }
 
 .container {
