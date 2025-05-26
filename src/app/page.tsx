@@ -8,6 +8,7 @@ import { Checkbox } from "@/shared/ui/checkbox";
 import { Select } from "@/shared/ui/select";
 import { TextField } from "@/shared/ui/text-field";
 import { FeedbackForm } from "@/widgets/feedback-form";
+import { HomeInfoSection } from "@/widgets/home-info-section";
 import { LastNews } from "@/widgets/last-news";
 import { PopularProducts } from "@/widgets/popular-products";
 
@@ -38,43 +39,9 @@ export default function Home() {
   return (
     <main>
       <PopularProducts />
+      <HomeInfoSection />
       <LastNews />
       <FeedbackForm />
-      <div>
-        <Button variant={"link_2"}>
-          <ArrowToTopLeftIcon />
-          Отправить
-        </Button>
-        <Button variant={"link_3"}>
-          <ArrowToTopLeftIcon />
-          Подробнее
-        </Button>
-
-        <Button variant="nav_1">
-          <ArrowRightIcon />
-        </Button>
-        <Button variant="nav_2">
-          <ArrowRightIcon />
-        </Button>
-        <Button variant="nav_3">
-          <ArrowRightIcon />
-        </Button>
-        <Button variant={"link_1"}>Подробнее о доставке</Button>
-        <Button variant={"link_1"} disabled>
-          Подробнее о доставке
-        </Button>
-        <Checkbox />
-        <Checkbox disabled />
-
-        <Button variant={"cart"}>
-          <CartIcon />
-          <p className="body_6">Коммерческое предложение</p>
-          <p className="body_6">
-            <strong>(0 товаров)</strong>
-          </p>
-        </Button>
-      </div>
-      <Select options={options} placeHolder={options[0].option} />
       <div>
         <TextField variant="search_1" placeholder="Поиск по сайту" />
         <TextField
@@ -117,6 +84,39 @@ export default function Home() {
           placeholder="Поиск по сайту"
           disabled={true}
         />
+        <Button variant={"link_2"}>
+          <ArrowToTopLeftIcon />
+          Отправить
+        </Button>
+        <Button variant={"link_3"}>
+          <ArrowToTopLeftIcon />
+          Подробнее
+        </Button>
+
+        <Button variant="nav_1">
+          <ArrowRightIcon />
+        </Button>
+        <Button variant="nav_2">
+          <ArrowRightIcon />
+        </Button>
+        <Button variant="nav_3">
+          <ArrowRightIcon />
+        </Button>
+        <Button variant={"link_1"}>Подробнее о доставке</Button>
+        <Button variant={"link_1"} disabled>
+          Подробнее о доставке
+        </Button>
+        <Checkbox />
+        <Checkbox disabled />
+
+        <Button variant={"cart"}>
+          <CartIcon />
+          <p className="body_6">Коммерческое предложение</p>
+          <p className="body_6">
+            <strong>(0 товаров)</strong>
+          </p>
+        </Button>
+        <Select options={options} placeHolder={options[0].option} />
       </div>
     </main>
   );

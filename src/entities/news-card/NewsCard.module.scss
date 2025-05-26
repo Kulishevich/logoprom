@@ -28,6 +28,12 @@
   padding: vw-1440(16) vw-1440(24) vw-1440(24);
 
   & > p {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
     margin-top: vw-1440(16);
     margin-bottom: vw-1440(24);
   }
