@@ -23,6 +23,30 @@
   & > img {
     object-fit: contain;
   }
+
+  & > .tagContainer {
+    position: absolute;
+    left: vw-1440(20);
+    top: vw-1440(20);
+
+    display: flex;
+    flex-direction: column;
+    gap: vw-1440(8);
+    align-items: start;
+
+    & > p {
+      color: var(--white);
+      border-radius: vw-1440(32);
+      padding: vw-1440(8) vw-1440(16);
+      &.missing {
+        background-color: var(--dark-grey-70);
+      }
+
+      &.news {
+        background-color: var(--color-green-70);
+      }
+    }
+  }
 }
 
 .content {

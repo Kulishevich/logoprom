@@ -2,12 +2,17 @@ import React from "react";
 import s from "./ProductCard.module.scss";
 import Image from "next/image";
 import { Button } from "@/shared/ui/button";
+import clsx from "clsx";
 
 export const ProductCard = () => {
   return (
     <div className={s.container}>
       <div className={s.imageContainer}>
         <Image src={"/product-image.png"} fill alt="product" />
+        <div className={s.tagContainer}>
+          <p className={clsx(s.missing, "body_5")}>Снят с производства</p>
+          <p className={clsx(s.news, "body_5")}>Новинка</p>
+        </div>
       </div>
       <div className={s.content}>
         <p className="body_3">

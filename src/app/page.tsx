@@ -8,6 +8,7 @@ import { Checkbox } from "@/shared/ui/checkbox";
 import { Select } from "@/shared/ui/select";
 import { TextField } from "@/shared/ui/text-field";
 import { FeedbackForm } from "@/widgets/feedback-form";
+import { LastNews } from "@/widgets/last-news";
 import { PopularProducts } from "@/widgets/popular-products";
 
 const options = [
@@ -37,6 +38,7 @@ export default function Home() {
   return (
     <main>
       <PopularProducts />
+      <LastNews />
       <FeedbackForm />
       <div>
         <Button variant={"link_2"}>
