@@ -18,7 +18,7 @@ export type TextFieldProps = {
   errorMessage?: ReactNode | string;
   isRequired?: boolean;
   label?: string;
-  variant?: "search_1" | "search_2" | "search_3";
+  variant?: "search_1" | "search_2" | "search_3" | "default" | "phone";
 } & ComponentPropsWithoutRef<"input">;
 
 type TextFieldRef = ElementRef<"input">;
@@ -34,13 +34,18 @@ export const TextField = forwardRef<TextFieldRef, TextFieldProps>(
       onChange,
       placeholder,
       value,
-      variant = "search_1",
+      variant = "default",
       ...rest
     } = props;
 
     const inputRef = useRef<HTMLInputElement | null>(null);
 
     const id = useId();
+
+    const is_search =
+      variant === "search_1" ||
+      variant === "search_2" ||
+      variant === "search_3";
 
     const inputChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
       onChange?.(e);
@@ -63,7 +68,8 @@ export const TextField = forwardRef<TextFieldRef, TextFieldProps>(
           <label
             className={clsx(
               disabled && s.disabled,
-              "h6",
+              s.label,
+              "body_2",
               isRequired && "required"
             )}
             htmlFor={id}
@@ -88,11 +94,15 @@ export const TextField = forwardRef<TextFieldRef, TextFieldProps>(
             value={value}
             {...rest}
           />
-          <SearchIcon
-            className={clsx(s.iconSearch, disabled && s.disabled, s[variant])}
-          />
+          {!!is_search && (
+            <SearchIcon
+              className={clsx(s.iconSearch, disabled && s.disabled, s[variant])}
+            />
+          )}
         </div>
-        {errorMessage && <span className={"error"}>{errorMessage}</span>}
+        {errorMessage && (
+          <span className={clsx("body_6", s.errorMessage)}>{errorMessage}</span>
+        )}
       </div>
     );
   }

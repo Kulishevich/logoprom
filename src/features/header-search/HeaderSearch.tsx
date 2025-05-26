@@ -8,7 +8,7 @@ export const HeaderSearch = () => {
   return (
     <div className={s.container}>
       <Logo className={s.logo} />
-      <TextField placeholder="Поиск по сайту" />
+      <TextField placeholder="Поиск по сайту" variant="search_1" />
       <div className={s.address}>
         <LocationIcon />
         <p className="body_4">220037, г. Минск, ул. Багратиона, 62–11</p>

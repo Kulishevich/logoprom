@@ -1,10 +1,10 @@
-@use '../../config/styles/functions' as *;
+@use "../../styles/functions" as *;
 
 .container {
   display: flex;
   flex-direction: column;
 
-  gap: vw-1440(8);
+  gap: vw-1440(12);
   @media (max-width: 768px) {
     gap: 8px;
   }
@@ -12,79 +12,66 @@
 
 .textarea {
   width: 100%;
-  padding: vw-1440(20);
+  padding: vw-1440(15) vw-1440(24);
 
-  color: var(--color-text);
+  color: var(--text);
 
-  background-color: var(--color-white);
-  border-radius: 2px;
+  background-color: var(--white);
+  border-radius: vw-1440(32);
   outline: 1px solid #1114341a;
   border: none;
   resize: none;
 
-  transition:
-    color 0.3s ease,
-    outline 0.3s ease;
+  transition: color 0.3s ease, outline 0.3s ease;
 
   &::-webkit-scrollbar {
     width: 6px;
-    background: var(--color-grey);
+    background: var(--color-blue);
     border-radius: 2px;
   }
 
   &::-webkit-scrollbar-thumb {
     flex: 1;
-    background: var(--color-bg-overlay);
+    background: var(--grey);
     border-radius: 3px;
 
     &:hover {
-      background: var(--color-text);
+      background: var(--text);
       cursor: pointer;
     }
   }
 
   &::placeholder {
-    color: var(--color-text);
-    opacity: 0.4;
+    color: var(--text);
+    opacity: 0.7;
   }
 
   &:hover {
-    outline: 1px solid var(--color-accent-1);
+    outline: 1px solid var(--color-blue);
   }
 
   &:focus {
-    color: var(--color-text);
-    outline: 1px solid var(--color-accent-1);
-
-    &::placeholder {
-      color: var(--color-text);
-    }
+    color: var(--text);
+    outline: 1px solid var(--color-blue);
   }
 
   &:active {
-    color: var(--color-text);
-    outline: 1px solid var(--color-accent-1);
-
-    &::placeholder {
-      color: var(--color-text);
-    }
+    color: var(--text);
+    outline: 1px solid var(--color-blue);
   }
 
   &:disabled {
     pointer-events: none;
     cursor: not-allowed;
-    opacity: 0.2;
-
-    &::placeholder {
-      color: var(--color-bg-overlay);
-    }
+    opacity: 0.3;
   }
 
   &.error {
-    outline: 1px solid var(--color-accent-red);
+    color: var(--color-red);
+    outline: 1px solid var(--color-red);
 
     &::placeholder {
-      color: var(var(--color-bg-overlay));
+      color: var(--color-red);
     }
   }
 
@@ -94,5 +81,9 @@
 }
 
 .label {
-  color: var(--color-text);
+  color: var(--text);
+}
+
+.errorMessage {
+  color: var(--color-red);
 }

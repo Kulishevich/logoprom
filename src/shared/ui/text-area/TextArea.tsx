@@ -1,13 +1,13 @@
-import { ComponentPropsWithoutRef, forwardRef } from 'react';
+import { ComponentPropsWithoutRef, forwardRef } from "react";
 
-import { clsx } from 'clsx';
+import { clsx } from "clsx";
 
-import s from './TextArea.module.scss';
+import s from "./TextArea.module.scss";
 
 export type TextAreaProps = {
   errorMessage?: string;
   label?: string;
-} & ComponentPropsWithoutRef<'textarea'>;
+} & ComponentPropsWithoutRef<"textarea">;
 
 export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
   ({ className, errorMessage, label, ...rest }, ref) => {
@@ -15,22 +15,24 @@ export const TextArea = forwardRef<HTMLTextAreaElement, TextAreaProps>(
 
     return (
       <div className={s.container}>
-        {label && <label className={(s.label, 'h6')}>{label}</label>}
+        {label && <label className={(s.label, "body_2")}>{label}</label>}
         <textarea
           className={clsx(
             s.textarea,
             showError && s.error,
             className,
-            'placeholder'
+            "fields"
           )}
           ref={ref}
           {...rest}
         />
 
-        {showError && <span className={'error'}>{errorMessage}</span>}
+        {showError && (
+          <span className={clsx("body_6", s.errorMessage)}>{errorMessage}</span>
+        )}
       </div>
     );
   }
 );
 
-TextArea.displayName = 'TextArea';
+TextArea.displayName = "TextArea";

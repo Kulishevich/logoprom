@@ -2,7 +2,7 @@
 
 .container {
   display: flex;
-  gap: vw-1440(8);
+  gap: vw-1440(12);
   align-items: center;
   justify-content: flex-start;
 
@@ -93,7 +93,7 @@
 }
 
 .label {
-  opacity: 0.5;
+  color: var(--text);
   &.disabled {
     color: var(--color-red);
   }

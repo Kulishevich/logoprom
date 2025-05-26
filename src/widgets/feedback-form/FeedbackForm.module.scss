@@ -32,7 +32,38 @@
   position: relative;
   width: vw-1440(612);
   height: vw-1440(440);
-
+  flex-shrink: 0;
   border-radius: vw-1440(12);
   overflow: hidden;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+}
+
+.textarea {
+  height: vw-1440(140);
+}
+
+.inputsContainer {
+  display: flex;
+  gap: vw-1440(24);
+
+  margin-bottom: vw-1440(24);
+}
+
+.submitContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: vw-1440(20);
+
+  margin-top: vw-1440(32);
+
+  & > button {
+    width: vw-1440(243);
+  }
 }

@@ -46,6 +46,7 @@ export default function Home() {
       <LastNews />
       <HomeSeoTextSection />
       <FeedbackForm />
+
       {/* <div>
         <TextField variant="search_1" placeholder="Поиск по сайту" />
         <TextField
