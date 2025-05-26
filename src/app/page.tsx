@@ -9,6 +9,7 @@ import { Select } from "@/shared/ui/select";
 import { TextField } from "@/shared/ui/text-field";
 import { FeedbackForm } from "@/widgets/feedback-form";
 import { HomeInfoSection } from "@/widgets/home-info-section";
+import { HomeSeoTextSection } from "@/widgets/home-seo-text-section";
 import { LastNews } from "@/widgets/last-news";
 import { PopularProducts } from "@/widgets/popular-products";
 
@@ -41,6 +42,7 @@ export default function Home() {
       <PopularProducts />
       <HomeInfoSection />
       <LastNews />
+      <HomeSeoTextSection />
       <FeedbackForm />
       <div>
         <TextField variant="search_1" placeholder="Поиск по сайту" />
