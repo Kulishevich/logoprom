@@ -25,8 +25,8 @@ export const FeedbackForm = () => {
         </div>
         <form className={s.form}>
           <div className={s.inputsContainer}>
-            <TextField placeholder="Ваше имя" label="Имя" isRequired />
-            <TextField placeholder="Ваш телефон" label="Телефон" isRequired />
+            <TextField label="Ваше имя" placeholder="Имя" isRequired />
+            <TextField label="Ваш телефон" placeholder="Телефон" isRequired />
           </div>
 
           <TextArea

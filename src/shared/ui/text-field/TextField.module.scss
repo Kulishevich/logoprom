@@ -96,7 +96,7 @@
     }
 
     @media (max-width: 768px) {
-      padding: 14px 16px 14px 48px;
+      padding: 14px 24px;
     }
   }
 
@@ -132,7 +132,7 @@
     }
 
     @media (max-width: 768px) {
-      padding: 14px 16px 14px 48px;
+      padding: 14px 24px;
     }
   }
 
@@ -249,9 +249,17 @@
 
 .label {
   margin-bottom: vw-1440(12);
+
+  @media (max-width: 768px) {
+    margin-bottom: 10px;
+  }
 }
 
 .errorMessage {
   margin-top: vw-1440(8);
   color: var(--color-red);
+
+  @media (max-width: 768px) {
+    margin-top: 8px;
+  }
 }

@@ -3,7 +3,14 @@
 .container {
   display: flex;
   gap: vw-1440(48);
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 24px;
+    width: 336px;
+  }
 }
+
 .info {
   display: flex;
   flex-direction: column;
@@ -13,8 +20,17 @@
 
   & > button {
     width: vw-1440(243);
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    gap: 16px;
+    width: 100%;
   }
 }
+
 .cardsContainer {
   position: relative;
   width: vw-1440(722);
@@ -41,5 +57,22 @@
     & > h2 {
       color: var(--color-blue);
     }
+
+    @media (max-width: 768px) {
+      border-radius: 8px;
+      padding: 16px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 336px;
+    height: 437px;
+    border-radius: 12px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 12px;
   }
 }

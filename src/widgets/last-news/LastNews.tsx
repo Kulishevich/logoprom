@@ -9,14 +9,14 @@ export const LastNews = () => {
     <div className={s.container}>
       <div className={s.header}>
         <h2 className="h2">Последние новости</h2>
-        <Button>
+        <Button className={"desktop-only"}>
           <ArrowToTopLeftIcon /> Все новости
         </Button>
       </div>
       <div className={s.newsList}>
         <NewsCard />
-        <NewsCard />
-        <NewsCard />
+        {/* <NewsCard /> */}
+        {/* <NewsCard /> */}
       </div>
     </div>
   );
