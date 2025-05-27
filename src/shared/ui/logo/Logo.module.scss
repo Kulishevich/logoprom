@@ -4,12 +4,21 @@
   display: flex;
   align-items: center;
   gap: vw-1440(12);
+
+  @media (max-width: 768px) {
+    gap: 8px;
+  }
 }
 
 .image {
   position: relative;
   width: vw-1440(252);
   height: vw-1440(65);
+
+  @media (max-width: 768px) {
+    width: 107px;
+    height: 27px;
+  }
 }
 
 .title {
@@ -24,6 +33,14 @@
     font-size: vw-1440(13);
     line-height: 140%;
     text-transform: uppercase;
+    @media (max-width: 768px) {
+      font-size: 8px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    gap: 4px;
+    width: 76px;
   }
 }
 
@@ -31,4 +48,9 @@
   position: relative;
   width: 100%;
   height: vw-1440(35);
+
+  @media (max-width: 768px) {
+    width: 59px;
+    height: 17px;
+  }
 }

@@ -1,0 +1,46 @@
+.container {
+  color: var(--white);
+  position: relative;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  gap: 115px;
+  background-color: var(--text);
+  padding: 11px 20px;
+
+  border-bottom: 1px solid #ffffff1a;
+}
+
+.mail {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.socialMedia {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navigation {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  z-index: 10;
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 21px;
+  margin-top: 8px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

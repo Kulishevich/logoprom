@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import "@/shared/styles/index.scss";
 import { Manrope } from "next/font/google";
-import { Header } from "@/widgets/header";
 import { Footer } from "@/widgets/footer";
+import { CartButton } from "@/features/cart-button";
+import { HeaderDesktop } from "@/widgets/header-desktop";
+import { HeaderMobile } from "@/widgets/header-mobile";
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -23,8 +25,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${manrope.variable}`}>
-        <Header />
+        <HeaderDesktop />
+        <HeaderMobile />
         {children}
+        <CartButton />
         <Footer />
       </body>
     </html>

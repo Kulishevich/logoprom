@@ -41,6 +41,16 @@
 
   & > svg {
     transition: color 0.5s ease, background-color 0.5s ease;
+
+    &:nth-child(1) {
+      width: vw-1440(42);
+      height: vw-1440(42);
+    }
+
+    &:nth-child(2) {
+      width: vw-1440(12);
+      height: vw-1440(12);
+    }
   }
 
   &:hover {
@@ -370,6 +380,8 @@
   padding: vw-1440(21) vw-1440(16);
   border-radius: 50%;
 
+  box-shadow: 0px 13px 29px 0px #1b1f1f1a;
+
   &:hover {
     & > svg {
       color: var(--color-red);
@@ -501,6 +513,34 @@
   }
 }
 
+.mobile_nav {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--white-10);
+
+  & > svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  &:hover {
+    color: var(--color-blue);
+  }
+
+  &:active {
+    color: var(--color-blue);
+  }
+
+  &:focus-visible {
+    color: var(--color-blue);
+  }
+
+  &:disabled {
+    pointer-events: none;
+  }
+}
 .fullWidth {
   width: 100%;
 }

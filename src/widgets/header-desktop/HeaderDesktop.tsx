@@ -1,12 +1,13 @@
 import { HeaderInfo } from "@/features/header-info";
 import { HeaderSearch } from "@/features/header-search";
 import React from "react";
-import s from "./Header.module.scss";
+import s from "./HeaderDesktop.module.scss";
 import { HeaderNavigation } from "@/features/header-navigation";
+import clsx from "clsx";
 
-export const Header = () => {
+export const HeaderDesktop = () => {
   return (
-    <div className={s.container}>
+    <div className={clsx(s.container, "desktop-only")}>
       <HeaderInfo />
       <HeaderSearch />
       <HeaderNavigation />

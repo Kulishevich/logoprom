@@ -1,14 +1,18 @@
 @use "../../shared/styles/functions" as *;
 
+.wrapper {
+  width: 100%;
+
+  position: absolute;
+  top: vw-1440(62);
+  z-index: 10;
+}
+
 .container {
   display: flex;
   align-items: center;
   width: vw-1440(1584);
   margin: 0 auto;
-
-  position: absolute;
-  top: vw-1440(62);
-  z-index: 10;
 }
 
 .logo {
