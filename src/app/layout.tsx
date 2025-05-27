@@ -28,8 +28,8 @@ export default function RootLayout({
         <HeaderDesktop />
         <HeaderMobile />
         {children}
-        <CartButton />
         <Footer />
+        <CartButton />
       </body>
     </html>
   );
