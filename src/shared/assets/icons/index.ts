@@ -36,3 +36,5 @@ export { default as ViberBackgroundIcon } from "./ViberBackgroundIcon";
 export { default as WhatsappBackgroundIcon } from "./WhatsappBackgroundIcon";
 export { default as TelegramBackgroundIcon } from "./TelegramBackgroundIcon";
 export { default as TelegramMiniIcon } from "./TelegramMiniIcon";
+export { default as MailIconBackground } from "./MailIconBackground";
+export { default as ClockIcon } from "./ClockIcon";

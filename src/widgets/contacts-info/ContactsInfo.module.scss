@@ -1,0 +1,28 @@
+@use "../../shared/styles/functions" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: vw-1440(48);
+}
+
+.contacts {
+  display: flex;
+  gap: vw-1440(24);
+
+  & > .elem {
+    width: vw-1440(306);
+    display: flex;
+    flex-direction: column;
+    gap: vw-1440(12);
+
+    & > svg {
+      width: vw-1440(42);
+      height: vw-1440(42);
+      color: var(--white);
+      padding: vw-1440(5);
+      background-color: var(--color-blue);
+      border-radius: vw-1440(8);
+    }
+  }
+}

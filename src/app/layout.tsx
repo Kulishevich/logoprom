@@ -5,6 +5,7 @@ import { Footer } from "@/widgets/footer";
 import { CartButton } from "@/features/cart-button";
 import { HeaderDesktop } from "@/widgets/header-desktop";
 import { HeaderMobile } from "@/widgets/header-mobile";
+import Script from "next/script";
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -24,6 +25,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <Script
+          src="https://api-maps.yandex.ru/v3/?apikey=e1f9579b-8502-438f-8273-6dff1fc98656&lang=ru_RU"
+          strategy="beforeInteractive"
+        />
+      </head>
       <body className={`${manrope.variable}`}>
         <HeaderDesktop />
         <HeaderMobile />

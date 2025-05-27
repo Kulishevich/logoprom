@@ -14,6 +14,9 @@ importers:
       '@radix-ui/react-select':
         specifier: ^2.2.5
         version: 2.2.5(@types/react-dom@19.1.5(@types/react@19.1.5))(@types/react@19.1.5)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      '@yandex/ymaps3-types':
+        specifier: ^1.0.16650934
+        version: 1.0.16650934(@types/react-dom@19.1.5(@types/react@19.1.5))(@types/react@19.1.5)
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -863,6 +866,20 @@ packages:
     resolution: {integrity: sha512-friS8NEQfHaDbkThxopGk+LuE5v3iY0StruifjQEt7SLbA46OnfgMO15sOTkbpJkol6RB+1l1TYPXh0sCddpvA==}
     cpu: [x64]
     os: [win32]
+
+  '@yandex/ymaps3-types@1.0.16650934':
+    resolution: {integrity: sha512-MMDXGDiOkX7AkYCVHvuEzAnoVEa3TR/5cCuGjMLJGC/yrzSUUVThEyYEfEF/hyUrfRI1UKbCDgXNGGAP4AhH6g==}
+    peerDependencies:
+      '@types/react': 16-18
+      '@types/react-dom': 16-18
+      '@vue/runtime-core': '3'
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      '@types/react-dom':
+        optional: true
+      '@vue/runtime-core':
+        optional: true
 
   acorn-jsx@5.3.2:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
@@ -2742,6 +2759,11 @@ snapshots:
 
   '@unrs/resolver-binding-win32-x64-msvc@1.7.2':
     optional: true
+
+  '@yandex/ymaps3-types@1.0.16650934(@types/react-dom@19.1.5(@types/react@19.1.5))(@types/react@19.1.5)':
+    optionalDependencies:
+      '@types/react': 19.1.5
+      '@types/react-dom': 19.1.5(@types/react@19.1.5)
 
   acorn-jsx@5.3.2(acorn@8.14.1):
     dependencies:
