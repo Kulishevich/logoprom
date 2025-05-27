@@ -115,7 +115,7 @@
 .primary {
   color: var(--white);
   background-color: var(--color-blue);
-  padding: vw-1440(17) vw-1440(28) vw-1440(17) vw-1440(20);
+  padding: vw-1440(12);
   border-radius: vw-1440(32);
   gap: vw-1440(5);
 
@@ -138,7 +138,7 @@
   }
 
   @media (max-width: 768px) {
-    padding: 17px 28px 17px 20px;
+    padding: 12px;
     border-radius: 32px;
     gap: 5px;
   }

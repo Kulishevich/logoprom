@@ -9,14 +9,11 @@ export const PopularProducts = () => {
     <div className={s.container}>
       <div className={s.header}>
         <h2 className="h2">Популярные товары</h2>
-        <Button>
+        <Button className={"desktop-only"}>
           <ArrowToTopLeftIcon /> В каталог
         </Button>
       </div>
       <div className={s.productsList}>
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
         <ProductCard />
       </div>
     </div>
