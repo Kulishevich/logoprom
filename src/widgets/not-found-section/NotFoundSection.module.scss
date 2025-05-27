@@ -1,0 +1,64 @@
+@use "../../shared/styles/functions" as *;
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: vw-1440(898);
+
+  & > svg {
+    z-index: 10;
+    position: absolute;
+    top: vw-1440(233);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  & > img {
+    object-fit: cover;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        0deg,
+        rgba(25, 31, 31, 0.3),
+        rgba(25, 31, 31, 0.3)
+      ),
+      linear-gradient(360deg, rgba(25, 31, 31, 0) 0%, #191f1f 100%);
+
+    z-index: 1;
+  }
+
+  & > .content {
+    z-index: 10;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    width: vw-1440(636);
+    margin: vw-1440(452) auto 0;
+    padding: vw-1440(36);
+
+    color: var(--white);
+    border-radius: vw-1440(12);
+    box-shadow: 0px 0px 20px 0px #ffffff0d inset;
+    backdrop-filter: blur(vw-1440(40));
+
+    & > p {
+      margin-top: vw-1440(8);
+      margin-bottom: vw-1440(32);
+    }
+
+    & > a {
+      width: vw-1440(243);
+      padding: vw-1440(17);
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import s from "./BlogList.module.scss";
 import { NewsCard } from "@/entities/news-card";
 import { Pagination } from "@/shared/ui/pagination";
@@ -20,7 +20,9 @@ export const BlogList = () => {
           <NewsCard key={index} />
         ))}
       </div>
-      <Pagination totalPages={10} />
+      <Suspense fallback={<p className="body_4">Загрузка...</p>}>
+        <Pagination totalPages={10} />
+      </Suspense>
     </div>
   );
 };

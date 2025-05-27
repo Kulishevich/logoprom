@@ -3,12 +3,6 @@
 .wrapper {
   background-color: var(--text);
   width: 100%;
-
-  margin-top: vw-1440(140);
-
-  @media (max-width: 768px) {
-    margin-top: 72px;
-  }
 }
 
 .container {

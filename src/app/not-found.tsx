@@ -1,3 +1,5 @@
+import { NotFoundSection } from "@/widgets/not-found-section";
+
 export default function NotFoundPage() {
-  return <div>ss</div>;
+  return <NotFoundSection />;
 }
