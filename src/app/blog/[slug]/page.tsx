@@ -1,13 +1,15 @@
 import { BlockImage } from "@/widgets/block-image";
-import { BlogList } from "@/widgets/blog-list";
+import { BlogSection } from "@/widgets/blog-section";
 import { FeedbackForm } from "@/widgets/feedback-form";
+import { OtherNews } from "@/widgets/other-news";
 
 export default function Blog() {
   return (
     <>
-      <BlockImage image={"/blog-background.jpg"} title="Блог" />
+      <BlockImage image={"/blog-solo-background.png"} title="Блог" />
       <main>
-        <BlogList />
+        <BlogSection />
+        <OtherNews />
         <FeedbackForm />
       </main>
     </>

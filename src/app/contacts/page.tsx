@@ -5,11 +5,13 @@ import { FeedbackForm } from "@/widgets/feedback-form";
 
 export default function Contacts() {
   return (
-    <main>
+    <>
       <BlockImage image={"/contacts-background.jpg"} title="Контакты" />
-      <ContactsInfo />
-      <ContactsLegalInformation />
-      <FeedbackForm />
-    </main>
+      <main>
+        <ContactsInfo />
+        <ContactsLegalInformation />
+        <FeedbackForm />
+      </main>
+    </>
   );
 }
