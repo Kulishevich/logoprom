@@ -1,0 +1,58 @@
+@use "../../shared/styles/functions" as *;
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  background: #0b0e0e99;
+  backdrop-filter: blur(10px);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 101;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.contentPopup {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: vw-1440(24);
+
+  width: vw-1440(1076);
+  padding: vw-1440(48) vw-1440(48) vw-1440(64);
+  background-color: var(--white);
+  border-radius: vw-1440(12);
+}
+
+.closeButton {
+  position: absolute;
+  top: vw-1440(24);
+  right: vw-1440(24);
+
+  & > svg {
+    width: vw-1440(42);
+    height: vw-1440(42);
+  }
+
+  transition: scale 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    cursor: pointer;
+    color: var(--color-blue);
+    scale: 1.1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

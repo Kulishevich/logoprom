@@ -6,12 +6,15 @@ import cn from "clsx";
 import s from "./Pagination.module.scss";
 import { ArrowLeftIcon, ArrowRightIcon } from "@/shared/assets/icons";
 
-interface Props {
+export interface PaginationProps {
   totalPages: number;
   currentPage?: string;
 }
 
-export const Pagination = ({ totalPages, currentPage = "1" }: Props) => {
+export const Pagination = ({
+  totalPages,
+  currentPage = "1",
+}: PaginationProps) => {
   const [paginationPages, setPaginationPages] = useState<number[]>([]);
   const searchParams = useSearchParams();
   const pathname = usePathname();
