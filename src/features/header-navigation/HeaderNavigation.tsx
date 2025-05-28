@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import s from "./HeaderNavigation.module.scss";
 import { Button } from "@/shared/ui/button";
 import { MenuIcon, MiniArrowDown } from "@/shared/assets/icons";
@@ -7,9 +7,11 @@ import Link from "next/link";
 import { navigation } from "@/shared/config/constants/navigation";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
+import { FeedbackPopup } from "../feedback-popup";
 
 export const HeaderNavigation = () => {
   const pathname = usePathname();
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   return (
     <div className={s.wrapper}>
@@ -42,7 +44,9 @@ export const HeaderNavigation = () => {
             </Link>
           ))}
         </nav>
-        <Button variant="callback">Обратный звонок</Button>
+        <FeedbackPopup isOpen={isPopupOpen} setIsOpen={setIsPopupOpen}>
+          <Button variant="callback">Обратный звонок</Button>
+        </FeedbackPopup>
       </div>
     </div>
   );
