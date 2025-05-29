@@ -1,4 +1,4 @@
-import React, { Dispatch, ReactNode, SetStateAction, useState } from "react";
+import React, { Dispatch, ReactNode, SetStateAction } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import s from "./FeedbackPopup.module.scss";
 import {

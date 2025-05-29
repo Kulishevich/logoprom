@@ -26,6 +26,7 @@ export const CustomerAssistanceSection = () => {
       <div className={s.navigation}>
         {content.map((elem) => (
           <Button
+            key={elem.id}
             variant={elem.id === activeSection ? "primary" : "secondary"}
             onClick={() => setActiveSection(elem.id)}
             className={s.button}
