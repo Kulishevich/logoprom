@@ -1,0 +1,22 @@
+@use "../../shared/styles/functions" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: vw-1440(36);
+
+  width: vw-1440(1296);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: vw-1440(20);
+
+  & > ul {
+    list-style-position: inside;
+    & > h3 {
+      margin-bottom: vw-1440(12);
+    }
+  }
+}
