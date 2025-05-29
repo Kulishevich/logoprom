@@ -1,0 +1,59 @@
+@use "../../shared/styles/functions" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: vw-1440(42);
+
+  width: vw-1440(1296);
+}
+.content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: vw-1440(24);
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    gap: vw-1440(51);
+  }
+}
+
+.imagesContainer {
+  position: relative;
+  display: flex;
+  & > div {
+    position: relative;
+    width: vw-1440(66);
+    height: vw-1440(66);
+    border-radius: vw-1440(8);
+    overflow: hidden;
+    & > img {
+      object-fit: cover;
+      border-radius: vw-1440(8);
+      overflow: hidden;
+    }
+
+    &:not(:first-child) {
+      width: vw-1440(74);
+      border-left: 8px solid var(--white);
+
+      &:nth-child(2) {
+        position: absolute;
+        left: vw-1440(58);
+        top: 0;
+      }
+
+      &:nth-child(3) {
+        position: absolute;
+        left: vw-1440(126);
+        top: 0;
+      }
+
+      & > img {
+        border-radius: vw-1440(8);
+        overflow: hidden;
+      }
+    }
+  }
+}

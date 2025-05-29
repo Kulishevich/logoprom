@@ -1,0 +1,28 @@
+@use "../../shared/styles/functions" as *;
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: vw-1440(48);
+
+  width: vw-1440(1296);
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: vw-1440(16);
+}
+.imageContainer {
+  position: relative;
+  width: vw-1440(722);
+  height: vw-1440(456);
+
+  border: 1px solid var(--color-blue);
+  border-radius: vw-1440(12);
+  overflow: hidden;
+
+  flex-shrink: 0;
+  & > img {
+    object-fit: contain;
+  }
+}
