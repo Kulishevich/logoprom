@@ -38,7 +38,11 @@ export const CategoryProductsList = () => {
           placeholder="Поиск по категориям"
           variant="search_2"
         />
-        <Select options={options} defaultValue={options[0].value} />
+        <Select
+          options={options}
+          defaultValue={options[0].value}
+          className={s.sort}
+        />
       </div>
       <div className={s.productsList}>
         {new Array(6).fill("").map((_, index) => (
