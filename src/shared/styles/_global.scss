@@ -39,6 +39,7 @@ main {
   flex-direction: column;
   align-items: center;
   gap: vw-1440(120);
+  width: vw-1440(1296);
 
   @media (max-width: 768px) {
     gap: 72px;

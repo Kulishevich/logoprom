@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export const CatalogCard = () => {
   return (
-    <Link href={"/"} className={s.container}>
+    <Link href={"/catalog/1"} className={s.container}>
       <div className={s.imageContainer}>
         <Image src={"/catalog-card.png"} fill alt="catalog-card" />
       </div>

@@ -5,15 +5,18 @@ import { getPaginationPages } from "@/shared/lib/utils/getPaginationPages";
 import cn from "clsx";
 import s from "./Pagination.module.scss";
 import { ArrowLeftIcon, ArrowRightIcon } from "@/shared/assets/icons";
+import clsx from "clsx";
 
 export interface PaginationProps {
   totalPages: number;
   currentPage?: string;
+  className?: string;
 }
 
 export const Pagination = ({
   totalPages,
   currentPage = "1",
+  className,
 }: PaginationProps) => {
   const [paginationPages, setPaginationPages] = useState<number[]>([]);
   const searchParams = useSearchParams();
@@ -49,7 +52,7 @@ export const Pagination = ({
 
   return (
     <Suspense fallback={<h1>Загрузка...</h1>}>
-      <div className={s.container}>
+      <div className={clsx(s.container, className)}>
         {currentPageNumber !== 1 && (
           <button
             className={s.button}

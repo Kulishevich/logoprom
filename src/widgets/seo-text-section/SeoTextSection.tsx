@@ -1,9 +1,10 @@
 import React from "react";
-import s from "./CatalogTextContent.module.scss";
+import s from "./SeoTextSection.module.scss";
+import clsx from "clsx";
 
-export const CatalogTextContent = () => {
+export const SeoTextSection = ({ className }: { className?: string }) => {
   return (
-    <div className={s.container}>
+    <div className={clsx(s.container, className)}>
       <h2 className="h2">
         Оптимизируйте производство с помощью современных технологий
       </h2>

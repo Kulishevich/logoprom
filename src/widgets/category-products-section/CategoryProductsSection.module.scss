@@ -1,0 +1,6 @@
+@use "../../shared/styles/functions" as *;
+
+.container {
+  display: flex;
+  gap: vw-1440(48);
+}

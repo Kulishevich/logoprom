@@ -1,4 +1,4 @@
-export default function CatalogLayout({
+export default function CategoryLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
