@@ -59,6 +59,13 @@
     border-bottom: 1px solid var(--grey);
   }
 }
+
+.priceSliderContaner {
+  display: flex;
+  flex-direction: column;
+  gap: vw-1440(16);
+}
+
 .inputsContainer {
   display: grid;
   grid-template-columns: repeat(2, vw-1440(115));

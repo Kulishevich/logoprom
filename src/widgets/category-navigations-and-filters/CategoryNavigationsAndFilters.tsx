@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import s from "./CategoryNavigationsAndFilters.module.scss";
 import { Collapse } from "@/shared/ui/collapse-navigation";
 import Link from "next/link";
@@ -6,6 +7,7 @@ import clsx from "clsx";
 import { TextField } from "@/shared/ui/text-field";
 import { Checkbox } from "@/shared/ui/checkbox";
 import { Button } from "@/shared/ui/button";
+import { PriceSlider } from "@/shared/ui/price-slider";
 
 const categories = [
   {
@@ -546,6 +548,9 @@ const categories = [
 ];
 
 export const CategoryNavigationsAndFilters = () => {
+  const [minPrice, setMinPrice] = useState(0);
+  const [maxPrice, setMaxPrice] = useState(0);
+
   return (
     <div className={s.container}>
       <div className={s.elem}>
@@ -575,9 +580,17 @@ export const CategoryNavigationsAndFilters = () => {
         <p className="body_2">Фильтр</p>
         <div className={s.elem}>
           <Collapse title="Цена" className={s.collapseFilter} variant="filter">
-            <div className={s.inputsContainer}>
-              <TextField placeholder="от 0" />
-              <TextField placeholder="от 0" />
+            <div className={s.priceSliderContaner}>
+              <div className={s.inputsContainer}>
+                <TextField placeholder="от 0" />
+                <TextField placeholder="до 200" />
+              </div>
+              <PriceSlider
+                minPrice={minPrice}
+                setMinPrice={setMinPrice}
+                maxPrice={maxPrice}
+                setMaxPrice={setMaxPrice}
+              />
             </div>
           </Collapse>
           <Collapse
