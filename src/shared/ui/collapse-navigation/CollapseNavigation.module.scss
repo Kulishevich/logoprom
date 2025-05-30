@@ -1,0 +1,78 @@
+@use "../../styles/functions" as *;
+
+.rootState {
+  display: flex;
+  flex-direction: column;
+}
+
+.trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+
+  background-color: transparent;
+  border: none;
+
+  padding: vw-1440(16) vw-1440(20);
+
+  & > svg {
+    width: vw-1440(9);
+    height: vw-1440(9);
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+  }
+
+  & > p {
+    text-align: start;
+    transition: color 0.3s ease;
+  }
+
+  &:hover {
+    cursor: pointer;
+    & > p {
+      color: var(--color-blue);
+    }
+  }
+
+  &[data-state="open"] {
+    & > svg {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.wrapper {
+  overflow: hidden;
+  .content {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  &[data-state="open"] {
+    animation: slideDown 300ms ease-out;
+  }
+  &[data-state="closed"] {
+    animation: slideUp 300ms ease-out;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-collapsible-content-height);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    height: var(--radix-collapsible-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
