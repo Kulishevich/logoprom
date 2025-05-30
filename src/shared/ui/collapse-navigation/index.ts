@@ -1,1 +1,1 @@
-export * from "./CollapseNavigation";
+export * from "./Collapse";

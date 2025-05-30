@@ -1,8 +1,11 @@
 import React from "react";
 import s from "./CategoryNavigationsAndFilters.module.scss";
-import { CollapseNavigation } from "@/shared/ui/collapse-navigation";
+import { Collapse } from "@/shared/ui/collapse-navigation";
 import Link from "next/link";
 import clsx from "clsx";
+import { TextField } from "@/shared/ui/text-field";
+import { Checkbox } from "@/shared/ui/checkbox";
+import { Button } from "@/shared/ui/button";
 
 const categories = [
   {
@@ -545,15 +548,11 @@ const categories = [
 export const CategoryNavigationsAndFilters = () => {
   return (
     <div className={s.container}>
-      <div className={s.navigation}>
+      <div className={s.elem}>
         {categories.map((category, index) => (
-          <CollapseNavigation
-            title={category.title}
-            className={s.collapse}
-            key={index}
-          >
+          <Collapse title={category.title} className={s.collapse} key={index}>
             {category.subcategories.map((subcategory, index) => (
-              <CollapseNavigation
+              <Collapse
                 title={subcategory.title}
                 className={s.collapseSecond}
                 key={index}
@@ -567,10 +566,32 @@ export const CategoryNavigationsAndFilters = () => {
                     {product.title}
                   </Link>
                 ))}
-              </CollapseNavigation>
+              </Collapse>
             ))}
-          </CollapseNavigation>
+          </Collapse>
         ))}
+      </div>
+      <div className={s.filters}>
+        <p className="body_2">Фильтр</p>
+        <div className={s.elem}>
+          <Collapse title="Цена" className={s.collapseFilter} variant="filter">
+            <div className={s.inputsContainer}>
+              <TextField placeholder="от 0" />
+              <TextField placeholder="от 0" />
+            </div>
+          </Collapse>
+          <Collapse
+            title="Количество каналов"
+            className={s.collapseFilter}
+            variant="filter"
+          >
+            <div className={s.checkboxContainer}>
+              <Checkbox label="1-2" />
+              <Checkbox label="Многоканальный" />
+            </div>
+          </Collapse>
+        </div>
+        <Button variant="secondary">Очистить фильтр</Button>
       </div>
     </div>
   );

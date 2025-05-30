@@ -5,9 +5,10 @@
   flex-direction: column;
 
   width: vw-1440(282);
+  gap: vw-1440(24);
 }
 
-.navigation {
+.elem {
   width: 100%;
   border-radius: vw-1440(8);
   overflow: hidden;
@@ -39,4 +40,39 @@
   &:hover {
     color: var(--color-blue);
   }
+}
+
+.collapseFilter {
+  background-color: var(--light-grey);
+  padding: vw-1440(20);
+  gap: vw-1440(16);
+
+  & > button {
+    padding: 0;
+
+    & > svg {
+      color: var(--color-blue);
+    }
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--grey);
+  }
+}
+.inputsContainer {
+  display: grid;
+  grid-template-columns: repeat(2, vw-1440(115));
+  gap: vw-1440(12);
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: vw-1440(20);
+}
+
+.checkboxContainer {
+  display: flex;
+  flex-direction: column;
+  gap: vw-1440(12);
 }
