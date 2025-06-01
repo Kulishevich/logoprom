@@ -6,6 +6,7 @@
   gap: vw-1440(12);
   width: vw-1440(306);
 
+  flex-shrink: 0;
   border-radius: vw-1440(12);
   border: 1px solid var(--grey);
   padding-bottom: vw-1440(20);

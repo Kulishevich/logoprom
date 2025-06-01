@@ -1,0 +1,72 @@
+@use "../../styles/functions" as *;
+
+.container {
+  position: relative;
+  width: vw-1440(1296);
+
+  @media (max-width: 768px) {
+    width: 336px;
+    margin-bottom: 70px;
+  }
+}
+
+.itemsContainer {
+  width: 100%;
+  display: flex;
+  gap: vw-1440(24);
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    gap: 15px;
+  }
+}
+
+.iconLeft {
+  position: absolute;
+  left: vw-1440(-106);
+  bottom: 50%;
+  transform: translateY(50%);
+
+  & > svg {
+    width: vw-1440(30);
+    height: vw-1440(30);
+    @media (max-width: 768px) {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    bottom: -72px;
+    left: 112px;
+    transform: translate(0, 0);
+  }
+}
+
+.iconRight {
+  position: absolute;
+  right: vw-1440(-106);
+
+  bottom: 50%;
+  transform: translateY(50%);
+
+  & > svg {
+    width: vw-1440(30);
+    height: vw-1440(30);
+    @media (max-width: 768px) {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    bottom: -72px;
+    right: 112px;
+    transform: translate(0, 0);
+  }
+}
