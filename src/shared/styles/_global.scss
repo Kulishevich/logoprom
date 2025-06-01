@@ -58,3 +58,24 @@ main {
     display: none !important;
   }
 }
+
+/* Работает в Chrome, Edge, Safari */
+::-webkit-scrollbar {
+  width: vw-1440(8); // ширина вертикального скролла
+  height: vw-1440(8); // высота горизонтального скролла
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; // фон трека
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--dark-grey-70); // цвет "ползунка"
+  border-radius: vw-1440(10);
+  border: 2px solid transparent; // пространство вокруг (если нужно)
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-blue); // цвет при наведении
+}

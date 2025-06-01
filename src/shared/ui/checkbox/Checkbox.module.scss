@@ -23,7 +23,7 @@
   height: vw-1440(32);
 
   border: 1px solid var(--grey);
-  border-radius: 2px;
+  border-radius: vw-1440(6);
 
   & > button {
     all: unset;

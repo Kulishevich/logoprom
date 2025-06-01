@@ -9,12 +9,12 @@ export const Collapse = ({
   title,
   children,
   className,
-  variant = "navigation",
+  titleSize = "body_4",
 }: {
   title: string;
   children: ReactNode;
   className?: string;
-  variant?: "filter" | "navigation";
+  titleSize?: string;
 }) => {
   const [open, setOpen] = useState(false);
 
@@ -25,7 +25,7 @@ export const Collapse = ({
       className={clsx(s.rootState, className)}
     >
       <Collapsible.Trigger className={s.trigger}>
-        <p className={variant === "filter" ? "body_4" : "body_3"}>{title}</p>
+        <p className={titleSize}>{title}</p>
         <MiniArrowRight />
       </Collapsible.Trigger>
       <Collapsible.Content className={s.wrapper}>

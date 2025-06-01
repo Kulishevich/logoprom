@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import s from "./CategoryNavigationsAndFilters.module.scss";
-import { Collapse } from "@/shared/ui/collapse-navigation";
+import { Collapse } from "@/shared/ui/collapse";
 import Link from "next/link";
 import clsx from "clsx";
 import { TextField } from "@/shared/ui/text-field";
@@ -555,9 +555,15 @@ export const CategoryNavigationsAndFilters = () => {
     <div className={s.container}>
       <div className={s.elem}>
         {categories.map((category, index) => (
-          <Collapse title={category.title} className={s.collapse} key={index}>
+          <Collapse
+            title={category.title}
+            className={s.collapse}
+            key={index}
+            titleSize="body_3"
+          >
             {category.subcategories.map((subcategory, index) => (
               <Collapse
+                titleSize="body_3"
                 title={subcategory.title}
                 className={s.collapseSecond}
                 key={index}
@@ -579,7 +585,11 @@ export const CategoryNavigationsAndFilters = () => {
       <div className={s.filters}>
         <p className="body_2">Фильтр</p>
         <div className={s.elem}>
-          <Collapse title="Цена" className={s.collapseFilter} variant="filter">
+          <Collapse
+            title="Цена"
+            className={s.collapseFilter}
+            titleSize="body_4"
+          >
             <div className={s.priceSliderContaner}>
               <div className={s.inputsContainer}>
                 <TextField placeholder="от 0" />
@@ -596,7 +606,7 @@ export const CategoryNavigationsAndFilters = () => {
           <Collapse
             title="Количество каналов"
             className={s.collapseFilter}
-            variant="filter"
+            titleSize="body_4"
           >
             <div className={s.checkboxContainer}>
               <Checkbox label="1-2" />

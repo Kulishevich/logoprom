@@ -1,0 +1,59 @@
+@use "../../shared/styles/functions" as *;
+
+.productContent {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--grey);
+}
+
+.collapse {
+  border-bottom: 1px solid var(--grey);
+  padding: vw-1440(24) 0;
+
+  & > button {
+    padding: 0;
+  }
+
+  .collapseContent {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: vw-1440(12);
+    margin-top: vw-1440(16);
+
+    & > .filterButton {
+      width: vw-1440(208);
+    }
+
+    & > .downloadButton:hover {
+      color: var(--color-blue);
+      & > svg {
+        color: var(--color-blue);
+      }
+    }
+  }
+}
+
+.technicalSpecifications {
+  display: flex;
+  flex-direction: column;
+
+  width: vw-1440(516);
+  & > .specificationElem {
+    display: flex;
+    padding: vw-1440(12) 0;
+    & > p {
+      width: 50%;
+      flex-shrink: 0;
+    }
+
+    label {
+      font-weight: 700;
+    }
+  }
+
+  .checkboxContainer {
+    display: flex;
+    flex-direction: column;
+  }
+}
