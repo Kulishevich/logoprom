@@ -1,0 +1,75 @@
+@use "../../shared/styles/functions" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: vw-1440(32);
+
+  width: 100%;
+}
+
+.tableWrapper {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--grey);
+  border-radius: vw-1440(12);
+}
+
+.table {
+  color: var(--text);
+
+  width: 100%;
+  border-collapse: collapse;
+
+  th,
+  td {
+    border: 1px solid var(--grey);
+    text-align: center;
+
+    padding: vw-1440(12) 0;
+  }
+
+  th {
+    height: vw-1440(69);
+    background-color: #0000000f;
+    border-top: none;
+
+    &:last-child {
+      border-right: none;
+    }
+
+    &:first-child {
+      border-left: none;
+      width: vw-1440(460);
+    }
+  }
+
+  tr {
+    height: vw-1440(65);
+    td {
+      text-align: center;
+
+      &:last-child {
+        border-right: none;
+      }
+      &:first-child {
+        border-left: none;
+        font-weight: 700;
+        width: vw-1440(460);
+      }
+    }
+    &:last-child {
+      td {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+.imageContainer {
+  position: relative;
+  width: vw-1440(207);
+  height: vw-1440(207);
+
+  margin: 0 auto;
+}
