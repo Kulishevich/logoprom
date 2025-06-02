@@ -2,12 +2,12 @@
 import React, { useState } from "react";
 import s from "./HeaderNavigation.module.scss";
 import { Button } from "@/shared/ui/button";
-import { MenuIcon, MiniArrowDown } from "@/shared/assets/icons";
 import Link from "next/link";
 import { navigation } from "@/shared/config/constants/navigation";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
 import { FeedbackPopup } from "../feedback-popup";
+import { BurgerButton } from "../burger-button";
 
 export const HeaderNavigation = () => {
   const pathname = usePathname();
@@ -16,11 +16,7 @@ export const HeaderNavigation = () => {
   return (
     <div className={s.wrapper}>
       <div className={s.container}>
-        <Button variant="catalog">
-          <MenuIcon />
-          Каталог
-          <MiniArrowDown />
-        </Button>
+        <BurgerButton />
         <nav className={s.navigation}>
           {navigation.slice(0, 2).map((nav, index) => (
             <Link

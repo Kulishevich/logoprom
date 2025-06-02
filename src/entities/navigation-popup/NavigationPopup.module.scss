@@ -1,0 +1,73 @@
+@use "../../shared/styles/functions" as *;
+
+.content {
+  position: absolute;
+  top: vw-1440(72);
+  left: 0;
+  z-index: 1002;
+
+  display: flex;
+
+  background-color: var(--white);
+  overflow: hidden;
+
+  animation: fadeIn 0.3s ease-out;
+
+  color: var(--text);
+}
+
+.categoryList {
+  display: flex;
+  flex-direction: column;
+  width: vw-1440(290);
+  box-sizing: border-box;
+
+  & > a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: vw-1440(12);
+
+    color: var(--text);
+    padding: vw-1440(20);
+
+    background-color: var(--light-grey);
+
+    & > svg {
+      width: vw-1440(9);
+      height: vw-1440(9);
+      flex-shrink: 0;
+    }
+
+    &:hover,
+    &.active {
+      background-color: var(--grey);
+    }
+  }
+}
+
+.subcategoryList {
+  display: flex;
+  flex-direction: column;
+  gap: vw-1440(20);
+  padding: vw-1440(20);
+}
+
+.subcategories {
+  display: grid;
+  grid-template-columns: repeat(2, vw-1440(305));
+  gap: vw-1440(16) vw-1440(52);
+
+  & > a {
+    color: var(--text);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
