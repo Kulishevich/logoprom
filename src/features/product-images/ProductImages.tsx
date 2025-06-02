@@ -21,6 +21,7 @@ export const ProductImages = () => {
           <button
             className={clsx(s.smallImage, index === activeImage && s.active)}
             key={index}
+            onClick={() => setActiveImage(index)}
           >
             <Image src={image} fill alt="product-image" />
           </button>
