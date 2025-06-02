@@ -10,7 +10,7 @@ export const SearchProduct = () => {
   return (
     <div className={s.container}>
       <div className={s.imageContainer}>
-        '<Image src={"/product-image.png"} fill alt="product-image" />
+        <Image src={"/product-image.png"} fill alt="product-image" />
       </div>
       <div className={s.priceContainer}>
         <p className="body_6">
@@ -24,10 +24,16 @@ export const SearchProduct = () => {
         ) : (
           <p className={clsx("body_6", s.notInStock)}>*Под заказ</p>
         )}
-        <Button textStyle={"body_6"}>Добавить в КП</Button>
-        <Button textStyle={"body_6"} variant="secondary">
-          Купить в 1 клик
-        </Button>
+        {in_stock ? (
+          <>
+            <Button textStyle={"body_6"}>Добавить в КП</Button>
+            <Button textStyle={"body_6"} variant="secondary">
+              Купить в 1 клик
+            </Button>
+          </>
+        ) : (
+          <Button variant="default">Заказать</Button>
+        )}
       </div>
     </div>
   );

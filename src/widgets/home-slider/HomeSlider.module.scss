@@ -3,6 +3,7 @@
 .wrapper {
   position: relative;
   margin-bottom: vw-1440(45);
+  z-index: 1;
 
   .iconLeft {
     & > svg {

@@ -3,6 +3,7 @@ import s from "./ProductCard.module.scss";
 import Image from "next/image";
 import { Button } from "@/shared/ui/button";
 import clsx from "clsx";
+import { BuyOneClickButton } from "@/widgets/buy-one-click-popup";
 
 export const ProductCard = () => {
   return (
@@ -40,7 +41,7 @@ export const ProductCard = () => {
         <div className={s.priceContainer}>
           <p className="h4">2600 BYN</p>
           <Button>Добавить в КП</Button>
-          <Button variant="secondary">Купить в 1 клик</Button>
+          <BuyOneClickButton />
         </div>
       </div>
     </div>
