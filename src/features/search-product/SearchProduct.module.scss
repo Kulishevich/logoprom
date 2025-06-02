@@ -1,0 +1,49 @@
+@use "../../shared/styles/functions" as *;
+
+.container {
+  display: flex;
+  gap: vw-1440(16);
+  z-index: 1000;
+
+  color: var(--text);
+}
+
+.imageContainer {
+  position: relative;
+  width: vw-1440(125);
+  height: vw-1440(125);
+
+  border-radius: vw-1440(12);
+  overflow: hidden;
+  border: 1px solid var(--grey);
+
+  flex-shrink: 0;
+}
+
+.priceContainer {
+  display: flex;
+  flex-direction: column;
+  gap: vw-1440(12);
+}
+.buttonsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: vw-1440(8);
+
+  width: vw-1440(142);
+  flex-shrink: 0;
+
+  & > p {
+    &.inStock {
+      color: var(--color-green);
+    }
+    &.notInStock {
+      color: var(--color-red);
+    }
+  }
+  & > button {
+    padding: vw-1440(12) 0;
+    width: 100%;
+  }
+}

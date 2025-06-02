@@ -12,6 +12,7 @@ import styles from "./Button.module.scss";
 export type ButtonProps<T extends ElementType = "button"> = {
   as?: T;
   fullWidth?: boolean;
+  textStyle?: string;
   variant?:
     | "callback"
     | "catalog"
@@ -40,6 +41,7 @@ export const Button = forwardRef(
       fullWidth,
       type = "button",
       variant = "primary",
+      textStyle = "button",
       ...rest
     } = props;
     const cn = clsx(
@@ -47,7 +49,7 @@ export const Button = forwardRef(
       styles[variant],
       fullWidth && styles.fullWidth,
       className,
-      variant === "catalog" ? "header" : "button"
+      textStyle
     );
 
     return <Component className={cn} ref={ref} type={type} {...rest} />;

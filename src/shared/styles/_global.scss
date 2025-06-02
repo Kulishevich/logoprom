@@ -59,23 +59,22 @@ main {
   }
 }
 
-/* Работает в Chrome, Edge, Safari */
 ::-webkit-scrollbar {
-  width: vw-1440(8); // ширина вертикального скролла
-  height: vw-1440(8); // высота горизонтального скролла
+  width: vw-1440(8);
+  height: vw-1440(8);
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent; // фон трека
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--dark-grey-70); // цвет "ползунка"
+  background-color: var(--dark-grey-70);
   border-radius: vw-1440(10);
-  border: 2px solid transparent; // пространство вокруг (если нужно)
+  border: 2px solid transparent;
   background-clip: content-box;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: var(--color-blue); // цвет при наведении
+  background-color: var(--color-blue);
 }

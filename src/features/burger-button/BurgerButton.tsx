@@ -34,7 +34,7 @@ export const BurgerButton = () => {
 
   return (
     <div className={s.burgerMenu} ref={containerRef}>
-      <Button variant="catalog">
+      <Button variant="catalog" textStyle="header">
         <MenuIcon />
         Каталог
         <MiniArrowDown />
