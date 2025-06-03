@@ -13,12 +13,19 @@ import clsx from "clsx";
 
 import s from "./TextField.module.scss";
 import { SearchIcon } from "@/shared/assets/icons";
+import { Button } from "../button";
 
 export type TextFieldProps = {
   errorMessage?: ReactNode | string;
   isRequired?: boolean;
   label?: string;
-  variant?: "search_1" | "search_2" | "search_3" | "default" | "phone";
+  variant?:
+    | "search_1"
+    | "search_2"
+    | "search_3"
+    | "default"
+    | "phone"
+    | "counter";
 } & ComponentPropsWithoutRef<"input">;
 
 type TextFieldRef = ElementRef<"input">;
@@ -42,6 +49,8 @@ export const TextField = forwardRef<TextFieldRef, TextFieldProps>(
 
     const id = useId();
 
+    const is_counter = variant === "counter";
+
     const is_search =
       variant === "search_1" ||
       variant === "search_2" ||
@@ -63,7 +72,7 @@ export const TextField = forwardRef<TextFieldRef, TextFieldProps>(
     }, [value]);
 
     return (
-      <div className={s.container}>
+      <div className={clsx(s.container, s[variant])}>
         {label && (
           <label
             className={clsx(
@@ -77,7 +86,12 @@ export const TextField = forwardRef<TextFieldRef, TextFieldProps>(
             {label}
           </label>
         )}
-        <div className={clsx(s.inputContainer, "fields")}>
+        <div
+          className={clsx(
+            s.inputContainer,
+            variant === "counter" ? "body_4" : "fields"
+          )}
+        >
           <input
             className={clsx(
               s.input,
@@ -94,6 +108,8 @@ export const TextField = forwardRef<TextFieldRef, TextFieldProps>(
             value={value}
             {...rest}
           />
+          {is_counter && <Button className={s.decrement}>-</Button>}
+          {is_counter && <Button className={s.increment}>+</Button>}
           {!!is_search && (
             <SearchIcon
               className={clsx(s.iconSearch, disabled && s.disabled, s[variant])}

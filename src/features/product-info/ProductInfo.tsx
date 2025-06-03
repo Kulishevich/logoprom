@@ -3,6 +3,7 @@ import s from "./ProductInfo.module.scss";
 import { Button } from "@/shared/ui/button";
 import { ProductContent } from "@/entities/product-content";
 import clsx from "clsx";
+import { ProductButton } from "@/widgets/product-button";
 
 export const ProductInfo = () => {
   const in_stock = true;
@@ -36,14 +37,8 @@ export const ProductInfo = () => {
       </div>
       <p className="price">от 2600 BYN</p>
       <div className={s.buttonContainer}>
-        {in_stock ? (
-          <>
-            <Button variant="primary">Добавить в КП</Button>
-            <Button variant="secondary">Купить в 1 клик</Button>
-          </>
-        ) : (
-          <Button variant="default">Заказать</Button>
-        )}
+        {in_stock && <Button>Добавить в КП</Button>}
+        <ProductButton type={in_stock ? "buy-one-click" : "order"} />
       </div>
       <ProductContent />
     </div>

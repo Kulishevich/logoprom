@@ -5,8 +5,8 @@
   display: flex;
   align-items: center;
   justify-content: start;
-  gap: vw-1440(6);
-  margin: vw-1440(36) auto vw-1440(20);
+  gap: vw-1440(8);
+  z-index: 1;
 
   @media (max-width: 768px) {
     justify-content: center;
@@ -21,22 +21,15 @@
 .elem {
   display: flex;
   align-items: center;
-  gap: vw-1440(6);
+  gap: vw-1440(8);
+  color: var(--white);
+
+  & > span {
+    color: var(--color-blue);
+  }
 
   @media (max-width: 768px) {
     gap: 6px;
-  }
-}
-
-.icon {
-  flex-shrink: 0;
-  color: var(--color-accent-1);
-  width: vw-1440(16);
-  height: vw-1440(16);
-
-  @media (max-width: 768px) {
-    width: 16px;
-    height: 16px;
   }
 }
 

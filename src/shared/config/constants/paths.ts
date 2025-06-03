@@ -7,4 +7,6 @@ export const paths = {
   blog: "/blog",
   contacts: "/contacts",
   privacy_policy: "/privacy-policy",
+  cart: "/cart",
+  order: "/order",
 };

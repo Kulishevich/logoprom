@@ -4,8 +4,6 @@ import s from "./Breadcrumbs.module.scss";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { navigation } from "@/shared/config/constants/navigation";
-import { ArrowRightIcon } from "@/shared/assets/icons";
-
 interface Props {
   className?: string;
   dynamicPath?: { title: string; path: string }[];
@@ -35,7 +33,7 @@ export const Breadcrumbs = ({ className, dynamicPath }: Props) => {
 
         if (lastItem) {
           return (
-            <p className={cn(s.elem, "body_6_bold")} key={idx}>
+            <p className={cn(s.elem, "body_6")} key={idx}>
               {path?.title}
             </p>
           );
@@ -44,7 +42,7 @@ export const Breadcrumbs = ({ className, dynamicPath }: Props) => {
         return (
           <Link href={href || "/"} className={cn(s.elem, "body_6")} key={idx}>
             {path?.title}
-            <ArrowRightIcon className={s.icon} />
+            <span>/</span>
           </Link>
         );
       })}
