@@ -6,9 +6,10 @@
   align-items: end;
   gap: vw-1440(24);
 
-  & > a,
-  button {
-    padding: 17px 43px;
+  width: 100%;
+
+  & > .button {
+    padding: vw-1440(17) vw-1440(43);
   }
 }
 
@@ -49,6 +50,10 @@
     &:first-child {
       border-left: none;
       width: vw-1440(430);
+    }
+
+    &:not(:first-child) {
+      width: vw-1440(288);
     }
   }
 

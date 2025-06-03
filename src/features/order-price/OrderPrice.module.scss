@@ -1,0 +1,37 @@
+@use "../../shared/styles/functions" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: vw-1440(20);
+
+  border: 1px solid var(--grey);
+  border-radius: vw-1440(12);
+  padding: vw-1440(32) vw-1440(22);
+}
+
+.priceAndDelivery {
+  display: flex;
+  flex-direction: column;
+  gap: vw-1440(12);
+
+  width: 100%;
+
+  padding-bottom: vw-1440(20);
+
+  border-bottom: 1px solid var(--grey);
+}
+
+.elem {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+
+  & > p {
+    &:last-child {
+      text-align: end;
+      font-weight: 700;
+    }
+  }
+}

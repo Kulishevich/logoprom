@@ -85,7 +85,11 @@ export const CartSection = () => {
           </tbody>
         </table>
       </div>
-      <Button as={Link} href={`${paths.cart}${paths.order}`}>
+      <Button
+        as={Link}
+        href={`${paths.cart}${paths.order}`}
+        className={s.button}
+      >
         <ArrowToTopLeftIcon />
         Перейти к оформлению заказа
       </Button>

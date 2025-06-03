@@ -60,7 +60,7 @@ export const Checkbox = forwardRef<CheckboxRef, CheckboxProps>((props, ref) => {
               className={clsx(
                 s.label,
                 disabled && s.disabled,
-                "body_4",
+                "body_5",
                 isRequired && "required"
               )}
             >
@@ -71,7 +71,7 @@ export const Checkbox = forwardRef<CheckboxRef, CheckboxProps>((props, ref) => {
               className={clsx(
                 s.label,
                 disabled && s.disabled,
-                "body_4",
+                "body_5",
                 isRequired && "required"
               )}
             >
