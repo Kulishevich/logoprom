@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import s from "./FeedbackForm.module.scss";
 import Image from "next/image";
@@ -6,6 +7,7 @@ import { TextArea } from "@/shared/ui/text-area";
 import { Checkbox } from "@/shared/ui/checkbox";
 import { Button } from "@/shared/ui/button";
 import { ArrowToTopLeftIcon } from "@/shared/assets/icons";
+import { showToast } from "@/shared/ui/toast";
 
 export const FeedbackForm = () => {
   return (
@@ -40,7 +42,16 @@ export const FeedbackForm = () => {
               label="Согласие на обработку персональных данных"
               privacyPolicy
             />
-            <Button>
+            <Button
+              onClick={() =>
+                showToast({
+                  title: "Мы получили вашу заявку",
+                  message:
+                    "В скором времени с вами свяжется наш менеджер и ответит на все вопросы.",
+                  variant: "success",
+                })
+              }
+            >
               <ArrowToTopLeftIcon />
               Отправить
             </Button>

@@ -6,6 +6,7 @@ import { CartButton } from "@/features/cart-button";
 import { HeaderDesktop } from "@/widgets/header-desktop";
 import { HeaderMobile } from "@/widgets/header-mobile";
 import Script from "next/script";
+import { Toaster } from "sonner";
 
 const manrope = Manrope({
   variable: "--font-manrope",
@@ -32,6 +33,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`${manrope.variable}`}>
+        <Toaster />
         <HeaderDesktop />
         <HeaderMobile />
         {children}

@@ -4,6 +4,7 @@ import { ToastT, Toaster, toast } from "sonner";
 import styles from "./Toast.module.scss";
 import {
   CheckCircleIcon,
+  CloseCircleIcon,
   CloseCircleOutlinedIcon,
 } from "@/shared/assets/icons";
 
@@ -13,7 +14,6 @@ const DEFAULT_POSITION = "top-center";
 type ToastType = "error" | "info" | "success" | "warning";
 type ToastOptions = {
   message?: string;
-  description?: string;
   title: string;
   variant?: ToastType;
 } & Omit<ToastT, "id">;
@@ -21,7 +21,6 @@ type ToastOptions = {
 const showToast = ({
   className,
   duration = DEFAULT_DURATION,
-  description,
   message,
   title,
   position = DEFAULT_POSITION,
@@ -43,16 +42,13 @@ const showToast = ({
         role="button"
         tabIndex={0}
       >
-        <p className={clsx(styles.title, "h5")}>
-          {variant === "error" && <CloseCircleOutlinedIcon />}
+        <p className={clsx(styles.title, "body_3")}>
           {variant === "success" && <CheckCircleIcon />}
+          {variant === "error" && <CloseCircleIcon />}
           {title}
         </p>
-        {!!description && (
-          <p className={clsx(styles.message, "body_5")}>{description}</p>
-        )}
         {!!message && (
-          <p className={clsx(styles.message, "body_7")}>{message}</p>
+          <p className={clsx(styles.message, "body_5")}>{message}</p>
         )}
       </div>
     ),
