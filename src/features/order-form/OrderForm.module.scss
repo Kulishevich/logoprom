@@ -1,0 +1,101 @@
+@use "../../shared/styles/functions" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: vw-1440(36);
+
+  width: vw-1440(856);
+}
+
+.elem {
+  display: flex;
+  flex-direction: column;
+  gap: vw-1440(24);
+
+  width: 100%;
+  padding: vw-1440(36);
+
+  border: 1px solid var(--grey);
+  border-radius: vw-1440(12);
+  & > .headerElem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h4 {
+      display: flex;
+      align-items: center;
+      gap: vw-1440(10);
+
+      & > span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        color: var(--dark-grey);
+        background-color: var(--grey);
+        border-radius: 50%;
+
+        width: vw-1440(36);
+        height: vw-1440(36);
+      }
+    }
+  }
+
+  &.active {
+    box-shadow: 0px 13px 29px 0px #1b1f1f1a;
+
+    & > h4 > span {
+      color: var(--white);
+      background-color: var(--color-blue);
+    }
+  }
+}
+
+.contacts {
+  display: grid;
+  grid-template-columns: repeat(2, vw-1440(380));
+  gap: vw-1440(32) vw-1440(24);
+}
+
+.deliveryMethod {
+  display: flex;
+  gap: vw-1440(24);
+
+  & > .deliveryCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: vw-1440(12);
+
+    padding: vw-1440(24);
+
+    width: vw-1440(246);
+    height: vw-1440(182);
+
+    border: 1px solid var(--grey);
+    border-radius: vw-1440(12);
+
+    &:hover {
+      opacity: 0.8;
+      cursor: pointer;
+    }
+
+    &.activeDelivery {
+      background-color: var(--color-blue);
+      color: var(--white);
+    }
+  }
+}
+
+.deliveryAddress {
+  display: flex;
+  flex-direction: column;
+  gap: vw-1440(20);
+
+  textarea {
+    height: vw-1440(190);
+  }
+}
