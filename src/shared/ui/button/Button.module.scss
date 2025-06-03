@@ -121,15 +121,18 @@
   gap: vw-1440(5);
 
   &:hover {
+    color: var(--white);
     background-color: var(--color-red);
     box-shadow: 0px 0px 4px 0px var(--color-red);
   }
 
   &:active {
+    color: var(--white);
     background-color: var(--color-red);
   }
 
   &:focus-visible {
+    color: var(--white);
     background-color: var(--color-red);
   }
 
