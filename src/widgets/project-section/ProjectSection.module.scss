@@ -1,0 +1,33 @@
+@use "../../shared/styles/functions" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.main {
+  display: flex;
+  gap: vw-1440(36);
+}
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: vw-1440(24);
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    gap: vw-1440(12);
+  }
+}
+.imageContainer {
+  position: relative;
+  width: vw-1440(636);
+  height: vw-1440(359);
+
+  border-radius: vw-1440(12);
+  overflow: hidden;
+
+  & > img {
+    object-fit: cover;
+  }
+}
