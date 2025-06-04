@@ -1,0 +1,14 @@
+@use "../../shared/styles/functions" as *;
+
+.continer {
+  display: flex;
+  flex-direction: column;
+}
+.proectsList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: vw-1440(32) vw-1440(24);
+
+  margin-top: vw-1440(42);
+  margin-bottom: vw-1440(36);
+}

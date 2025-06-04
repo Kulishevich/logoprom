@@ -2,11 +2,7 @@ import { clsx } from "clsx";
 import { ToastT, Toaster, toast } from "sonner";
 
 import styles from "./Toast.module.scss";
-import {
-  CheckCircleIcon,
-  CloseCircleIcon,
-  CloseCircleOutlinedIcon,
-} from "@/shared/assets/icons";
+import { CheckCircleIcon, CloseCircleIcon } from "@/shared/assets/icons";
 
 const DEFAULT_DURATION = 5000;
 const DEFAULT_POSITION = "top-center";

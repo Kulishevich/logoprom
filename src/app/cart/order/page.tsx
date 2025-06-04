@@ -1,5 +1,4 @@
 import { BlockImage } from "@/widgets/block-image";
-import { CartSection } from "@/widgets/cart-section";
 import { OrderSection } from "@/widgets/order-section";
 
 export default function About() {
