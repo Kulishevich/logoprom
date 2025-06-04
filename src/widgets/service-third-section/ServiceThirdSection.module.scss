@@ -1,0 +1,34 @@
+@use "../../shared/styles/functions" as *;
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  display: flex;
+  gap: vw-1440(24);
+
+  margin-top: vw-1440(24);
+  margin-bottom: vw-1440(36);
+
+  & > p:first-child {
+    width: vw-1440(746);
+  }
+  & > p:last-child {
+    width: vw-1440(526);
+  }
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  height: vw-1440(400);
+
+  border-radius: vw-1440(12);
+  overflow: hidden;
+
+  & > img {
+    object-fit: cover;
+  }
+}

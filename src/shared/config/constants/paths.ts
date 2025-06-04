@@ -9,4 +9,5 @@ export const paths = {
   privacy_policy: "/privacy-policy",
   cart: "/cart",
   order: "/order",
+  services: "/services",
 };
