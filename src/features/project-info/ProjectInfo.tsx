@@ -23,7 +23,7 @@ export const ProjectInfo = () => {
         <p className="body_2">Используемые товары</p>
         <div>
           {new Array(4).fill("").map((_, index) => (
-            <UsedProductCard />
+            <UsedProductCard key={index} />
           ))}
         </div>
       </div>

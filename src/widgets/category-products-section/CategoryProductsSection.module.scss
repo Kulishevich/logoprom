@@ -2,5 +2,11 @@
 
 .container {
   display: flex;
-  gap: vw-1440(48);
+  flex-direction: column;
+  gap: vw-1440(32);
+
+  & > .content {
+    display: flex;
+    gap: vw-1440(48);
+  }
 }

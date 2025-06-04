@@ -566,7 +566,7 @@ export const NavigationPopup = () => {
         <div className={s.subcategories}>
           {categories[activeCategory].subcategories?.map(
             (subcategory, index) => (
-              <Link className="body_4" href={`/`} key={index}>
+              <Link className="body_4" href={`/catalog/1/1`} key={index}>
                 {subcategory.title}
               </Link>
             )

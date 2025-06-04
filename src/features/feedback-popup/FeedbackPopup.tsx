@@ -22,7 +22,7 @@ export const FeedbackPopup = ({
 }) => {
   return (
     <Dialog.Root open={isOpen} onOpenChange={setIsOpen}>
-      <Dialog.Trigger>{children}</Dialog.Trigger>
+      <Dialog.Trigger asChild>{children}</Dialog.Trigger>
       <Dialog.Portal>
         <Dialog.Overlay className={s.overlay}>
           <Dialog.Content
@@ -30,11 +30,15 @@ export const FeedbackPopup = ({
             onClick={() => setIsOpen(false)}
           >
             <div className={s.header}>
-              <h2 className="h2">Свяжитесь с нами</h2>
-              <p className="body_1">
-                Заполните форму обратной связи, и наш менеджер свяжется с вами
-                в ближайшее время.
-              </p>
+              <Dialog.Title asChild>
+                <h2 className="h2">Свяжитесь с нами</h2>
+              </Dialog.Title>
+              <Dialog.Description asChild>
+                <p className="body_1">
+                  Заполните форму обратной связи, и наш менеджер свяжется с вами
+                  в ближайшее время.
+                </p>
+              </Dialog.Description>
             </div>
             <form className={s.form}>
               <div className={s.inputsContainer}>

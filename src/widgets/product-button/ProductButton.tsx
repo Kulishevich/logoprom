@@ -33,11 +33,13 @@ export const ProductButton = ({
       <Dialog.Portal>
         <Dialog.Overlay className={s.overlay}>
           <Dialog.Content className={s.contentPopup}>
-            <h2 className="h2">
-              {type === "buy-one-click"
-                ? "Купить в один клик"
-                : "Заказать товар"}
-            </h2>
+            <Dialog.Title asChild>
+              <h2 className="h2">
+                {type === "buy-one-click"
+                  ? "Купить в один клик"
+                  : "Заказать товар"}
+              </h2>
+            </Dialog.Title>
             <div className={s.content}>
               <div className={s.card}>
                 <div className={s.imageContainer}>
