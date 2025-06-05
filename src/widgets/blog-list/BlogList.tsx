@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React from "react";
 import s from "./BlogList.module.scss";
 import { NewsCard } from "@/entities/news-card";
 import { Button } from "@/shared/ui/button";

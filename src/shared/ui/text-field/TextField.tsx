@@ -18,7 +18,7 @@ import { SearchIcon } from "@/shared/assets/icons";
 import { Button } from "../button";
 import { Country, CountrySelect } from "../country-select";
 
-type Variant =
+export type Variant =
   | "search_1"
   | "search_2"
   | "search_3"

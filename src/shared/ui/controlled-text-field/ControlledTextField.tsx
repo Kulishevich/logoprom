@@ -3,13 +3,31 @@ import {
   UseControllerProps,
   useController,
 } from "react-hook-form";
-import { TextField, TextFieldProps } from "../text-field";
+import { TextField, TextFieldProps, Variant } from "../text-field";
+import { Country } from "../country-select";
+import { Dispatch, SetStateAction } from "react";
 
-type ControlledTextFieldProps<T extends FieldValues> = Omit<
+type BaseControlledProps<T extends FieldValues> = Omit<
   TextFieldProps,
   "disabled" | "onBlur" | "onChange" | "ref" | "value"
 > &
   UseControllerProps<T>;
+
+type ControlledPhoneProps<T extends FieldValues> = BaseControlledProps<T> & {
+  variant: "phone";
+  selectedCountry: Country;
+  onSelect: Dispatch<SetStateAction<Country>>;
+};
+
+type ControlledNonPhoneProps<T extends FieldValues> = BaseControlledProps<T> & {
+  variant?: Exclude<Variant, "phone">;
+  selectedCountry?: never;
+  onSelect?: never;
+};
+
+type ControlledTextFieldProps<T extends FieldValues> =
+  | ControlledPhoneProps<T>
+  | ControlledNonPhoneProps<T>;
 
 export const ControlledTextField = <T extends FieldValues>({
   control,
