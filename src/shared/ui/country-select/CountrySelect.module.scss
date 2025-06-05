@@ -1,0 +1,46 @@
+@use "../../styles/functions" as *;
+
+.trigger {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: vw-1440(4);
+  & > svg:first-child {
+    width: vw-1440(24);
+    height: vw-1440(24);
+  }
+
+  & > .arrow {
+    width: vw-1440(12);
+    height: vw-1440(12);
+  }
+}
+
+.content {
+  background: var(--white);
+  border: 1px solid var(--grey);
+  border-radius: vw-1440(12);
+  padding: vw-1440(4);
+  max-height: vw-1440(300);
+  overflow-y: auto;
+  min-width: vw-1440(200);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: vw-1440(6) vw-1440(8);
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  border-radius: vw-1440(4);
+
+  &:hover {
+    background: var(--grey);
+  }
+}

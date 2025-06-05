@@ -1,4 +1,4 @@
-import React, { Dispatch, ReactNode, SetStateAction } from "react";
+import React, { Dispatch, ReactNode, SetStateAction, useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import s from "./FeedbackPopup.module.scss";
 import {
@@ -10,6 +10,8 @@ import { TextArea } from "@/shared/ui/text-area";
 import { Checkbox } from "@/shared/ui/checkbox";
 import { Button } from "@/shared/ui/button";
 import Image from "next/image";
+import { Country } from "@/shared/ui/country-select";
+import { countries } from "@/shared/ui/country-select/countries";
 
 export const FeedbackPopup = ({
   children,
@@ -20,15 +22,14 @@ export const FeedbackPopup = ({
   isOpen: boolean;
   setIsOpen: Dispatch<SetStateAction<boolean>>;
 }) => {
+  const [selectedCountry, setSelectedCountry] = useState<Country>(countries[0]);
+
   return (
     <Dialog.Root open={isOpen} onOpenChange={setIsOpen}>
       <Dialog.Trigger asChild>{children}</Dialog.Trigger>
       <Dialog.Portal>
         <Dialog.Overlay className={s.overlay}>
-          <Dialog.Content
-            className={s.contentPopup}
-            onClick={() => setIsOpen(false)}
-          >
+          <Dialog.Content className={s.contentPopup}>
             <div className={s.header}>
               <Dialog.Title asChild>
                 <h2 className="h2">Свяжитесь с нами</h2>
@@ -45,8 +46,11 @@ export const FeedbackPopup = ({
                 <TextField label="Ваше имя" placeholder="Имя" isRequired />
                 <TextField
                   label="Ваш телефон"
-                  placeholder="Телефон"
+                  placeholder="(__) - ___-__-__"
                   isRequired
+                  variant="phone"
+                  selectedCountry={selectedCountry}
+                  onSelect={setSelectedCountry}
                 />
               </div>
 

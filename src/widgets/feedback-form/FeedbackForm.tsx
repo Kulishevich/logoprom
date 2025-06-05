@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import s from "./FeedbackForm.module.scss";
 import Image from "next/image";
 import { TextField } from "@/shared/ui/text-field";
@@ -8,8 +8,12 @@ import { Checkbox } from "@/shared/ui/checkbox";
 import { Button } from "@/shared/ui/button";
 import { ArrowToTopLeftIcon } from "@/shared/assets/icons";
 import { showToast } from "@/shared/ui/toast";
+import { Country } from "@/shared/ui/country-select";
+import { countries } from "@/shared/ui/country-select/countries";
 
 export const FeedbackForm = () => {
+  const [selectedCountry, setSelectedCountry] = useState<Country>(countries[0]);
+
   return (
     <div className={s.container}>
       <div className={s.header}>
@@ -28,9 +32,15 @@ export const FeedbackForm = () => {
         <form className={s.form}>
           <div className={s.inputsContainer}>
             <TextField label="Ваше имя" placeholder="Имя" isRequired />
-            <TextField label="Ваш телефон" placeholder="Телефон" isRequired />
+            <TextField
+              label="Ваш телефон"
+              placeholder="(__) - ___-__-__"
+              isRequired
+              variant="phone"
+              selectedCountry={selectedCountry}
+              onSelect={setSelectedCountry}
+            />
           </div>
-
           <TextArea
             label="Комментарий"
             placeholder="Комментарий"

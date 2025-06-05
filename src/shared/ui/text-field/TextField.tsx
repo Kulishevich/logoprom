@@ -2,8 +2,10 @@
 import {
   ChangeEvent,
   ComponentPropsWithoutRef,
+  Dispatch,
   ElementRef,
   ReactNode,
+  SetStateAction,
   forwardRef,
   useEffect,
   useId,
@@ -14,19 +16,40 @@ import clsx from "clsx";
 import s from "./TextField.module.scss";
 import { SearchIcon } from "@/shared/assets/icons";
 import { Button } from "../button";
+import { Country, CountrySelect } from "../country-select";
 
-export type TextFieldProps = {
+type Variant =
+  | "search_1"
+  | "search_2"
+  | "search_3"
+  | "default"
+  | "phone"
+  | "counter";
+
+type BaseProps = {
   errorMessage?: ReactNode | string;
   isRequired?: boolean;
   label?: string;
-  variant?:
-    | "search_1"
-    | "search_2"
-    | "search_3"
-    | "default"
-    | "phone"
-    | "counter";
-} & ComponentPropsWithoutRef<"input">;
+  className?: string;
+  disabled?: boolean;
+  placeholder?: string;
+  value?: string;
+  onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
+} & Omit<ComponentPropsWithoutRef<"input">, "onSelect">;
+
+type PhoneProps = {
+  variant: "phone";
+  selectedCountry: Country;
+  onSelect: Dispatch<SetStateAction<Country>>;
+};
+
+type NonPhoneProps = {
+  variant?: Exclude<Variant, "phone">;
+  selectedCountry?: never;
+  onSelect?: never;
+};
+
+export type TextFieldProps = BaseProps & (PhoneProps | NonPhoneProps);
 
 type TextFieldRef = ElementRef<"input">;
 
@@ -39,6 +62,8 @@ export const TextField = forwardRef<TextFieldRef, TextFieldProps>(
       isRequired = false,
       label,
       onChange,
+      selectedCountry,
+      onSelect,
       placeholder,
       value,
       variant = "default",
@@ -55,6 +80,8 @@ export const TextField = forwardRef<TextFieldRef, TextFieldProps>(
       variant === "search_1" ||
       variant === "search_2" ||
       variant === "search_3";
+
+    const is_phone = variant === "phone";
 
     const inputChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
       onChange?.(e);
@@ -114,6 +141,15 @@ export const TextField = forwardRef<TextFieldRef, TextFieldProps>(
             <SearchIcon
               className={clsx(s.iconSearch, disabled && s.disabled, s[variant])}
             />
+          )}
+          {is_phone && !!selectedCountry && !!onSelect && (
+            <div className={s.phonePrefix}>
+              <CountrySelect
+                selectedCountry={selectedCountry}
+                onSelect={onSelect}
+              />
+              <span>{selectedCountry.dialCode}</span>
+            </div>
           )}
         </div>
         {errorMessage && (
