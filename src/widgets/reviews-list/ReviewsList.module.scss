@@ -4,4 +4,9 @@
   display: flex;
   flex-direction: column;
   gap: vw-1440(36);
+
+  @media (max-width: 768px) {
+    gap: 24px;
+    width: 336px;
+  }
 }

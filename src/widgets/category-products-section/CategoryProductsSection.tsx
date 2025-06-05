@@ -6,7 +6,7 @@ import { CategoryCards } from "../category-cards";
 import { CategoryNavigation } from "../category-navigation";
 
 export const CategoryProductsSection = () => {
-  const variant = true;
+  const variant = false;
 
   return (
     <div className={s.container}>

@@ -5,6 +5,9 @@ import { Pagination } from "@/shared/ui/pagination";
 import { TextField } from "@/shared/ui/text-field";
 import { Select } from "@/shared/ui/select";
 import { SeoTextSection } from "../seo-text-section";
+import { FilterSecondIcon } from "@/shared/assets/icons";
+import { Button } from "@/shared/ui/button";
+import clsx from "clsx";
 
 const options = [
   {
@@ -38,11 +41,16 @@ export const CategoryProductsList = () => {
           placeholder="Поиск по категориям"
           variant="search_2"
         />
-        <Select
-          options={options}
-          defaultValue={options[0].value}
-          className={s.sort}
-        />
+        <div className={s.selectContainer}>
+          <Select
+            options={options}
+            defaultValue={options[0].value}
+            className={s.sort}
+          />
+          <Button variant="nav_3" className={clsx(s.filter, "mobile-only")}>
+            <FilterSecondIcon />
+          </Button>
+        </div>
       </div>
       <div className={s.productsList}>
         {new Array(6).fill("").map((_, index) => (

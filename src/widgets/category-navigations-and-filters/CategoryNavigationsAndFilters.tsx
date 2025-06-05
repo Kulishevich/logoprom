@@ -552,7 +552,7 @@ export const CategoryNavigationsAndFilters = () => {
   const [maxPrice, setMaxPrice] = useState(0);
 
   return (
-    <div className={s.container}>
+    <div className={clsx(s.container, "desktop-only")}>
       <div className={s.elem}>
         {categories.map((category, index) => (
           <Collapse

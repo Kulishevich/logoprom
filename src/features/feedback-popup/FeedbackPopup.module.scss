@@ -29,6 +29,12 @@
   border-radius: vw-1440(12);
 
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    width: 336px;
+    padding: 42px 24px 24px;
+    border-radius: 12px;
+  }
 }
 
 .header {
@@ -37,6 +43,11 @@
   gap: vw-1440(8);
 
   width: vw-1440(636);
+
+  @media (max-width: 768px) {
+    gap: 8px;
+    width: 100%;
+  }
 }
 
 .form {
@@ -47,6 +58,10 @@
   z-index: 10;
 
   width: vw-1440(583);
+  @media (max-width: 768px) {
+    gap: 20px;
+    width: 100%;
+  }
 }
 
 .textarea {
@@ -101,6 +116,16 @@
     cursor: pointer;
     color: var(--color-blue);
     scale: 1.1;
+  }
+
+  @media (max-width: 768px) {
+    top: 12px;
+    right: 12px;
+
+    & > svg {
+      width: 42px;
+      height: 42px;
+    }
   }
 }
 

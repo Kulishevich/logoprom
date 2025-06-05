@@ -6,12 +6,25 @@
   gap: vw-1440(36);
 
   width: vw-1440(1296);
+
+  @media (max-width: 768px) {
+    gap: 24px;
+    width: 336px;
+  }
 }
 .navigation {
   display: flex;
   gap: vw-1440(16);
 
   .button {
-    padding: 12px 24px;
+    padding: vw-1440(12) vw-1440(24);
+  }
+
+  @media (max-width: 768px) {
+    gap: 12px;
+
+    .button {
+      padding: 10px 20px;
+    }
   }
 }

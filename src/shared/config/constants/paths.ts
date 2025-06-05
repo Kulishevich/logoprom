@@ -10,4 +10,5 @@ export const paths = {
   cart: "/cart",
   order: "/order",
   services: "/services",
+  catalog: "/catalog",
 };

@@ -6,10 +6,20 @@
   gap: vw-1440(24);
 
   width: vw-1440(1296);
+
+  @media (max-width: 768px) {
+    gap: 20px;
+
+    width: 336px;
+  }
 }
 
 .elem {
   display: flex;
   flex-direction: column;
   gap: vw-1440(12);
+
+  @media (max-width: 768px) {
+    gap: 10px;
+  }
 }

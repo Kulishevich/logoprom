@@ -23,5 +23,16 @@
     position: relative;
     width: vw-1440(200);
     height: vw-1440(200);
+
+    @media (max-width: 768px) {
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    gap: 8px;
+    padding: 38px 16px;
+    border-radius: 12px;
   }
 }

@@ -30,7 +30,7 @@ export const HeaderNavigation = () => {
           <Link href={"/"} className="header">
             Услуги
           </Link>
-          {navigation.slice(2).map((nav, index) => (
+          {navigation.slice(2, 7).map((nav, index) => (
             <Link
               href={nav.path}
               className={clsx("header", pathname === nav.path && s.active)}

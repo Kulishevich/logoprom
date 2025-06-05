@@ -4,6 +4,16 @@
   display: grid;
   grid-template-columns: repeat(3, vw-1440(416));
   gap: vw-1440(24);
+
+  flex-shrink: 0;
+
+  @media (max-width: 768px) {
+    width: 336px;
+    display: flex;
+    gap: 24px;
+
+    overflow-x: auto;
+  }
 }
 
 .card {
@@ -16,11 +26,23 @@
 
   padding: vw-1440(16) vw-1440(20) vw-1440(19);
 
+  flex-shrink: 0;
+
   & > .imageContainer {
     position: relative;
 
     width: vw-1440(116);
     height: vw-1440(116);
+
+    flex-shrink: 0;
+    & > img {
+      object-fit: contain;
+    }
+
+    @media (max-width: 768px) {
+      width: 78px;
+      height: 78px;
+    }
   }
 
   & > .content {
@@ -30,5 +52,17 @@
     & > ul {
       list-style-position: inside;
     }
+
+    @media (max-width: 768px) {
+      gap: 12px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 270px;
+    height: 189px;
+    gap: 16px;
+    border-radius: 12px;
+    padding: 16px 20px;
   }
 }

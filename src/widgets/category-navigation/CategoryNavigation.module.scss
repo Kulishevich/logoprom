@@ -4,4 +4,10 @@
   display: flex;
   gap: vw-1440(16) vw-1440(24);
   flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    width: 336px;
+    overflow: auto;
+    flex-wrap: nowrap;
+  }
 }

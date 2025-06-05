@@ -8,4 +8,5 @@ export const navigation = [
   { title: "Отзывы", path: paths.reviews },
   { title: "Блог", path: paths.blog },
   { title: "Контакты", path: paths.contacts },
+  { title: "Каталог", path: paths.catalog },
 ];

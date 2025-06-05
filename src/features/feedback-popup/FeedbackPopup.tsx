@@ -12,6 +12,7 @@ import { Button } from "@/shared/ui/button";
 import Image from "next/image";
 import { Country } from "@/shared/ui/country-select";
 import { countries } from "@/shared/ui/country-select/countries";
+import clsx from "clsx";
 
 export const FeedbackPopup = ({
   children,
@@ -71,7 +72,7 @@ export const FeedbackPopup = ({
                 </Button>
               </div>
             </form>
-            <div className={s.imageContainer}>
+            <div className={clsx(s.imageContainer, "desktop-only")}>
               <Image src={"/feedback-popup.png"} fill alt="" />
             </div>
             <Dialog.DialogClose className={s.closeButton}>

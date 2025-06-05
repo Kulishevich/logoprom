@@ -6,10 +6,9 @@ import { PaginationSuspense } from "@/shared/ui/pagination-suspense";
 export const ReviewsList = () => {
   return (
     <div className={s.container}>
-      <ReviewsCard />
-      <ReviewsCard />
-      <ReviewsCard />
-      <ReviewsCard />
+      {new Array(4).fill("").map((_, index) => (
+        <ReviewsCard key={index} />
+      ))}
       <PaginationSuspense totalPages={10} />
     </div>
   );

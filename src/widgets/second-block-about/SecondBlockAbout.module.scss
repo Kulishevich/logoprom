@@ -6,6 +6,11 @@
   gap: vw-1440(42);
 
   width: vw-1440(1296);
+
+  @media (max-width: 768px) {
+    gap: 24px;
+    width: 336px;
+  }
 }
 .content {
   display: grid;
@@ -16,12 +21,29 @@
     display: flex;
     flex-direction: column;
     gap: vw-1440(51);
+
+    @media screen {
+      gap: 51px;
+      padding: 24px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 336px;
+
+    & > div {
+      gap: 24px;
+    }
   }
 }
 
 .imagesContainer {
   position: relative;
   display: flex;
+
   & > div {
     position: relative;
     width: vw-1440(66);
@@ -32,28 +54,55 @@
       object-fit: cover;
       border-radius: vw-1440(8);
       overflow: hidden;
+
+      @media (max-width: 768px) {
+        border-radius: 8px;
+      }
     }
 
     &:not(:first-child) {
       width: vw-1440(74);
-      border-left: 8px solid var(--white);
+      border-left: vw-1440(8) solid var(--white);
 
       &:nth-child(2) {
         position: absolute;
         left: vw-1440(58);
         top: 0;
+
+        @media (max-width: 768px) {
+          left: 58px;
+        }
       }
 
       &:nth-child(3) {
         position: absolute;
         left: vw-1440(126);
         top: 0;
+
+        @media (max-width: 768px) {
+          left: 126px;
+        }
       }
 
       & > img {
         border-radius: vw-1440(8);
         overflow: hidden;
+
+        @media (max-width: 768px) {
+          border-radius: 8px;
+        }
       }
+
+      @media (max-width: 768px) {
+        width: 74px;
+        border-left: 8px solid var(--white);
+      }
+    }
+
+    @media (max-width: 768px) {
+      width: 66px;
+      height: 66px;
+      border-radius: 8px;
     }
   }
 }
