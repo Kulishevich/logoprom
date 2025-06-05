@@ -9,12 +9,10 @@
   z-index: 1;
 
   @media (max-width: 768px) {
-    justify-content: center;
     gap: 6px;
     max-width: 336px;
     width: 100%;
     flex-wrap: wrap;
-    margin: 24px auto 16px;
   }
 }
 

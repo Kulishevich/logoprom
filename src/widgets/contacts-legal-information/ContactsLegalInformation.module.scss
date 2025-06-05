@@ -5,10 +5,20 @@
   flex-direction: column;
   gap: vw-1440(42);
   width: vw-1440(1296);
+
+  @media (max-width: 768px) {
+    width: 336px;
+    gap: 24px;
+  }
 }
 .content {
   display: flex;
   gap: vw-1440(134);
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 24px;
+  }
 }
 .elem {
   width: vw-1440(526);
@@ -19,5 +29,14 @@
 
   & > h4 {
     border-bottom: 1px solid var(--color-blue);
+    padding-bottom: vw-1440(8);
+    @media (max-width: 768px) {
+      padding-bottom: 8px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    gap: 12px;
   }
 }

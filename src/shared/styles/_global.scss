@@ -60,8 +60,13 @@ main {
 }
 
 ::-webkit-scrollbar {
-  width: vw-1440(8);
-  height: vw-1440(8);
+  width: vw-1440(10);
+  height: vw-1440(10);
+
+  @media (max-width: 768px) {
+    width: 10px;
+    height: 10px;
+  }
 }
 
 ::-webkit-scrollbar-track {
@@ -73,6 +78,9 @@ main {
   border-radius: vw-1440(10);
   border: 2px solid transparent;
   background-clip: content-box;
+  @media (max-width: 768px) {
+    border-radius: 10px;
+  }
 }
 
 ::-webkit-scrollbar-thumb:hover {

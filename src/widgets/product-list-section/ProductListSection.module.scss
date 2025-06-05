@@ -9,6 +9,7 @@
 
   @media (max-width: 768px) {
     width: 336px;
+    gap: 20px;
   }
 }
 
@@ -25,4 +26,7 @@
 .productsList {
   display: flex;
   gap: vw-1440(24);
+
+  width: 100%;
+  overflow-x: auto;
 }

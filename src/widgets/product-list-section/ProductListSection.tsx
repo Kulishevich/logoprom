@@ -22,10 +22,9 @@ export const ProductListSection = ({
         )}
       </div>
       <div className={s.productsList}>
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
+        {new Array(6).fill("").map((_, index) => (
+          <ProductCard key={index} />
+        ))}
       </div>
     </div>
   );

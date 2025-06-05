@@ -31,7 +31,7 @@
 
     display: flex;
     flex-direction: column;
-    gap: vw-1440(129616);
+    gap: vw-1440(16);
     justify-content: end;
 
     & > h1 {
@@ -39,5 +39,18 @@
       z-index: 1;
       margin-bottom: vw-1440(12);
     }
+
+    @media screen {
+      width: 336px;
+      gap: 12px;
+      & > h1 {
+        margin-bottom: 32px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    height: 164px;
+    margin-bottom: 36px;
   }
 }

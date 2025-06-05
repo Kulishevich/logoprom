@@ -14,6 +14,19 @@
     width: vw-1440(12);
     height: vw-1440(12);
   }
+
+  @media (max-width: 768px) {
+    gap: 4px;
+    & > svg:first-child {
+      width: 24px;
+      height: 24px;
+    }
+
+    & > .arrow {
+      width: 12px;
+      height: 12px;
+    }
+  }
 }
 
 .content {
