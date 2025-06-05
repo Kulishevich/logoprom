@@ -16,10 +16,13 @@ export const OtherNews = () => {
         </Button>
       </div>
       <div className={s.newsList}>
-        <NewsCard />
-        <NewsCard />
-        <NewsCard />
+        {new Array(6).fill("").map((_, index) => (
+          <NewsCard key={index} />
+        ))}
       </div>
+      <Button className={"mobile-only"} as={Link} href={paths.blog}>
+        <ArrowToTopLeftIcon /> Все новости
+      </Button>
     </div>
   );
 };

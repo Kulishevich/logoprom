@@ -6,7 +6,12 @@
   gap: vw-1440(32);
 
   width: vw-1440(1296);
+  @media (max-width: 768px) {
+    gap: 24px;
+    width: 336px;
+  }
 }
+
 .date {
   display: flex;
   align-items: center;
@@ -17,11 +22,23 @@
     background-color: var(--color-blue);
     padding: vw-1440(8) vw-1440(16);
     border-radius: vw-1440(32);
+
+    @media (max-width: 768px) {
+      padding: 8px 16px;
+      border-radius: 32px;
+    }
   }
   & > div {
     display: flex;
     align-items: center;
     gap: vw-1440(6);
+    @media (max-width: 768px) {
+      gap: 6px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    gap: 16px;
   }
 }
 
@@ -29,4 +46,8 @@
   display: flex;
   flex-direction: column;
   gap: vw-1440(24);
+
+  @media (max-width: 768px) {
+    gap: 20px;
+  }
 }

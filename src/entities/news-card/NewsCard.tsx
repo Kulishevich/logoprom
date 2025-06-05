@@ -3,6 +3,8 @@ import s from "./NewsCard.module.scss";
 import Image from "next/image";
 import { Button } from "@/shared/ui/button";
 import { ArrowToTopLeftIcon, EyeIcon } from "@/shared/assets/icons";
+import Link from "next/link";
+import { paths } from "@/shared/config/constants/paths";
 
 export const NewsCard = () => {
   return (
@@ -21,7 +23,7 @@ export const NewsCard = () => {
         <p className="h3">
           Изменение цен и расширение ассортимента датчиков температуры
         </p>
-        <Button variant="link_3">
+        <Button variant="link_3" as={Link} href={`${paths.blog}/1`}>
           <ArrowToTopLeftIcon />
           Подробнее
         </Button>

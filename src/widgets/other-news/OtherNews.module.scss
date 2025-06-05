@@ -26,4 +26,12 @@
 .newsList {
   display: flex;
   gap: vw-1440(24);
+  overflow-x: auto;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    width: 336px;
+    gap: 24px;
+    overflow-x: hidden;
+  }
 }
