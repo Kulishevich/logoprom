@@ -6,6 +6,7 @@ import { TextField } from "@/shared/ui/text-field";
 import { ArrowToTopLeftIcon } from "@/shared/assets/icons";
 import Link from "next/link";
 import { paths } from "@/shared/config/constants/paths";
+import clsx from "clsx";
 
 const products = [
   {
@@ -42,7 +43,7 @@ const products = [
 
 export const CartSection = () => {
   return (
-    <div className={s.container}>
+    <div className={clsx(s.container, "desktop-only")}>
       <div className={s.tableWrapper}>
         <table className={s.table}>
           <thead>

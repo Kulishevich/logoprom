@@ -7,6 +7,10 @@
 
   &.counter {
     width: vw-1440(109);
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
   }
 }
 
@@ -32,6 +36,13 @@
 
     width: vw-1440(21);
     height: vw-1440(21);
+
+    @media (max-width: 768px) {
+      top: 10px;
+      left: 8px;
+      width: 21px;
+      height: 21px;
+    }
   }
 
   & > .increment {
@@ -42,6 +53,13 @@
 
     width: vw-1440(21);
     height: vw-1440(21);
+
+    @media (max-width: 768px) {
+      top: 10px;
+      right: 8px;
+      width: 21px;
+      height: 21px;
+    }
   }
 }
 
@@ -156,7 +174,7 @@
     }
 
     @media (max-width: 768px) {
-      padding: 14px 24px;
+      padding: 8px 35px;
     }
   }
 

@@ -1,5 +1,6 @@
 import { BlockImage } from "@/widgets/block-image";
 import { CartSection } from "@/widgets/cart-section";
+import { CartSectionMobile } from "@/widgets/cart-section-mobile";
 
 export default function About() {
   return (
@@ -10,6 +11,7 @@ export default function About() {
       />
       <main>
         <CartSection />
+        <CartSectionMobile />
       </main>
     </>
   );
