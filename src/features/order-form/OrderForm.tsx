@@ -5,27 +5,29 @@ import { TextField } from "@/shared/ui/text-field";
 import clsx from "clsx";
 import { TextArea } from "@/shared/ui/text-area";
 import { Button } from "@/shared/ui/button";
+import { countries } from "@/shared/ui/country-select/countries";
+import { Country } from "@/shared/ui/country-select";
 
 const deliveryMethods = [
   {
     id: "1",
-    title: "По РБ (заказ > 400 BYN)",
-    description: "Бесплатно",
+    title: "Самовывоз",
   },
   {
     id: "2",
-    title: "По РБ (заказ < 400 BYN)",
-    description: "Оговаривается индивидуально",
+    title: "Оговаривается индивидуально",
+    description: "По РБ",
   },
   {
     id: "3",
-    title: "по Минску (заказ < 400 BYN)",
-    description: "10 BYN",
+    title: "10 BYN",
+    description: "по Минску (заказ < 400 BYN)",
   },
 ];
 
 export const OrderForm = () => {
   const [activeDelivery, setActiveDelivery] = useState(deliveryMethods[0].id);
+  const [selectedCountry, setSelectedCountry] = useState<Country>(countries[0]);
 
   return (
     <div className={s.container}>
@@ -36,14 +38,24 @@ export const OrderForm = () => {
           </h4>
         </div>
         <div className={s.contacts}>
-          <TextField label="Имя" isRequired placeholder="Имя" />
-          <TextField label="Телефон" isRequired placeholder="Телефон" />
-          <TextField label="Фамилия" isRequired placeholder="Фамилия" />
+          <TextField label="ФИО" isRequired placeholder="ФИО" />
+          <TextField
+            label="Телефон"
+            placeholder="(__) - ___-__-__"
+            isRequired
+            variant="phone"
+            selectedCountry={selectedCountry}
+            onSelect={setSelectedCountry}
+          />
+          <TextField
+            label="Наименование компании"
+            isRequired
+            placeholder="Наименование компании"
+          />
           <TextField label="Email" isRequired placeholder="Email" />
           <TextField
-            label="Отчество (если есть)"
-            isRequired
-            placeholder="Отчество"
+            label="УНП (необязательное поле)"
+            placeholder="УНП (необязательное поле)"
           />
         </div>
       </div>
@@ -63,8 +75,8 @@ export const OrderForm = () => {
               onClick={() => setActiveDelivery(elem.id)}
               key={index}
             >
-              <p className="body_3">{elem.title}</p>
-              <p className="body_1">{elem.description}</p>
+              {elem.description && <p className="body_3">{elem.description}</p>}
+              <p className="body_1">{elem.title}</p>
             </button>
           ))}
         </div>
