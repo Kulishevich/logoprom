@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Button } from "@/shared/ui/button";
 import clsx from "clsx";
 import { ProductButton } from "@/widgets/product-button";
+import { ChoiceProductLabelingPopup } from "@/features/choice-product-labeling-popup";
 
 export const ProductCard = () => {
   const in_stock = true;
@@ -42,7 +43,11 @@ export const ProductCard = () => {
         </div>
         <div className={s.priceContainer}>
           <p className="h4">2600 BYN</p>
-          {in_stock && <Button>Добавить в КП</Button>}
+          {in_stock && (
+            <ChoiceProductLabelingPopup>
+              <Button>Добавить в КП</Button>
+            </ChoiceProductLabelingPopup>
+          )}
           <ProductButton type={in_stock ? "buy-one-click" : "order"} />
         </div>
       </div>

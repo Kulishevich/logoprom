@@ -1,0 +1,139 @@
+@use "../../shared/styles/functions" as *;
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  background: #0b0e0e99;
+  backdrop-filter: blur(10px);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 101;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.contentPopup {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: vw-1440(36);
+
+  width: vw-1440(1076);
+  max-height: 95vh;
+
+  padding: vw-1440(48);
+  background-color: var(--white);
+  border-radius: vw-1440(12);
+
+  overflow: hidden;
+  overflow-y: auto;
+
+  & > h2 {
+    margin: 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    width: 336px;
+    padding: 58px 24px 24px;
+    border-radius: 12px;
+    gap: 20px;
+  }
+}
+
+.content {
+  display: flex;
+  gap: vw-1440(36);
+
+  & > .inputWithButton {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    & > p {
+      margin-top: vw-1440(24);
+      margin-bottom: vw-1440(16);
+      &::before {
+        content: "*";
+        color: var(--color-red);
+      }
+
+      @media (max-width: 768px) {
+        margin-top: 20px;
+        margin-bottom: 16px;
+      }
+    }
+
+    & > button {
+      width: vw-1440(243);
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+    }
+  }
+
+  & > .imageContainer {
+    position: relative;
+    width: vw-1440(504);
+    height: vw-1440(226);
+
+    flex-shrink: 0;
+
+    & > img {
+      object-fit: contain;
+    }
+
+    @media (max-width: 768px) {
+      width: 288px;
+      height: 160px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+.closeButton {
+  position: absolute;
+  top: vw-1440(24);
+  right: vw-1440(24);
+
+  & > svg {
+    width: vw-1440(42);
+    height: vw-1440(42);
+  }
+
+  transition: scale 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    cursor: pointer;
+    color: var(--color-blue);
+    scale: 1.1;
+  }
+
+  @media (max-width: 768px) {
+    top: 12px;
+    right: 12px;
+
+    & > svg {
+      width: 42px;
+      height: 42px;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
