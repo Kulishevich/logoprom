@@ -30,6 +30,7 @@
 }
 
 .content {
+  z-index: 1000;
   background: var(--white);
   border: 1px solid var(--grey);
   border-radius: vw-1440(12);

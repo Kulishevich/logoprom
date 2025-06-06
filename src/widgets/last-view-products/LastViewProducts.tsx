@@ -8,12 +8,9 @@ export const LastViewProducts = () => {
     <div className={s.container}>
       <h2 className="h2">Вы недавно смотрели</h2>
       <Slider itemWidth={264}>
-        <LastViewProductCard />
-        <LastViewProductCard />
-        <LastViewProductCard />
-        <LastViewProductCard />
-        <LastViewProductCard />
-        <LastViewProductCard />
+        {new Array(6).fill("").map((_, index) => (
+          <LastViewProductCard key={index}/>
+        ))}
       </Slider>
     </div>
   );

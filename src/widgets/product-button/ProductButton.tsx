@@ -10,6 +10,8 @@ import { TextField } from "@/shared/ui/text-field";
 import { Checkbox } from "@/shared/ui/checkbox";
 import { Button } from "@/shared/ui/button";
 import Image from "next/image";
+import { Country } from "@/shared/ui/country-select";
+import { countries } from "@/shared/ui/country-select/countries";
 
 export const ProductButton = ({
   className,
@@ -19,7 +21,7 @@ export const ProductButton = ({
   type: "buy-one-click" | "order";
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const [selectedCountry, setSelectedCountry] = useState<Country>(countries[0]);
   return (
     <Dialog.Root open={isOpen} onOpenChange={setIsOpen}>
       <Dialog.Trigger asChild>
@@ -54,13 +56,16 @@ export const ProductButton = ({
                 <div className={s.inputsContainer}>
                   <TextField label="Ваше имя" placeholder="Имя" isRequired />
                   <TextField
-                    label="Ваш email"
-                    placeholder="Телефон"
+                    label="Ваш телефон"
+                    placeholder="(__) - ___-__-__"
                     isRequired
+                    variant="phone"
+                    selectedCountry={selectedCountry}
+                    onSelect={setSelectedCountry}
                   />
                 </div>
                 <p className="h4">или</p>
-                <TextField label="Ваш телефон" placeholder="Email" isRequired />
+                <TextField label="Ваш email" placeholder="Email" isRequired />
                 <div className={s.submitContainer}>
                   <Checkbox
                     label="Согласие на обработку персональных данных"

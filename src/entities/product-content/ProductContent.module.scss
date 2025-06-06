@@ -23,6 +23,10 @@
 
     & > .filterButton {
       width: vw-1440(208);
+
+      @media (max-width: 768px) {
+        width: 208px;
+      }
     }
 
     & > .downloadButton:hover {
@@ -31,6 +35,14 @@
         color: var(--color-blue);
       }
     }
+    @media (max-width: 768px) {
+      gap: 12px;
+      margin-top: 16px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 20px 0;
   }
 }
 
@@ -39,6 +51,7 @@
   flex-direction: column;
 
   width: vw-1440(516);
+
   & > .specificationElem {
     display: flex;
     padding: vw-1440(12) 0;
@@ -50,10 +63,19 @@
     label {
       font-weight: 700;
     }
+
+    @media (max-width: 768px) {
+      padding: 12px 0;
+
+    }
   }
 
   .checkboxContainer {
     display: flex;
     flex-direction: column;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
   }
 }

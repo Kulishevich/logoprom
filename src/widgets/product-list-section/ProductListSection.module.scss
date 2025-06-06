@@ -20,6 +20,9 @@
 
   & > button {
     width: vw-1440(243);
+    @media (max-width: 768px) {
+      width: 243px;
+    }
   }
 }
 
@@ -29,4 +32,17 @@
 
   width: 100%;
   overflow-x: auto;
+
+  &.primary {
+  }
+
+  &.secondary {
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 768px) {
+    gap: 20px;
+  }
 }

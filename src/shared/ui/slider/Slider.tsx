@@ -3,6 +3,7 @@ import React, { ReactNode, useRef } from "react";
 import s from "./Slider.module.scss";
 import { Button } from "../button";
 import { ArrowLeftIcon, ArrowRightIcon } from "@/shared/assets/icons";
+import clsx from "clsx";
 
 type SliderProps = {
   children: ReactNode;
@@ -28,7 +29,7 @@ export const Slider = ({ children, itemWidth }: SliderProps) => {
     <div className={s.container}>
       <Button
         variant="nav_3"
-        className={s.iconLeft}
+        className={clsx(s.iconLeft, "desktop-only")}
         onClick={() => scroll("left")}
       >
         <ArrowLeftIcon />
@@ -39,7 +40,7 @@ export const Slider = ({ children, itemWidth }: SliderProps) => {
       </div>
       <Button
         variant="nav_3"
-        className={s.iconRight}
+        className={clsx(s.iconRight, "desktop-only")}
         onClick={() => scroll("right")}
       >
         <ArrowRightIcon />

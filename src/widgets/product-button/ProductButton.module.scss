@@ -24,20 +24,34 @@
   gap: vw-1440(24);
 
   width: vw-1440(1076);
+  max-height: 95vh;
+
   padding: vw-1440(48);
   background-color: var(--white);
   border-radius: vw-1440(12);
 
   overflow: hidden;
+  overflow-y: auto;
 
   & > h2 {
     margin: 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    width: 336px;
+    padding: 58px 24px 24px;
+    border-radius: 12px;
+    gap: 20px;
   }
 }
 
 .content {
   display: flex;
   gap: vw-1440(48);
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 24px;
+  }
 }
 
 .form {
@@ -46,6 +60,11 @@
   gap: vw-1440(24);
 
   width: vw-1440(585);
+
+  @media (max-width: 768px) {
+    gap: 20px;
+    width: 100%;
+  }
 }
 
 .inputsContainer {
@@ -94,6 +113,16 @@
     color: var(--color-blue);
     scale: 1.1;
   }
+
+  @media (max-width: 768px) {
+    top: 12px;
+    right: 12px;
+
+    & > svg {
+      width: 42px;
+      height: 42px;
+    }
+  }
 }
 
 .card {
@@ -110,6 +139,16 @@
     padding: 0 vw-1440(16);
     text-align: center;
   }
+
+  @media (max-width: 768px) {
+    gap: 12px;
+    width: 100%;
+    border-radius: 12px;
+    padding-bottom: 20px;
+    & > p {
+      padding: 0 16px;
+    }
+  }
 }
 
 .imageContainer {
@@ -123,6 +162,11 @@
 
   & > img {
     object-fit: contain;
+  }
+
+  @media (max-width: 768px) {
+    height: 139px;
+    border-radius: 12px;
   }
 }
 

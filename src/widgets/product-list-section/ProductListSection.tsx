@@ -3,13 +3,16 @@ import s from "./ProductListSection.module.scss";
 import { Button } from "@/shared/ui/button";
 import { ArrowToTopLeftIcon } from "@/shared/assets/icons";
 import { ProductCard } from "@/entities/product-card";
+import clsx from "clsx";
 
 export const ProductListSection = ({
   title,
   with_button = true,
+  variant = "primary",
 }: {
   title: string;
   with_button?: boolean;
+  variant?: "primary" | "secondary";
 }) => {
   return (
     <div className={s.container}>
@@ -21,7 +24,7 @@ export const ProductListSection = ({
           </Button>
         )}
       </div>
-      <div className={s.productsList}>
+      <div className={clsx(s.productsList, s[variant])}>
         {new Array(6).fill("").map((_, index) => (
           <ProductCard key={index} />
         ))}

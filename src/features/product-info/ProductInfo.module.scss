@@ -22,6 +22,10 @@
     color: var(--text);
     opacity: 0.5;
   }
+
+  @media (max-width: 768px) {
+    margin-bottom: 12px;
+  }
 }
 
 .productCharacteristics {
@@ -43,6 +47,14 @@
       text-align: end;
       font-weight: 700;
     }
+
+    @media (max-width: 768px) {
+      padding: 12px 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom: 32px;
   }
 }
 
@@ -53,5 +65,15 @@
 
   & > button {
     width: vw-1440(266);
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 12px;
+    margin: 16px 0 48px;
+
+    & > button {
+      width: 100%;
+    }
   }
 }

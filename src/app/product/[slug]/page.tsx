@@ -12,7 +12,11 @@ export default function Product() {
       <main>
         <ProductSection />
         <ProductModification />
-        <ProductListSection title="Сопутствующие товары" with_button={false} />
+        <ProductListSection
+          variant="secondary"
+          title="Сопутствующие товары"
+          with_button={false}
+        />
         <LastViewProducts />
         <FeedbackForm />
       </main>
