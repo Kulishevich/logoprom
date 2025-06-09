@@ -4,6 +4,10 @@
   display: flex;
   flex-direction: column;
   gap: vw-1440(16);
+
+  @media (max-width: 768px) {
+    gap: 20px;
+  }
 }
 
 .bigImage {
@@ -27,6 +31,19 @@
     padding: vw-1440(8) vw-1440(16);
     border-radius: vw-1440(32);
     background-color: var(--color-red);
+
+    @media (max-width: 768px) {
+      top: 16px;
+      left: 16px;
+      padding: 8px 16px;
+      border-radius: 32px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 336px;
+    border-radius: 12px;
   }
 }
 
@@ -37,6 +54,11 @@
   width: vw-1440(416);
 
   overflow: auto;
+
+  @media (max-width: 768px) {
+    gap: 16px;
+    width: 100%;
+  }
 }
 
 .smallImage {
@@ -44,12 +66,18 @@
 
   width: vw-1440(96);
   height: vw-1440(96);
-  border-radius: 12px;
+  border-radius: vw-1440(12);
   overflow: hidden;
 
   flex-shrink: 0;
 
   & > img {
     object-fit: cover;
+  }
+
+  @media (max-width: 768px) {
+    width: 96px;
+    height: 96px;
+    border-radius: 12px;
   }
 }

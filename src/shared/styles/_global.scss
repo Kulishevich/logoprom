@@ -42,6 +42,7 @@ main {
   width: vw-1440(1296);
 
   @media (max-width: 768px) {
+    width: 336px;
     gap: 72px;
     margin-bottom: 72px;
   }
@@ -61,22 +62,22 @@ main {
 
 ::-webkit-scrollbar {
   width: vw-1440(10);
-  height: vw-1440(10);
+  height: vw-1440(3);
 
   @media (max-width: 768px) {
     width: 10px;
-    height: 10px;
+    height: 3px;
   }
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: var(--text-30);
+  border-radius: 2px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--dark-grey-70);
+  background-color: var(--color-blue);
   border-radius: vw-1440(10);
-  border: 2px solid transparent;
   background-clip: content-box;
   @media (max-width: 768px) {
     border-radius: 10px;

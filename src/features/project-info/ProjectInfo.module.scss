@@ -9,6 +9,14 @@
 
   border-radius: vw-1440(12);
   background-color: var(--light-grey);
+
+  @media (max-width: 768px) {
+    gap: 12px;
+    width: 100%;
+    padding: 24px;
+
+    border-radius: 12px;
+  }
 }
 .characteristics {
   display: flex;
@@ -24,6 +32,10 @@
 
     & > p:last-child {
       font-weight: 700;
+      text-align: end;
+    }
+    @media (max-width: 768px) {
+      padding: 12px 0;
     }
   }
 }
@@ -39,5 +51,15 @@
     gap: vw-1440(16);
 
     padding-bottom: vw-1440(16);
+
+    @media (max-width: 768px) {
+      gap: 16px;
+      padding-bottom: 16px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    gap: 16px;
+    width: 100%;
   }
 }

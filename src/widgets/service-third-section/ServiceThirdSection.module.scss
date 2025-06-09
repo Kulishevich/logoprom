@@ -14,9 +14,23 @@
 
   & > p:first-child {
     width: vw-1440(746);
+    @media (max-width: 768px) {
+      width: 100%;
+    }
   }
   & > p:last-child {
     width: vw-1440(526);
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+
+  @media screen {
+    flex-direction: column;
+    gap: 16px;
+
+    margin-top: 16px;
+    margin-bottom: 32px;
   }
 }
 
@@ -30,5 +44,10 @@
 
   & > img {
     object-fit: cover;
+  }
+
+  @media (max-width: 768px) {
+    height: 234px;
+    border-radius: 12px;
   }
 }

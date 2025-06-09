@@ -5,6 +5,10 @@
   flex-direction: column;
   gap: vw-1440(36);
   width: 100%;
+
+  @media (max-width: 768px) {
+    gap: 24px;
+  }
 }
 .header {
   display: flex;
@@ -13,7 +17,17 @@
   & > p {
     width: vw-1440(526);
   }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 16px;
+
+    & > p {
+      width: 100%;
+    }
+  }
 }
+
 .imageContainer {
   position: relative;
   width: vw-1440(306);
@@ -26,5 +40,11 @@
 
   & > img {
     object-fit: cover;
+  }
+
+  @media (max-width: 768px) {
+    width: 248px;
+    height: 320px;
+    border-radius: 12px;
   }
 }

@@ -1,16 +1,13 @@
 @use "../../shared/styles/functions" as *;
 
 .container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: vw-1440(24);
-
+  display: flex;
+  flex-direction: column;
+  gap: vw-1440(32);
   width: 100%;
 
   @media (max-width: 768px) {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+    gap: 20px;
     width: 336px;
   }
 }

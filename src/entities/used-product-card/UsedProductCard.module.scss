@@ -5,7 +5,10 @@
   flex-direction: column;
 
   border: 1px solid var(--grey);
-  border-radius: vw-1440(20);
+  border-radius: vw-1440(12);
+  @media (max-width: 768px) {
+    border-radius: 12px;
+  }
 }
 .imageContainer {
   position: relative;
@@ -18,6 +21,13 @@
   & > img {
     object-fit: contain;
   }
+
+  @media (max-width: 768px) {
+    width: 240px;
+    height: 160px;
+
+    border-radius: 12px;
+  }
 }
 
 .content {
@@ -28,5 +38,14 @@
   & > .price {
     margin-top: vw-1440(12);
     margin-bottom: vw-1440(16);
+
+    @media (max-width: 768px) {
+      margin-top: 12px;
+      margin-bottom: 16px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 16px 16px 20px;
   }
 }

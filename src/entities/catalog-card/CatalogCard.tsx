@@ -6,10 +6,14 @@ import Link from "next/link";
 export const CatalogCard = () => {
   return (
     <Link href={"/catalog/1"} className={s.container}>
-      <div className={s.imageContainer}>
-        <Image src={"/catalog-card.png"} fill alt="catalog-card" />
+      <p className="h4">Контрольно-измерительные приборы</p>
+      <div className={s.imagesContainer}>
+        {new Array(4).fill("").map((_, index) => (
+          <div key={index}>
+            <Image src={"/catalog-card.png"} fill alt="catalog-card" />
+          </div>
+        ))}
       </div>
-      <p className="body_3">Контрольно-измерительные приборы</p>
     </Link>
   );
 };
