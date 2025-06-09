@@ -24,11 +24,14 @@
   gap: vw-1440(36);
 
   width: vw-1440(1076);
+  max-height: 95vh;
   padding: vw-1440(48);
+
   background-color: var(--white);
   border-radius: vw-1440(12);
 
   overflow: hidden;
+  overflow-y: auto;
 
   @media (max-width: 768px) {
     width: 336px;

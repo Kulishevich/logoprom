@@ -13,6 +13,7 @@ import Image from "next/image";
 import { Country } from "@/shared/ui/country-select";
 import { countries } from "@/shared/ui/country-select/countries";
 import clsx from "clsx";
+import { showToast } from "@/shared/ui/toast";
 
 export const FeedbackPopup = ({
   children,
@@ -66,7 +67,14 @@ export const FeedbackPopup = ({
                   label="Согласие на обработку персональных данных"
                   privacyPolicy
                 />
-                <Button>
+                <Button
+                  onClick={() =>
+                    showToast({
+                      title: "Товар добавлен в корзину",
+                      variant: "success",
+                    })
+                  }
+                >
                   <ArrowToTopLeftIcon />
                   Отправить
                 </Button>

@@ -3,7 +3,24 @@
 .continer {
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 768px) {
+    width: 336px;
+  }
 }
+
+.navigation {
+  display: flex;
+  gap: vw-1440(16);
+  flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    gap: 16px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+}
+
 .proectsList {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -11,4 +28,13 @@
 
   margin-top: vw-1440(42);
   margin-bottom: vw-1440(36);
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    margin-top: 28px;
+    margin-bottom: 32px;
+  }
 }

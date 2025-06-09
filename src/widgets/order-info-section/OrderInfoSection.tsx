@@ -12,18 +12,18 @@ import { paths } from "@/shared/config/constants/paths";
 import clsx from "clsx";
 
 export const OrderInfoSection = () => {
-  const status = false;
+  const status = true;
 
   return (
     <div className={s.container}>
       <Image
         src={status ? "/order-success.jpg" : "/order-error.jpg"}
         fill
-        alt="not found"
+        alt="order-info"
       />
       {status ? (
         <div className={s.content}>
-          <CheckCircleIcon />
+          <CheckCircleIcon className={s.success} />
           <div>
             <h2 className="h2">Ваш заказ оформлен!</h2>
             <p className="body_3">
@@ -41,7 +41,7 @@ export const OrderInfoSection = () => {
         </div>
       ) : (
         <div className={clsx(s.content, s.error)}>
-          <CloseCircleIcon />
+          <CloseCircleIcon className={s.error} />
           <div>
             <h2 className={"h2"}>Ваш заказ не оформлен...</h2>
             <p className="body_4">Пожалуйста, повторите попытку ещё раз.</p>
