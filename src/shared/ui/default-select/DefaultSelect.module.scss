@@ -5,26 +5,31 @@
   align-items: center;
   cursor: pointer;
   gap: vw-1440(4);
-  & > svg:first-child {
-    width: vw-1440(24);
-    height: vw-1440(24);
-  }
 
-  & > .arrow {
-    width: vw-1440(12);
-    height: vw-1440(12);
+  & > svg {
+    &:first-child {
+      width: vw-1440(24);
+      height: vw-1440(24);
+    }
+    &.arrow {
+      width: vw-1440(12);
+      height: vw-1440(12);
+    }
   }
 
   @media (max-width: 768px) {
     gap: 4px;
-    & > svg:first-child {
-      width: 24px;
-      height: 24px;
-    }
 
-    & > .arrow {
-      width: 12px;
-      height: 12px;
+    & > svg {
+      &:first-child {
+        width: 24px;
+        height: 24px;
+      }
+
+      &.arrow {
+        width: 9px;
+        height: 9px;
+      }
     }
   }
 }
@@ -37,7 +42,14 @@
   padding: vw-1440(4);
   max-height: vw-1440(300);
   overflow-y: auto;
-  min-width: vw-1440(200);
+  min-width: vw-1440(150);
+
+  @media (max-width: 768px) {
+    border-radius: 12px;
+    padding: 4px;
+    max-height: 300px;
+    min-width: 150px;
+  }
 }
 
 .list {
@@ -47,6 +59,7 @@
 
 .item {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding: vw-1440(6) vw-1440(8);
   cursor: pointer;
@@ -56,5 +69,9 @@
 
   &:hover {
     background: var(--grey);
+  }
+
+  @media (max-width: 768px) {
+    padding: 6px 8px;
   }
 }

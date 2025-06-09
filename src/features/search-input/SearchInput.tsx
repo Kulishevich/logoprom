@@ -20,15 +20,6 @@ export const SearchInput = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // const searchResult = {
-  //   categories: categories?.filter((category) =>
-  //     category.name.toLowerCase().includes(searchValue.toLowerCase())
-  //   ),
-  //   products: products?.filter((product) =>
-  //     product.name.toLowerCase().includes(searchValue.toLowerCase())
-  //   ),
-  // };
-
   const handleChangeValue = (value: string) => {
     setSearchValue(value);
     setIsOpen(!!value);

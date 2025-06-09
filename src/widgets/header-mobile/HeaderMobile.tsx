@@ -1,18 +1,16 @@
 import clsx from "clsx";
-import React from "react";
 import s from "./HeaderMobile.module.scss";
 import {
   MailIcon,
-  MenuIcon,
-  PhoneIcon,
-  SearchIcon,
   TelegramOutlineIcon,
   ViberOutlineIcon,
   WhatsappOutlineIcon,
 } from "@/shared/assets/icons";
 import Link from "next/link";
 import { Logo } from "@/shared/ui/logo";
-import { Button } from "@/shared/ui/button";
+import { HeaderMobileFeedbackPopup } from "@/features/header-mobile-feedback-popup";
+import { HeaderBurgerMenu } from "@/features/header-burder-menu";
+import { HeaderMobileSearch } from "@/features/header-mobile-search";
 
 export const HeaderMobile = () => {
   return (
@@ -33,15 +31,9 @@ export const HeaderMobile = () => {
       <div className={s.navigation}>
         <Logo />
         <div className={s.menu}>
-          <Button variant="mobile_nav">
-            <SearchIcon />
-          </Button>
-          <Button variant="mobile_nav">
-            <PhoneIcon />
-          </Button>
-          <Button variant="mobile_nav">
-            <MenuIcon />
-          </Button>
+          <HeaderMobileSearch />
+          <HeaderMobileFeedbackPopup />
+          <HeaderBurgerMenu />
         </div>
       </div>
     </div>

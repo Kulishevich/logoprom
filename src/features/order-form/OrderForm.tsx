@@ -5,8 +5,8 @@ import { TextField } from "@/shared/ui/text-field";
 import clsx from "clsx";
 import { TextArea } from "@/shared/ui/text-area";
 import { Button } from "@/shared/ui/button";
-import { countries } from "@/shared/ui/country-select/countries";
-import { Country } from "@/shared/ui/country-select";
+import { countries } from "@/shared/ui/default-select/countries";
+import { Option } from "@/shared/ui/default-select";
 
 const deliveryMethods = [
   {
@@ -27,7 +27,7 @@ const deliveryMethods = [
 
 export const OrderForm = () => {
   const [activeDelivery, setActiveDelivery] = useState(deliveryMethods[0].id);
-  const [selectedCountry, setSelectedCountry] = useState<Country>(countries[0]);
+  const [selectedCountry, setSelectedCountry] = useState<Option>(countries[0]);
 
   return (
     <div className={s.container}>
@@ -44,7 +44,8 @@ export const OrderForm = () => {
             placeholder="(__) - ___-__-__"
             isRequired
             variant="phone"
-            selectedCountry={selectedCountry}
+            options={countries}
+            selected={selectedCountry}
             onSelect={setSelectedCountry}
           />
           <TextField

@@ -10,8 +10,8 @@ import { TextField } from "@/shared/ui/text-field";
 import { Checkbox } from "@/shared/ui/checkbox";
 import { Button } from "@/shared/ui/button";
 import Image from "next/image";
-import { Country } from "@/shared/ui/country-select";
-import { countries } from "@/shared/ui/country-select/countries";
+import { countries } from "@/shared/ui/default-select/countries";
+import { Option } from "@/shared/ui/default-select";
 
 export const ProductButton = ({
   className,
@@ -21,7 +21,7 @@ export const ProductButton = ({
   type: "buy-one-click" | "order";
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedCountry, setSelectedCountry] = useState<Country>(countries[0]);
+  const [selectedCountry, setSelectedCountry] = useState<Option>(countries[0]);
 
   return (
     <Dialog.Root open={isOpen} onOpenChange={setIsOpen}>
@@ -61,7 +61,8 @@ export const ProductButton = ({
                     placeholder="(__) - ___-__-__"
                     isRequired
                     variant="phone"
-                    selectedCountry={selectedCountry}
+                    options={countries}
+                    selected={selectedCountry}
                     onSelect={setSelectedCountry}
                   />
                 </div>

@@ -42,4 +42,12 @@
   gap: vw-1440(6);
   width: vw-1440(246);
   flex-shrink: 0;
+  & > svg {
+    width: vw-1440(29);
+    height: vw-1440(29);
+  }
+}
+
+.selectTrigger {
+  color: var(--color-blue);
 }

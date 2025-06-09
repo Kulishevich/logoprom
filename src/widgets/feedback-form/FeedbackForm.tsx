@@ -8,11 +8,11 @@ import { Checkbox } from "@/shared/ui/checkbox";
 import { Button } from "@/shared/ui/button";
 import { ArrowToTopLeftIcon } from "@/shared/assets/icons";
 import { showToast } from "@/shared/ui/toast";
-import { Country } from "@/shared/ui/country-select";
-import { countries } from "@/shared/ui/country-select/countries";
+import { countries } from "@/shared/ui/default-select/countries";
+import { Option } from "@/shared/ui/default-select";
 
 export const FeedbackForm = () => {
-  const [selectedCountry, setSelectedCountry] = useState<Country>(countries[0]);
+  const [selectedCountry, setSelectedCountry] = useState<Option>(countries[0]);
 
   return (
     <div className={s.container}>
@@ -37,7 +37,8 @@ export const FeedbackForm = () => {
               placeholder="(__) - ___-__-__"
               isRequired
               variant="phone"
-              selectedCountry={selectedCountry}
+              options={countries}
+              selected={selectedCountry}
               onSelect={setSelectedCountry}
             />
           </div>

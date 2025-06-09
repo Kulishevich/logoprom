@@ -63,19 +63,20 @@ main {
 ::-webkit-scrollbar {
   width: vw-1440(10);
   height: vw-1440(3);
-
+  border-top: 5px solid transparent;
   @media (max-width: 768px) {
-    width: 10px;
+    width: 6px;
     height: 3px;
   }
 }
 
 ::-webkit-scrollbar-track {
   background: var(--text-30);
-  border-radius: 2px;
 }
 
 ::-webkit-scrollbar-thumb {
+  border-top: 10px;
+
   background-color: var(--color-blue);
   border-radius: vw-1440(10);
   background-clip: content-box;

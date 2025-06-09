@@ -10,10 +10,10 @@ import { TextArea } from "@/shared/ui/text-area";
 import { Checkbox } from "@/shared/ui/checkbox";
 import { Button } from "@/shared/ui/button";
 import Image from "next/image";
-import { Country } from "@/shared/ui/country-select";
-import { countries } from "@/shared/ui/country-select/countries";
+import { countries } from "@/shared/ui/default-select/countries";
 import clsx from "clsx";
 import { showToast } from "@/shared/ui/toast";
+import { Option } from "@/shared/ui/default-select";
 
 export const FeedbackPopup = ({
   children,
@@ -24,7 +24,7 @@ export const FeedbackPopup = ({
   isOpen: boolean;
   setIsOpen: Dispatch<SetStateAction<boolean>>;
 }) => {
-  const [selectedCountry, setSelectedCountry] = useState<Country>(countries[0]);
+  const [selectedCountry, setSelectedCountry] = useState<Option>(countries[0]);
 
   return (
     <Dialog.Root open={isOpen} onOpenChange={setIsOpen}>
@@ -51,7 +51,8 @@ export const FeedbackPopup = ({
                   placeholder="(__) - ___-__-__"
                   isRequired
                   variant="phone"
-                  selectedCountry={selectedCountry}
+                  options={countries}
+                  selected={selectedCountry}
                   onSelect={setSelectedCountry}
                 />
               </div>

@@ -9,20 +9,35 @@ export const SearchProduct = () => {
 
   return (
     <div className={s.container}>
-      <div className={s.imageContainer}>
-        <Image src={"/product-image.png"} fill alt="product-image" />
-      </div>
-      <div className={s.priceContainer}>
-        <p className="body_6">
-          2ТРМ1 обновлённый погодозависимый двухканальный регулятор с RS-485
-        </p>
-        <p className="body_3">2600 BYN</p>
+      <div className={s.content}>
+        <div className={s.imageContainer}>
+          <Image src={"/product-image.png"} fill alt="product-image" />
+        </div>
+        <div className={s.priceContainer}>
+          <p className="body_6">
+            2ТРМ1 обновлённый погодозависимый двухканальный регулятор с RS-485
+          </p>
+          {in_stock ? (
+            <p className={clsx("body_6", s.inStock, "mobile-only")}>
+              *В наличии
+            </p>
+          ) : (
+            <p className={clsx("body_6", s.notInStock, "mobile-only")}>
+              *Под заказ
+            </p>
+          )}
+          <p className="body_3">2600 BYN</p>
+        </div>
       </div>
       <div className={s.buttonsContainer}>
         {in_stock ? (
-          <p className={clsx("body_6", s.inStock)}>*В наличии</p>
+          <p className={clsx("body_6", s.inStock, "desktop-only")}>
+            *В наличии
+          </p>
         ) : (
-          <p className={clsx("body_6", s.notInStock)}>*Под заказ</p>
+          <p className={clsx("body_6", s.notInStock, "desktop-only")}>
+            *Под заказ
+          </p>
         )}
         {in_stock ? (
           <>

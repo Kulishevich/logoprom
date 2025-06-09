@@ -90,6 +90,10 @@
       margin: 0 auto;
     }
   }
+
+  @media (max-width: 768px) {
+    margin-top: 95px;
+  }
 }
 
 .infoBlock {

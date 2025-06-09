@@ -2,29 +2,28 @@
 
 import * as Popover from "@radix-ui/react-popover";
 import { Dispatch, ReactNode, SetStateAction, useState } from "react";
-import s from "./CountrySelect.module.scss"; // Создай CSS-модуль
+import s from "./DefaultSelect.module.scss";
 import clsx from "clsx";
 import { MiniArrowDown } from "@/shared/assets/icons";
-import { countries } from "./countries";
 
-export type Country = {
-  code: string;
-  name: string;
-  dialCode: string;
-  flag: string;
-  icon: ReactNode;
+export type Option = {
+  id: number;
+  value: string;
+  icon?: ReactNode;
 };
 
 type Props = {
-  onSelect: Dispatch<SetStateAction<Country>>;
-  selectedCountry: Country;
+  onSelect: Dispatch<SetStateAction<Option>>;
+  selected: Option;
   className?: string;
+  options: Option[];
 };
 
-export const CountrySelect = ({
+export const DefaultSelect = ({
   onSelect,
-  selectedCountry,
+  selected,
   className,
+  options,
 }: Props) => {
   const [open, setOpen] = useState(false);
 
@@ -32,7 +31,7 @@ export const CountrySelect = ({
     <Popover.Root open={open} onOpenChange={setOpen}>
       <Popover.Trigger asChild>
         <button className={clsx(s.trigger, className)}>
-          {selectedCountry.icon}
+          {selected.icon}
           <MiniArrowDown className={s.arrow} />
         </button>
       </Popover.Trigger>
@@ -40,18 +39,17 @@ export const CountrySelect = ({
       <Popover.Portal>
         <Popover.Content className={s.content} sideOffset={5}>
           <div className={s.list}>
-            {countries.map((country) => (
+            {options.map((option) => (
               <button
-                key={country.code}
+                key={option.id}
                 className={clsx(s.item, "body_5")}
                 onClick={() => {
-                  onSelect(country);
+                  onSelect(option);
                   setOpen(false);
                 }}
               >
-                <span>{country.flag}</span>
-                <span>{country.name}</span>
-                <span>{country.dialCode}</span>
+                <span>{option.value}</span>
+                {!!option.icon && option.icon}
               </button>
             ))}
           </div>

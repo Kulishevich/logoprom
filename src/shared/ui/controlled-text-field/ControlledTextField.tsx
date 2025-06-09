@@ -4,8 +4,8 @@ import {
   useController,
 } from "react-hook-form";
 import { TextField, TextFieldProps, Variant } from "../text-field";
-import { Country } from "../country-select";
 import { Dispatch, SetStateAction } from "react";
+import { Option } from "../default-select";
 
 type BaseControlledProps<T extends FieldValues> = Omit<
   TextFieldProps,
@@ -15,14 +15,16 @@ type BaseControlledProps<T extends FieldValues> = Omit<
 
 type ControlledPhoneProps<T extends FieldValues> = BaseControlledProps<T> & {
   variant: "phone";
-  selectedCountry: Country;
-  onSelect: Dispatch<SetStateAction<Country>>;
+  selected: Option;
+  onSelect: Dispatch<SetStateAction<Option>>;
+  options: Option[];
 };
 
 type ControlledNonPhoneProps<T extends FieldValues> = BaseControlledProps<T> & {
   variant?: Exclude<Variant, "phone">;
-  selectedCountry?: never;
+  selected?: never;
   onSelect?: never;
+  options?: never;
 };
 
 type ControlledTextFieldProps<T extends FieldValues> =

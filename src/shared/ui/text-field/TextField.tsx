@@ -16,7 +16,7 @@ import clsx from "clsx";
 import s from "./TextField.module.scss";
 import { SearchIcon } from "@/shared/assets/icons";
 import { Button } from "../button";
-import { Country, CountrySelect } from "../country-select";
+import { DefaultSelect, Option } from "../default-select";
 
 export type Variant =
   | "search_1"
@@ -39,14 +39,16 @@ type BaseProps = {
 
 type PhoneProps = {
   variant: "phone";
-  selectedCountry: Country;
-  onSelect: Dispatch<SetStateAction<Country>>;
+  selected: Option;
+  onSelect: Dispatch<SetStateAction<Option>>;
+  options: Option[];
 };
 
 type NonPhoneProps = {
   variant?: Exclude<Variant, "phone">;
-  selectedCountry?: never;
+  selected?: never;
   onSelect?: never;
+  options?: never;
 };
 
 export type TextFieldProps = BaseProps & (PhoneProps | NonPhoneProps);
@@ -62,8 +64,9 @@ export const TextField = forwardRef<TextFieldRef, TextFieldProps>(
       isRequired = false,
       label,
       onChange,
-      selectedCountry,
+      selected,
       onSelect,
+      options,
       placeholder,
       value,
       variant = "default",
@@ -142,13 +145,14 @@ export const TextField = forwardRef<TextFieldRef, TextFieldProps>(
               className={clsx(s.iconSearch, disabled && s.disabled, s[variant])}
             />
           )}
-          {is_phone && !!selectedCountry && !!onSelect && (
+          {is_phone && !!selected && !!onSelect && (
             <div className={s.phonePrefix}>
-              <CountrySelect
-                selectedCountry={selectedCountry}
+              <DefaultSelect
+                selected={selected}
                 onSelect={onSelect}
+                options={options}
               />
-              <span>{selectedCountry.dialCode}</span>
+              <span>{selected.value}</span>
             </div>
           )}
         </div>
