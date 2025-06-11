@@ -94,6 +94,14 @@
 
 .label {
   color: var(--text);
+
+  a {
+    color: var(--text);
+
+    &:hover {
+      color: var(--color-blue);
+    }
+  }
   &.disabled {
     color: var(--color-red);
   }

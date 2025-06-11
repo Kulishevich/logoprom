@@ -4,6 +4,7 @@ import Link from "next/link";
 import React, { useEffect, useRef, useState } from "react";
 import s from "./HeaderServicesButton.module.scss";
 import { MiniArrowDown } from "@/shared/assets/icons";
+import { navigation } from "@/shared/config/constants/navigation";
 
 export const HeaderServicesButton = () => {
   const [isOpenNavigation, setIsOpenNavigation] = useState(false);
@@ -38,8 +39,8 @@ export const HeaderServicesButton = () => {
       </Link>
       {isOpenNavigation && (
         <div className={s.content}>
-          <Link className="body_3" href={`${paths.services}/1`}>
-            Услуги
+          <Link className="body_3" href={`${navigation[3].path}/1`}>
+            {navigation[3].title}
           </Link>
         </div>
       )}

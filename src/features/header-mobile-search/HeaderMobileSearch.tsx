@@ -11,13 +11,13 @@ export const HeaderMobileSearch = () => {
 
   return (
     <>
-      <Button variant="mobile_nav" onClick={() => setIsOpen(true)}>
+      <Button variant="mobile_nav" onClick={() => setIsOpen((prev) => !prev)}>
         <SearchIcon />
       </Button>
       {isOpen && (
         <div className={s.container}>
           <TextField placeholder="Поиск по сайту" variant="search_3" />
-          {!!isOpen && <SearchPopup />}
+          {!!isOpen && <SearchPopup setIsOpen={setIsOpen} />}
         </div>
       )}
     </>

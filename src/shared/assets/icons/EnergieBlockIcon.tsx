@@ -13,14 +13,17 @@ const EnergieBlockIcon = (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <path d="M0.900391 88.2329H51.0842V120H1.00675V88.9025" fill="#DADADA" />
+    <path
+      d="M0.900391 88.2329H51.0842V120H1.00675V88.9025"
+      fill="currentColor"
+    />
     <path
       d="M0.900391 88.2329H51.0842V120H1.00675V88.9025"
       stroke="white"
       strokeWidth="1.33333"
       strokeMiterlimit="10"
     />
-    <path d="M0.916016 1H51.0997V31.9922H1.02238" fill="#DADADA" />
+    <path d="M0.916016 1H51.0997V31.9922H1.02238" fill="currentColor" />
     <path
       d="M0.916016 1H51.0997V31.9922H1.02238"
       stroke="white"
@@ -29,7 +32,7 @@ const EnergieBlockIcon = (
     />
     <path
       d="M47.5084 91.444V94.9368H4.65512V91.444H0.932617V30.1855H4.65512V26.7329H47.5084V30.1855H51.0836V91.444H47.5084Z"
-      fill="#DADADA"
+      fill="currentColor"
       stroke="white"
       strokeWidth="1.33333"
       strokeMiterlimit="10"

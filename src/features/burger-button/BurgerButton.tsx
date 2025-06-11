@@ -7,6 +7,7 @@ import { NavigationPopup } from "@/entities/navigation-popup";
 import { MenuIcon, MiniArrowDown } from "@/shared/assets/icons";
 import Link from "next/link";
 import { paths } from "@/shared/config/constants/paths";
+import { navigation } from "@/shared/config/constants/navigation";
 
 export const BurgerButton = () => {
   const [isOpenNavigation, setIsOpenNavigation] = useState(false);
@@ -38,12 +39,12 @@ export const BurgerButton = () => {
     <div className={s.burgerMenu} ref={containerRef}>
       <Button
         as={Link}
-        href={paths.catalog}
+        href={navigation[3].path}
         variant="catalog"
         textStyle="header"
       >
         <MenuIcon />
-        Каталог
+        {navigation[3].title}
         <MiniArrowDown />
       </Button>
       {isOpenNavigation && <NavigationPopup />}

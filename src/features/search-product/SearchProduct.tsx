@@ -6,13 +6,21 @@ import clsx from "clsx";
 import Link from "next/link";
 import { paths } from "@/shared/config/constants/paths";
 
-export const SearchProduct = () => {
+export const SearchProduct = ({
+  setIsOpen,
+}: {
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}) => {
   const in_stock = true;
 
   return (
     <div className={s.container}>
       <div className={s.content}>
-        <Link href={`${paths.projects}/1`} className={s.imageContainer}>
+        <Link
+          href={`${paths.product}/1`}
+          className={s.imageContainer}
+          onClick={() => setIsOpen(false)}
+        >
           <Image src={"/product-image.png"} fill alt="product-image" />
         </Link>
         <div className={s.priceContainer}>

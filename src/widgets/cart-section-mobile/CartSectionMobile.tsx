@@ -13,7 +13,7 @@ export const CartSectionMobile = () => {
         <p className="button">5 товаров</p>
         <Button variant="link_3">
           <ArrowToTopLeftIcon />
-          Очистить корзину
+          Очистить КП
         </Button>
       </div>
       <div className={s.productsList}>

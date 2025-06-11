@@ -12,7 +12,7 @@ const PRIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => (
   >
     <path
       d="M127.723 1.00049H1V87.228H127.723V1.00049Z"
-      fill="#DADADA"
+      fill="currentColor"
       stroke="white"
       strokeWidth="0.910349"
       strokeMiterlimit="10"
@@ -31,7 +31,7 @@ const PRIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => (
     />
     <path
       d="M127.723 22.4902H1V65.0721H127.723V22.4902Z"
-      fill="#DADADA"
+      fill="currentColor"
       stroke="white"
       strokeWidth="0.910349"
       strokeMiterlimit="10"

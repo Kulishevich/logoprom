@@ -32,6 +32,7 @@
     top: vw-1440(135);
     left: vw-1440(596);
   }
+
   & > .rsText {
     color: var(--color-red);
     font-weight: 700;
@@ -59,11 +60,10 @@
         background-color: var(--white);
         transition: scale 0.3s ease, box-shadow 0.3s ease;
 
+        color: #dadada;
         &:hover {
+          color: var(--dark-grey);
           cursor: pointer;
-          scale: 1.2;
-          border: 1px solid var(--color-blue);
-          box-shadow: 0px 13px 29px 0px #1b1f1f1a;
         }
       }
 
@@ -94,11 +94,10 @@
           background-color: var(--white);
           transition: scale 0.3s ease, box-shadow 0.3s ease;
 
+          color: #dadada;
           &:hover {
+            color: var(--dark-grey);
             cursor: pointer;
-            scale: 1.2;
-            border: 1px solid var(--color-blue);
-            box-shadow: 0px 13px 29px 0px #1b1f1f1a;
           }
         }
       }
@@ -111,11 +110,10 @@
           background-color: var(--white);
           transition: scale 0.3s ease, box-shadow 0.3s ease;
 
+          color: #706f6f;
           &:hover {
+            color: var(--dark-grey);
             cursor: pointer;
-            scale: 1.2;
-            border: 1px solid var(--color-blue);
-            box-shadow: 0px 13px 29px 0px #1b1f1f1a;
           }
         }
         margin-left: vw-1440(15);
@@ -127,11 +125,10 @@
           background-color: var(--white);
           transition: scale 0.3s ease, box-shadow 0.3s ease;
 
+          color: #dadada;
           &:hover {
+            color: var(--dark-grey);
             cursor: pointer;
-            scale: 1.2;
-            border: 1px solid var(--color-blue);
-            box-shadow: 0px 13px 29px 0px #1b1f1f1a;
           }
 
           width: vw-1440(78);
@@ -165,11 +162,10 @@
       background-color: var(--white);
       transition: scale 0.3s ease, box-shadow 0.3s ease;
 
+      color: #dadada;
       &:hover {
+        color: var(--dark-grey);
         cursor: pointer;
-        scale: 1.2;
-        border: 1px solid var(--color-blue);
-        box-shadow: 0px 13px 29px 0px #1b1f1f1a;
       }
 
       &:nth-child(2) {
@@ -207,11 +203,10 @@
         background-color: var(--white);
         transition: scale 0.3s ease, box-shadow 0.3s ease;
 
+        color: #dadada;
         &:hover {
+          color: var(--dark-grey);
           cursor: pointer;
-          scale: 1.2;
-          border: 1px solid var(--color-blue);
-          box-shadow: 0px 13px 29px 0px #1b1f1f1a;
         }
       }
       &:nth-child(2) > svg {
@@ -221,11 +216,10 @@
         background-color: var(--white);
         transition: scale 0.3s ease, box-shadow 0.3s ease;
 
+        color: #706f6f;
         &:hover {
+          color: var(--dark-grey);
           cursor: pointer;
-          scale: 1.2;
-          border: 1px solid var(--color-blue);
-          box-shadow: 0px 13px 29px 0px #1b1f1f1a;
         }
       }
     }
@@ -251,11 +245,10 @@
         background-color: var(--white);
         transition: scale 0.3s ease, box-shadow 0.3s ease;
 
+        color: #dadada;
         &:hover {
+          color: var(--dark-grey);
           cursor: pointer;
-          scale: 1.2;
-          border: 1px solid var(--color-blue);
-          box-shadow: 0px 13px 29px 0px #1b1f1f1a;
         }
       }
       &:nth-child(2) svg {
@@ -265,11 +258,10 @@
         background-color: var(--white);
         transition: scale 0.3s ease, box-shadow 0.3s ease;
 
+        color: #dadada;
         &:hover {
+          color: var(--dark-grey);
           cursor: pointer;
-          scale: 1.2;
-          border: 1px solid var(--color-blue);
-          box-shadow: 0px 13px 29px 0px #1b1f1f1a;
         }
       }
 
@@ -299,9 +291,10 @@
         & > svg {
           transition: scale 0.3s ease;
 
+          color: #dadada;
           &:hover {
+            color: var(--dark-grey);
             cursor: pointer;
-            scale: 1.2;
           }
 
           width: vw-1440(40);
@@ -313,9 +306,10 @@
         & > svg {
           transition: scale 0.3s ease;
 
+          color: #dadada;
           &:hover {
+            color: var(--dark-grey);
             cursor: pointer;
-            scale: 1.2;
           }
 
           width: vw-1440(26);
@@ -327,9 +321,10 @@
         & > svg {
           transition: scale 0.3s ease;
 
+          color: #dadada;
           &:hover {
+            color: var(--dark-grey);
             cursor: pointer;
-            scale: 1.2;
           }
 
           width: vw-1440(39);
@@ -341,9 +336,10 @@
         & > svg {
           transition: scale 0.3s ease;
 
+          color: #dadada;
           &:hover {
+            color: var(--dark-grey);
             cursor: pointer;
-            scale: 1.2;
           }
 
           width: vw-1440(59);

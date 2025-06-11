@@ -12,7 +12,7 @@ const PCHVIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => (
   >
     <path
       d="M77.2391 11.7505H1.24023V171H77.2391V11.7505Z"
-      fill="#DADADA"
+      fill="currentColor"
       stroke="white"
       strokeWidth="0.910349"
       strokeMiterlimit="10"

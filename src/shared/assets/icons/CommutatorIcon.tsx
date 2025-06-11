@@ -15,7 +15,7 @@ const CommutatorIcon = (
   >
     <path
       d="M29.8128 1.36963H0.891602V143.177H29.8128V1.36963Z"
-      fill="#DADADA"
+      fill="currentColor"
       stroke="white"
       strokeWidth="1.21904"
       strokeMiterlimit="10"

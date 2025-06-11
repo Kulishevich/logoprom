@@ -11,4 +11,5 @@ export const paths = {
   order: "/order",
   services: "/services",
   catalog: "/catalog",
+  product: "/product",
 };

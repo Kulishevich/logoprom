@@ -25,7 +25,7 @@ const SensorControlledIcon = (
     />
     <path
       d="M141.637 2.91992H0.393555V92.6757H141.637V2.91992Z"
-      fill="#706F6F"
+      fill="currentColor"
     />
     <path
       d="M141.902 92.9378H0.121094V2.65039H141.902V92.9378ZM0.658297 92.4061H141.35V3.15956H0.658297V92.4061Z"

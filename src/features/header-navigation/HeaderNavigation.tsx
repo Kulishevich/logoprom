@@ -19,7 +19,7 @@ export const HeaderNavigation = () => {
       <div className={s.container}>
         <BurgerButton />
         <nav className={s.navigation}>
-          {navigation.slice(0, 2).map((nav, index) => (
+          {navigation.slice(1, 3).map((nav, index) => (
             <Link
               href={nav.path}
               className={clsx("header", pathname === nav.path && s.active)}
@@ -29,7 +29,7 @@ export const HeaderNavigation = () => {
             </Link>
           ))}
           <HeaderServicesButton />
-          {navigation.slice(2, 7).map((nav, index) => (
+          {navigation.slice(4, -1).map((nav, index) => (
             <Link
               href={nav.path}
               className={clsx("header", pathname === nav.path && s.active)}

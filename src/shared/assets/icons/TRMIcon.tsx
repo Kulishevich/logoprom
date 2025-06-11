@@ -19,7 +19,7 @@ const TRMIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => (
     />
     <path
       d="M103.146 4.67188H4.34766V103.399H103.146V4.67188Z"
-      fill="#706F6F"
+      fill="currentColor"
       stroke="white"
       strokeWidth="1.08424"
       strokeMiterlimit="10"

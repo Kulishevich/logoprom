@@ -4,6 +4,7 @@ import { Logo } from "@/shared/ui/logo";
 import { FooterSocailMedia } from "@/features/footer-social-media";
 import Link from "next/link";
 import { navigation } from "@/shared/config/constants/navigation";
+import { paths } from "@/shared/config/constants/paths";
 
 const catalog = [
   "Контрольно-измерительные приборы",
@@ -38,7 +39,7 @@ export const Footer = () => {
             <div className={s.navigation}>
               <h3 className="h3">Покупателям</h3>
               <div>
-                {navigation.map((nav, index) => (
+                {navigation.slice(1, -1).map((nav, index) => (
                   <Link href={nav.path} key={index} className="body_2">
                     {nav.title}
                   </Link>
@@ -64,7 +65,9 @@ export const Footer = () => {
         <FooterSocailMedia />
         <div className={s.info}>
           <p className="body_5">© 2025 logo-prom.by</p>
-          <p className="body_5">Политика обработки персональных данных</p>
+          <Link href={paths.privacy_policy} className="body_5">
+            Политика обработки персональных данных
+          </Link>
           <p className="body_5">
             Дизайн и разработка: <Link href={"/"}>Cropas.by</Link>
           </p>

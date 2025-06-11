@@ -39,11 +39,13 @@ export const HeaderBurgerMenu = () => {
         <div className={s.container}>
           <div className={s.content}>
             <div className={s.navigation}>
-              <Link className="h4" href={navigation[0].path}>
-                {navigation[0].title}
-              </Link>
-              {navigation.slice(1, 7).map((nav, index) => (
-                <Link className="h4" href={nav.path} key={index}>
+              {navigation.slice(1, -1).map((nav, index) => (
+                <Link
+                  className="h4"
+                  href={nav.path}
+                  key={index}
+                  onClick={() => setIsOpen(false)}
+                >
                   {nav.title}
                 </Link>
               ))}

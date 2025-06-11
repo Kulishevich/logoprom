@@ -15,7 +15,7 @@ const ModuleInputOutputIcon = (
   >
     <path
       d="M40.7629 1H1V120H40.7629V1Z"
-      fill="#DADADA"
+      fill="currentColor"
       stroke="white"
       strokeWidth="0.758674"
       strokeMiterlimit="10"
