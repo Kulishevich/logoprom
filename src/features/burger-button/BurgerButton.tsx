@@ -6,7 +6,6 @@ import s from "./BurgerButton.module.scss";
 import { NavigationPopup } from "@/entities/navigation-popup";
 import { MenuIcon, MiniArrowDown } from "@/shared/assets/icons";
 import Link from "next/link";
-import { paths } from "@/shared/config/constants/paths";
 import { navigation } from "@/shared/config/constants/navigation";
 
 export const BurgerButton = () => {

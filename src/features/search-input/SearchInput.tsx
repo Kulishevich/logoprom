@@ -33,7 +33,7 @@ export const SearchInput = () => {
         value={searchValue}
         onChange={(e) => handleChangeValue(e.target.value)}
       />
-      {!!isOpen && <SearchPopup />}
+      {!!isOpen && <SearchPopup setIsOpen={setIsOpen} />}
     </div>
   );
 };
