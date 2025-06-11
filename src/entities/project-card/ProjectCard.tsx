@@ -8,7 +8,7 @@ import { ArrowToTopLeftIcon } from "@/shared/assets/icons";
 
 export const ProjectCard = () => {
   return (
-    <div className={s.container}>
+    <Link href={`${paths.projects}/1`} className={s.container}>
       <div className={s.imageContainer}>
         <Image src={"/project-image.png"} alt="project-image" fill />
       </div>
@@ -38,11 +38,11 @@ export const ProjectCard = () => {
             </Button>
           </div>
         </div>
-        <Button as={Link} href={`${paths.projects}/1`} variant="link_3">
+        <Button variant="link_3">
           <ArrowToTopLeftIcon />
           Подробнее
         </Button>
       </div>
-    </div>
+    </Link>
   );
 };

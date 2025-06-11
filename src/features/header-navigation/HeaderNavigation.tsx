@@ -8,6 +8,7 @@ import { usePathname } from "next/navigation";
 import clsx from "clsx";
 import { FeedbackPopup } from "../feedback-popup";
 import { BurgerButton } from "../burger-button";
+import { HeaderServicesButton } from "../header-services-button";
 
 export const HeaderNavigation = () => {
   const pathname = usePathname();
@@ -27,9 +28,7 @@ export const HeaderNavigation = () => {
               {nav.title}
             </Link>
           ))}
-          <Link href={"/"} className="header">
-            Услуги
-          </Link>
+          <HeaderServicesButton />
           {navigation.slice(2, 7).map((nav, index) => (
             <Link
               href={nav.path}

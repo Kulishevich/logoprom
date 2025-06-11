@@ -6,14 +6,25 @@
   cursor: pointer;
   gap: vw-1440(4);
 
+  &.primary {
+    & > svg {
+      color: var(--text);
+    }
+  }
+  &.secondary {
+    & > svg {
+      color: var(--color-blue);
+    }
+  }
+
   & > svg {
     &:first-child {
       width: vw-1440(24);
       height: vw-1440(24);
     }
     &.arrow {
-      width: vw-1440(12);
-      height: vw-1440(12);
+      width: vw-1440(9);
+      height: vw-1440(9);
     }
   }
 
@@ -39,14 +50,13 @@
   background: var(--white);
   border: 1px solid var(--grey);
   border-radius: vw-1440(12);
-  padding: vw-1440(4);
+  padding: vw-1440(16) vw-1440(20);
   max-height: vw-1440(300);
   overflow-y: auto;
   min-width: vw-1440(150);
-
   @media (max-width: 768px) {
     border-radius: 12px;
-    padding: 4px;
+    padding: 16px 20px;
     max-height: 300px;
     min-width: 150px;
   }
@@ -55,23 +65,26 @@
 .list {
   display: flex;
   flex-direction: column;
+  gap: vw-1440(12);
+  @media (max-width: 768px) {
+    gap: 12px;
+  }
 }
 
 .item {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: vw-1440(6) vw-1440(8);
   cursor: pointer;
   background: transparent;
   border: none;
   border-radius: vw-1440(4);
 
   &:hover {
-    background: var(--grey);
+    color: var(--color-blue);
   }
 
   @media (max-width: 768px) {
-    padding: 6px 8px;
+    border-radius: 4px;
   }
 }

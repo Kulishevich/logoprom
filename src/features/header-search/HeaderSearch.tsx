@@ -35,7 +35,7 @@ export const HeaderSearch = () => {
             selected={selectedCountry}
             onSelect={setSelectedCountry}
             options={phones}
-            className={s.selectTrigger}
+            variant="secondary"
           />
         </div>
       </div>

@@ -17,22 +17,22 @@ const EnergieBlockIcon = (
     <path
       d="M0.900391 88.2329H51.0842V120H1.00675V88.9025"
       stroke="white"
-      stroke-width="1.33333"
-      stroke-miterlimit="10"
+      strokeWidth="1.33333"
+      strokeMiterlimit="10"
     />
     <path d="M0.916016 1H51.0997V31.9922H1.02238" fill="#DADADA" />
     <path
       d="M0.916016 1H51.0997V31.9922H1.02238"
       stroke="white"
-      stroke-width="1.33333"
-      stroke-miterlimit="10"
+      strokeWidth="1.33333"
+      strokeMiterlimit="10"
     />
     <path
       d="M47.5084 91.444V94.9368H4.65512V91.444H0.932617V30.1855H4.65512V26.7329H47.5084V30.1855H51.0836V91.444H47.5084Z"
       fill="#DADADA"
       stroke="white"
-      stroke-width="1.33333"
-      stroke-miterlimit="10"
+      strokeWidth="1.33333"
+      strokeMiterlimit="10"
     />
     <path d="M40.2109 32.8231V87.3379H41.2336V32.8231H40.2109Z" fill="white" />
     <path d="M52 32.8228H0V33.8069H52V32.8228Z" fill="white" />
@@ -41,15 +41,15 @@ const EnergieBlockIcon = (
       d="M41.2336 81.3765H40.2109V83.3528H41.2336V81.3765Z"
       fill="#00B1B2"
       stroke="#30B6B3"
-      stroke-width="0.946665"
-      stroke-miterlimit="10"
+      strokeWidth="0.946665"
+      strokeMiterlimit="10"
     />
     <path
       d="M41.2414 36.647H40.2188V38.6233H41.2414V36.647Z"
       fill="#00B1B2"
       stroke="#30B6B3"
-      stroke-width="0.946665"
-      stroke-miterlimit="10"
+      strokeWidth="0.946665"
+      strokeMiterlimit="10"
     />
     <path
       d="M6.96247 40.414L5.86621 38.5667C6.19732 38.3881 6.56865 38.2944 6.94609 38.2944C7.32353 38.2944 7.69496 38.3881 8.02607 38.5667L6.96247 40.414Z"

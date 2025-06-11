@@ -78,6 +78,17 @@
   padding-left: vw-1440(20);
   padding-right: vw-1440(20);
 
+  & > a {
+    color: var(--text);
+  }
+
+  & > .inStock {
+    color: var(--color-green);
+  }
+  & > .notInStock {
+    color: var(--color-green);
+  }
+
   @media (max-width: 768px) {
     gap: 16px;
     padding-left: 20px;

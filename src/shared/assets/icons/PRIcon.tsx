@@ -14,89 +14,89 @@ const PRIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => (
       d="M127.723 1.00049H1V87.228H127.723V1.00049Z"
       fill="#DADADA"
       stroke="white"
-      stroke-width="0.910349"
-      stroke-miterlimit="10"
+      strokeWidth="0.910349"
+      strokeMiterlimit="10"
     />
     <path
       d="M127.712 13.561H1"
       stroke="white"
-      stroke-width="1.5343"
-      stroke-miterlimit="10"
+      strokeWidth="1.5343"
+      strokeMiterlimit="10"
     />
     <path
       d="M127.712 74.6772H1"
       stroke="white"
-      stroke-width="1.5343"
-      stroke-miterlimit="10"
+      strokeWidth="1.5343"
+      strokeMiterlimit="10"
     />
     <path
       d="M127.723 22.4902H1V65.0721H127.723V22.4902Z"
       fill="#DADADA"
       stroke="white"
-      stroke-width="0.910349"
-      stroke-miterlimit="10"
+      strokeWidth="0.910349"
+      strokeMiterlimit="10"
     />
     <path
       d="M71.2085 27.0215H7.34082V46.4866H71.2085V27.0215Z"
       fill="#E3E3E3"
       stroke="white"
-      stroke-width="1.5343"
-      stroke-miterlimit="10"
+      strokeWidth="1.5343"
+      strokeMiterlimit="10"
     />
     <path
       d="M67.4648 29.9883H11.0947V43.5106H67.4648V29.9883Z"
       fill="#706F6F"
       stroke="white"
-      stroke-width="1.5343"
-      stroke-miterlimit="10"
+      strokeWidth="1.5343"
+      strokeMiterlimit="10"
     />
     <path
       d="M107.029 22.7773V65.0728"
       stroke="white"
-      stroke-width="1.5343"
-      stroke-miterlimit="10"
+      strokeWidth="1.5343"
+      strokeMiterlimit="10"
     />
     <path
       d="M96.126 30.4482H84.8848V37.9663H96.126V30.4482Z"
       fill="#E3E3E3"
       stroke="white"
-      stroke-width="1.5343"
-      stroke-miterlimit="10"
+      strokeWidth="1.5343"
+      strokeMiterlimit="10"
     />
     <path
       d="M96.126 51.7651H84.8848V59.2832H96.126V51.7651Z"
       fill="#E3E3E3"
       stroke="white"
-      stroke-width="1.5343"
-      stroke-miterlimit="10"
+      strokeWidth="1.5343"
+      strokeMiterlimit="10"
     />
     <path
       d="M71.9767 51.7651H60.7354V59.2832H71.9767V51.7651Z"
       fill="#E3E3E3"
       stroke="white"
-      stroke-width="1.5343"
-      stroke-miterlimit="10"
+      strokeWidth="1.5343"
+      strokeMiterlimit="10"
     />
     <path
       d="M54.2803 51.7651H43.0391V59.2832H54.2803V51.7651Z"
       fill="#E3E3E3"
       stroke="white"
-      stroke-width="1.5343"
-      stroke-miterlimit="10"
+      strokeWidth="1.5343"
+      strokeMiterlimit="10"
     />
     <path
       d="M36.5958 51.7651H25.3545V59.2832H36.5958V51.7651Z"
       fill="#E3E3E3"
       stroke="white"
-      stroke-width="1.5343"
-      stroke-miterlimit="10"
+      strokeWidth="1.5343"
+      strokeMiterlimit="10"
     />
     <path
       d="M18.5821 51.7651H7.34082V59.2832H18.5821V51.7651Z"
       fill="#E3E3E3"
       stroke="white"
-      stroke-width="1.5343"
-      stroke-miterlimit="10"
+      strokeWidth="1.5343"
+      strokeMiterlimit="10"
     />
     <path d="M84.874 44.1135V46.1797H87.7789V44.1135H84.874Z" fill="#00B1B2" />
     <path d="M93.21 44.1135V46.1797H96.1149V44.1135H93.21Z" fill="#00B1B2" />

@@ -10,6 +10,7 @@ import s from "./HomeSlider.module.scss";
 import { Button } from "@/shared/ui/button";
 import { Swiper as SwiperType } from "swiper";
 import { ArrowLeftIcon, ArrowRightIcon } from "@/shared/assets/icons";
+import Link from "next/link";
 
 const slides = [
   {
@@ -108,12 +109,12 @@ export const HomeSlider = () => {
       </Button>
       <div className={s.infoBlock}>
         {sldierInfo.map((elem, index) => (
-          <div className={s.elemInfo} key={index}>
+          <Link href={"/"} className={s.elemInfo} key={index}>
             <div className={s.imageContainer}>
               <Image fill src={elem.image} alt={elem.title} />
             </div>
             <p className="h5">{elem.title}</p>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

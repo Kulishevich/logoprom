@@ -32,17 +32,21 @@
 
   width: 100%;
   overflow-x: auto;
+  padding-bottom: vw-1440(32);
 
-  &.primary {
-  }
-
-  &.secondary {
+  &::-webkit-scrollbar {
+    height: vw-1440(7);
     @media (max-width: 768px) {
-      flex-direction: column;
+      height: 5px;
     }
   }
 
   @media (max-width: 768px) {
     gap: 20px;
+
+    &.secondary {
+      flex-direction: column;
+      padding-bottom: 0;
+    }
   }
 }

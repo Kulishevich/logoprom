@@ -14,70 +14,70 @@ const PCHVIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => (
       d="M77.2391 11.7505H1.24023V171H77.2391V11.7505Z"
       fill="#DADADA"
       stroke="white"
-      stroke-width="0.910349"
-      stroke-miterlimit="10"
+      strokeWidth="0.910349"
+      strokeMiterlimit="10"
     />
     <path
       d="M70.355 79.6382H34.3604V162.838H70.355V79.6382Z"
       fill="#E3E3E3"
       stroke="white"
-      stroke-width="1.37064"
-      stroke-miterlimit="10"
+      strokeWidth="1.37064"
+      strokeMiterlimit="10"
     />
     <path
       d="M77.2391 1.00049H1.24023V11.7507H77.2391V1.00049Z"
       fill="#E3E3E3"
       stroke="white"
-      stroke-width="1.37064"
-      stroke-miterlimit="10"
+      strokeWidth="1.37064"
+      strokeMiterlimit="10"
     />
     <path
       d="M70.2319 18.5015H34.2373V62.9961H70.2319V18.5015Z"
       fill="#E3E3E3"
       stroke="white"
-      stroke-width="1.37064"
-      stroke-miterlimit="10"
+      strokeWidth="1.37064"
+      strokeMiterlimit="10"
     />
     <path
       d="M65.2405 29.0781H39.2393V38.8772H65.2405V29.0781Z"
       fill="#706F6F"
       stroke="white"
-      stroke-width="1.37064"
-      stroke-miterlimit="10"
+      strokeWidth="1.37064"
+      strokeMiterlimit="10"
     />
     <path
       d="M42.3385 48.8602C44.0502 48.8602 45.4378 47.4726 45.4378 45.7609C45.4378 44.0492 44.0502 42.6616 42.3385 42.6616C40.6268 42.6616 39.2393 44.0492 39.2393 45.7609C39.2393 47.4726 40.6268 48.8602 42.3385 48.8602Z"
       fill="#EDEDED"
       stroke="white"
-      stroke-width="1.37064"
-      stroke-miterlimit="10"
+      strokeWidth="1.37064"
+      strokeMiterlimit="10"
     />
     <path
       d="M52.363 48.8602C54.0747 48.8602 55.4622 47.4726 55.4622 45.7609C55.4622 44.0492 54.0747 42.6616 52.363 42.6616C50.6513 42.6616 49.2637 44.0492 49.2637 45.7609C49.2637 47.4726 50.6513 48.8602 52.363 48.8602Z"
       fill="#EDEDED"
       stroke="white"
-      stroke-width="1.37064"
-      stroke-miterlimit="10"
+      strokeWidth="1.37064"
+      strokeMiterlimit="10"
     />
     <path
       d="M57.9074 61.0009C60.4834 61.0009 62.5717 58.9126 62.5717 56.3366C62.5717 53.7606 60.4834 51.6724 57.9074 51.6724C55.3314 51.6724 53.2432 53.7606 53.2432 56.3366C53.2432 58.9126 55.3314 61.0009 57.9074 61.0009Z"
       fill="#EDEDED"
       stroke="white"
-      stroke-width="1.37064"
-      stroke-miterlimit="10"
+      strokeWidth="1.37064"
+      strokeMiterlimit="10"
     />
     <path
       d="M62.3864 48.8602C64.0981 48.8602 65.4857 47.4726 65.4857 45.7609C65.4857 44.0492 64.0981 42.6616 62.3864 42.6616C60.6747 42.6616 59.2871 44.0492 59.2871 45.7609C59.2871 47.4726 60.6747 48.8602 62.3864 48.8602Z"
       fill="#EDEDED"
       stroke="white"
-      stroke-width="1.37064"
-      stroke-miterlimit="10"
+      strokeWidth="1.37064"
+      strokeMiterlimit="10"
     />
     <path
       d="M24.8789 11.9956V170.744"
       stroke="white"
-      stroke-width="1.37064"
-      stroke-miterlimit="10"
+      strokeWidth="1.37064"
+      strokeMiterlimit="10"
     />
     <path
       d="M40.6513 23.8716L39.4443 21.7645C39.8058 21.5582 40.2147 21.4497 40.6308 21.4497C41.047 21.4497 41.456 21.5582 41.8174 21.7645L40.6513 23.8716Z"
@@ -122,74 +122,74 @@ const PCHVIcon = (props: SVGProps<SVGSVGElement>, ref: Ref<SVGSVGElement>) => (
     <path
       d="M34.2998 86.1743H70.4274"
       stroke="white"
-      stroke-width="1.37064"
-      stroke-miterlimit="10"
+      strokeWidth="1.37064"
+      strokeMiterlimit="10"
     />
     <path
       d="M34.2998 92.5571H70.4274"
       stroke="white"
-      stroke-width="1.37064"
-      stroke-miterlimit="10"
+      strokeWidth="1.37064"
+      strokeMiterlimit="10"
     />
     <path
       d="M34.2998 98.9297H70.4274"
       stroke="white"
-      stroke-width="1.37064"
-      stroke-miterlimit="10"
+      strokeWidth="1.37064"
+      strokeMiterlimit="10"
     />
     <path
       d="M34.2998 105.302H70.4274"
       stroke="white"
-      stroke-width="1.37064"
-      stroke-miterlimit="10"
+      strokeWidth="1.37064"
+      strokeMiterlimit="10"
     />
     <path
       d="M34.2998 111.674H70.4274"
       stroke="white"
-      stroke-width="1.37064"
-      stroke-miterlimit="10"
+      strokeWidth="1.37064"
+      strokeMiterlimit="10"
     />
     <path
       d="M34.2998 118.046H70.4274"
       stroke="white"
-      stroke-width="1.37064"
-      stroke-miterlimit="10"
+      strokeWidth="1.37064"
+      strokeMiterlimit="10"
     />
     <path
       d="M34.2998 124.419H70.4274"
       stroke="white"
-      stroke-width="1.37064"
-      stroke-miterlimit="10"
+      strokeWidth="1.37064"
+      strokeMiterlimit="10"
     />
     <path
       d="M34.2998 130.792H70.4274"
       stroke="white"
-      stroke-width="1.37064"
-      stroke-miterlimit="10"
+      strokeWidth="1.37064"
+      strokeMiterlimit="10"
     />
     <path
       d="M34.2998 137.174H70.4274"
       stroke="white"
-      stroke-width="1.37064"
-      stroke-miterlimit="10"
+      strokeWidth="1.37064"
+      strokeMiterlimit="10"
     />
     <path
       d="M34.2998 143.546H70.4274"
       stroke="white"
-      stroke-width="1.37064"
-      stroke-miterlimit="10"
+      strokeWidth="1.37064"
+      strokeMiterlimit="10"
     />
     <path
       d="M34.2998 149.919H70.4274"
       stroke="white"
-      stroke-width="1.37064"
-      stroke-miterlimit="10"
+      strokeWidth="1.37064"
+      strokeMiterlimit="10"
     />
     <path
       d="M34.2998 156.292H70.4274"
       stroke="white"
-      stroke-width="1.37064"
-      stroke-miterlimit="10"
+      strokeWidth="1.37064"
+      strokeMiterlimit="10"
     />
   </svg>
 );

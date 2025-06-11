@@ -17,6 +17,7 @@ type Props = {
   selected: Option;
   className?: string;
   options: Option[];
+  variant?: "primary" | "secondary";
 };
 
 export const DefaultSelect = ({
@@ -24,25 +25,34 @@ export const DefaultSelect = ({
   selected,
   className,
   options,
+  variant = "primary",
 }: Props) => {
   const [open, setOpen] = useState(false);
 
   return (
     <Popover.Root open={open} onOpenChange={setOpen}>
       <Popover.Trigger asChild>
-        <button className={clsx(s.trigger, className)}>
+        <button className={clsx(s.trigger, className, s[variant])}>
           {selected.icon}
           <MiniArrowDown className={s.arrow} />
         </button>
       </Popover.Trigger>
 
       <Popover.Portal>
-        <Popover.Content className={s.content} sideOffset={5}>
+        <Popover.Content
+          className={s.content}
+          side={variant === "secondary" ? "bottom" : "bottom"}
+          align={variant === "secondary" ? "end" : "start"}
+          sideOffset={variant === "secondary" ? 15 : 8}
+        >
           <div className={s.list}>
             {options.map((option) => (
               <button
                 key={option.id}
-                className={clsx(s.item, "body_5")}
+                className={clsx(
+                  s.item,
+                  variant === "secondary" ? "body_3" : "body_5"
+                )}
                 onClick={() => {
                   onSelect(option);
                   setOpen(false);

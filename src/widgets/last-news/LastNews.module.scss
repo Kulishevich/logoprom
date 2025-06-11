@@ -10,6 +10,7 @@
   @media (max-width: 768px) {
     width: 336px;
     gap: 24px;
+    padding-bottom: 20px;
   }
 }
 
@@ -26,4 +27,12 @@
 .newsList {
   display: flex;
   gap: vw-1440(24);
+  overflow-x: auto;
+  padding-bottom: vw-1440(32);
+  &::-webkit-scrollbar {
+    height: vw-1440(7);
+    @media (max-width: 768px) {
+      height: 5px;
+    }
+  }
 }

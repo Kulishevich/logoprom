@@ -65,7 +65,14 @@
 
   max-height: vw-1440(408);
   overflow: auto;
+  padding-right: 1px;
 
+  &::-webkit-scrollbar {
+    width: vw-1440(5);
+    @media (max-width: 768px) {
+      width: 5px;
+    }
+  }
   @media (max-width: 768px) {
     flex-direction: row;
     gap: 16px;

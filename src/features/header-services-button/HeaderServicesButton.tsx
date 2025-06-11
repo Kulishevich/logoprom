@@ -1,14 +1,11 @@
 "use client";
-import { Button } from "@/shared/ui/button";
-import React, { useEffect, useRef, useState } from "react";
-import s from "./BurgerButton.module.scss";
-
-import { NavigationPopup } from "@/entities/navigation-popup";
-import { MenuIcon, MiniArrowDown } from "@/shared/assets/icons";
-import Link from "next/link";
 import { paths } from "@/shared/config/constants/paths";
+import Link from "next/link";
+import React, { useEffect, useRef, useState } from "react";
+import s from "./HeaderServicesButton.module.scss";
+import { MiniArrowDown } from "@/shared/assets/icons";
 
-export const BurgerButton = () => {
+export const HeaderServicesButton = () => {
   const [isOpenNavigation, setIsOpenNavigation] = useState(false);
   const containerRef = useRef<HTMLDivElement | null>(null);
 
@@ -35,18 +32,17 @@ export const BurgerButton = () => {
   }, []);
 
   return (
-    <div className={s.burgerMenu} ref={containerRef}>
-      <Button
-        as={Link}
-        href={paths.catalog}
-        variant="catalog"
-        textStyle="header"
-      >
-        <MenuIcon />
-        Каталог
-        <MiniArrowDown />
-      </Button>
-      {isOpenNavigation && <NavigationPopup />}
+    <div className={s.container} ref={containerRef}>
+      <Link href={paths.services} className="header">
+        Услуги <MiniArrowDown />
+      </Link>
+      {isOpenNavigation && (
+        <div className={s.content}>
+          <Link className="body_3" href={`${paths.services}/1`}>
+            Услуги
+          </Link>
+        </div>
+      )}
     </div>
   );
 };

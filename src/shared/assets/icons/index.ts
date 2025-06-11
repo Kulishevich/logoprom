@@ -57,3 +57,4 @@ export { default as DavlenieIcon } from "./DavlenieIcon";
 export { default as LevelIcon } from "./LevelIcon";
 export { default as TeperaturaIcon } from "./TeperaturaIcon";
 export { default as VlajnostIcon } from "./VlajnostIcon";
+export { default as RussiaFlagIcon } from "./RussiaFlagIcon";

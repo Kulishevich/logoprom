@@ -1,12 +1,13 @@
 import React from "react";
 import s from "./CategoryCards.module.scss";
 import Image from "next/image";
+import Link from "next/link";
 
 export const CategoryCards = () => {
   return (
     <div className={s.container}>
       {new Array(4).fill("").map((_, index) => (
-        <div className={s.card} key={index}>
+        <Link href="/" className={s.card} key={index}>
           <div className={s.imageContainer}>
             <Image src="/subcategory-image.png" fill alt="subcategory" />
           </div>
@@ -18,7 +19,7 @@ export const CategoryCards = () => {
               <li>Диапазон сечений 1,5 – 16 мм²</li>
             </ul>
           </div>
-        </div>
+        </Link>
       ))}
     </div>
   );

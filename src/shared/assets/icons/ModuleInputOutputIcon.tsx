@@ -17,15 +17,15 @@ const ModuleInputOutputIcon = (
       d="M40.7629 1H1V120H40.7629V1Z"
       fill="#DADADA"
       stroke="white"
-      stroke-width="0.758674"
-      stroke-miterlimit="10"
+      strokeWidth="0.758674"
+      strokeMiterlimit="10"
     />
     <path
       d="M41.0008 19.1338H34.2168V113.775H41.0008V19.1338Z"
       fill="#E3E3E3"
       stroke="white"
-      stroke-width="0.605234"
-      stroke-miterlimit="10"
+      strokeWidth="0.605234"
+      strokeMiterlimit="10"
     />
     <path
       d="M6.81929 7.28959L5.75977 5.40035C6.0786 5.21789 6.43797 5.12207 6.80346 5.12207C7.16895 5.12207 7.52832 5.21789 7.84715 5.40035L6.81929 7.28959Z"

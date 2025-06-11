@@ -6,23 +6,26 @@ import clsx from "clsx";
 import { ProductButton } from "@/widgets/product-button";
 import { ChoiceProductLabelingPopup } from "@/features/choice-product-labeling-popup";
 
+import Link from "next/link";
 export const ProductCard = () => {
   const in_stock = true;
 
   return (
     <div className={s.container}>
-      <div className={s.imageContainer}>
+      <Link href={`/product/1`} className={s.imageContainer}>
         <Image src={"/product-image.png"} fill alt="product" />
         <div className={s.tagContainer}>
           <p className={clsx(s.missing, "body_5")}>Снят с производства</p>
           <p className={clsx(s.news, "body_5")}>Новинка</p>
         </div>
-      </div>
+      </Link>
       <div className={s.content}>
-        <p className="body_3">
+        <Link href={"/product/1"} className="body_3">
           2ТРМ1 обновлённый погодозависимый двухканальный регулятор с RS-485
+        </Link>
+        <p className={clsx("body_6", in_stock ? s.inStock : s.notInStock)}>
+          *В наличии
         </p>
-        <p className="body_6">*В наличии</p>
         <div className={s.characteristics}>
           <p className="body_6">
             Количество каналов:<strong>1–2 канала</strong>

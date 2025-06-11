@@ -8,6 +8,7 @@ import { TextField } from "@/shared/ui/text-field";
 import { Checkbox } from "@/shared/ui/checkbox";
 import { Button } from "@/shared/ui/button";
 import { PriceSlider } from "@/shared/ui/price-slider";
+import { paths } from "@/shared/config/constants/paths";
 
 const categories = [
   {
@@ -570,7 +571,7 @@ export const CategoryNavigationsAndFilters = () => {
               >
                 {subcategory.products.map((product, index) => (
                   <Link
-                    href={"/"}
+                    href={`${paths.catalog}/1/1`}
                     className={clsx("body_5", s.link)}
                     key={index}
                   >

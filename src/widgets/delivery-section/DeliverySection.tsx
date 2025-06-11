@@ -20,7 +20,7 @@ const deliveryCards = [
   {
     id: 3,
     title: "по Минску",
-    description: "10 ₽ (при заказе на сумму менее 400 руб)",
+    description: "10 BYN (при заказе на сумму менее 400 руб)",
     icon: <LocationIcon />,
   },
 ];

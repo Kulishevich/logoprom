@@ -1,4 +1,4 @@
-import { BelarusFlagIcon } from "@/shared/assets/icons";
+import { BelarusFlagIcon, RussiaFlagIcon } from "@/shared/assets/icons";
 import { Option } from "./DefaultSelect";
 
 export const countries: Option[] = [
@@ -10,6 +10,6 @@ export const countries: Option[] = [
   {
     id: 2,
     value: "+7",
-    icon: <BelarusFlagIcon />,
+    icon: <RussiaFlagIcon />,
   },
 ];

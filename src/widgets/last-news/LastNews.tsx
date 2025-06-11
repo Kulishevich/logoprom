@@ -16,9 +16,9 @@ export const LastNews = () => {
         </Button>
       </div>
       <div className={s.newsList}>
-        <NewsCard />
-        {/* <NewsCard /> */}
-        {/* <NewsCard /> */}
+        {new Array(5).fill("").map((_, index) => (
+          <NewsCard key={index} />
+        ))}
       </div>
     </div>
   );

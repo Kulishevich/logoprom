@@ -143,6 +143,12 @@
       }
     }
 
+    &:hover {
+      & > p {
+        color: var(--color-blue);
+      }
+    }
+
     @media (max-width: 768px) {
       gap: 12px;
       padding: 0;

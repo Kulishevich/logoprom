@@ -8,7 +8,7 @@ import { paths } from "@/shared/config/constants/paths";
 
 export const NewsCard = () => {
   return (
-    <div className={s.container}>
+    <Link href={`${paths.blog}/1`} className={s.container}>
       <div className={s.imageContainer}>
         <Image src={"/news-image.png"} fill alt="news" />
       </div>
@@ -23,11 +23,11 @@ export const NewsCard = () => {
         <p className="h3">
           Изменение цен и расширение ассортимента датчиков температуры
         </p>
-        <Button variant="link_3" as={Link} href={`${paths.blog}/1`}>
+        <Button variant="link_3">
           <ArrowToTopLeftIcon />
           Подробнее
         </Button>
       </div>
-    </div>
+    </Link>
   );
 };
