@@ -26,13 +26,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <Script
-          src="https://api-maps.yandex.ru/v3/?apikey=e1f9579b-8502-438f-8273-6dff1fc98656&lang=ru_RU"
-          strategy="beforeInteractive"
-        />
-      </head>
       <body className={`${manrope.variable}`}>
+        <Script
+          src={`https://api-maps.yandex.ru/v3/?apikey=${process.env.NEXT_PUBLIC_YANDEX_KEY}&lang=ru_RU`}
+          strategy="afterInteractive"
+        />
         <Toaster />
         <HeaderDesktop />
         <HeaderMobile />

@@ -1,6 +1,11 @@
 .container {
   color: var(--white);
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  width: 100%;
 }
 
 .info {
@@ -36,7 +41,15 @@
   justify-content: center;
   align-items: center;
   gap: 21px;
-  margin-top: 8px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+  transition: background-color 0.3s ease;
+  background: transparent;
+
+  &.scrolled {
+    background-color: var(--text);
+  }
 }
 
 .menu {

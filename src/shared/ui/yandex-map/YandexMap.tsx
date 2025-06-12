@@ -3,7 +3,7 @@ import React, { useEffect, useRef } from "react";
 import clsx from "clsx";
 import styles from "./YandexMap.module.scss";
 import { VectorCustomizationItem } from "@yandex/ymaps3-types";
-import mapStyles from "@/shared/styles/maps-styles.json";
+import mapStyles from "@/shared/config/constants/logoprom.json";
 
 declare global {
   interface Window {
